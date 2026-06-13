@@ -1,0 +1,101 @@
+#!/usr/bin/env sh
+set -e
+
+# Auto-format and fix staged files first (prettier + eslint --fix)
+npx lint-staged
+
+# Enforce capitalized file names under tests/ — every file name must start with a
+# capital letter (e.g. Login.spec.ts). Keeps spec naming consistent and avoids
+# Windows case-only rename issues that git can silently miss.
+TEST_FILES=$(git diff --cached --name-only --diff-filter=ACM -- 'tests/')
+if [ -n "$TEST_FILES" ]; then
+  NAME_ERROR=0
+  for file in $TEST_FILES; do
+    base=$(basename "$file")
+    if ! printf '%s\n' "$base" | grep -E -q '^[A-Z]'; then
+      echo "Invalid test file name (must start with a capital letter): $file"
+      NAME_ERROR=1
+    fi
+  done
+  if [ "$NAME_ERROR" -eq 1 ]; then
+    echo ""
+    echo "Rename the above files so each name starts with a capital letter."
+    echo ""
+    exit 1
+  fi
+fi
+
+# Collect staged TS/JS files after lint-staged so guards run against fixed content
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM -- '*.ts' '*.js')
+
+if [ -n "$STAGED_FILES" ]; then
+  HAS_ERROR=0
+
+  # Block focused tests (.only) — prevents accidentally committing isolated runs
+  for file in $STAGED_FILES; do
+    if git show ":$file" | grep -E -q '\.[[:space:]]*only[[:space:]]*\('; then
+      echo "Focused test detected: $file"
+      git show ":$file" | grep -E -n '\.[[:space:]]*only[[:space:]]*\('
+      HAS_ERROR=1
+    fi
+  done
+
+  # Block skipped tests (.skip) — keeps the full test suite running in CI
+  for file in $STAGED_FILES; do
+    if git show ":$file" | grep -E -q '\.[[:space:]]*skip[[:space:]]*\('; then
+      echo "Skipped test detected: $file"
+      git show ":$file" | grep -E -n '\.[[:space:]]*skip[[:space:]]*\('
+      HAS_ERROR=1
+    fi
+  done
+
+  # Block eslint-disable on Playwright rules — enforces test quality standards
+  for file in $STAGED_FILES; do
+    if git show ":$file" | grep -E -q '//[[:space:]]*eslint-disable(-next-line|-line)?[[:space:]].*playwright/'; then
+      echo "Playwright eslint-disable detected: $file"
+      git show ":$file" | grep -E -n '//[[:space:]]*eslint-disable(-next-line|-line)?[[:space:]].*playwright/'
+      HAS_ERROR=1
+    fi
+  done
+
+  # Block console.log in all files, including test files — this project uses the winston
+  # logger exclusively. ESLint's no-console rule is turned off for test files to avoid
+  # noise from the Playwright plugin config, but the logging standard still applies.
+  # Use the framework logger (scripts/logger/logger.ts) instead of console.log.
+  for file in $STAGED_FILES; do
+    if git show ":$file" | grep -q 'console\.log'; then
+      echo "console.log detected: $file"
+      git show ":$file" | grep -n 'console\.log'
+      HAS_ERROR=1
+    fi
+  done
+
+  if [ "$HAS_ERROR" -eq 1 ]; then
+    echo ""
+    echo "Pre-commit failed. Resolve the above issues before committing."
+    echo "Run 'npm run fix' to auto-resolve formatting and lint issues."
+    echo ""
+    exit 1
+  fi
+fi
+
+# Verify no remaining lint violations on staged files after auto-fix.
+# --max-warnings 0 promotes every warning to a failure so advisory rules
+# (e.g. no-focused-tests shipped as "warn" in the recommended preset) still block the commit.
+if [ -n "$STAGED_FILES" ]; then
+  while IFS= read -r file; do
+    npx eslint --max-warnings 0 "$file"
+  done <<EOF
+$STAGED_FILES
+EOF
+fi
+
+# Confirm all staged files are correctly formatted after lint-staged's stash/restore cycle
+STAGED_ALL=$(git diff --cached --name-only --diff-filter=ACM -- '*.ts' '*.js' '*.mjs' '*.json' '*.md' '*.yml' '*.yaml')
+if [ -n "$STAGED_ALL" ]; then
+  while IFS= read -r file; do
+    npx prettier --check "$file"
+  done <<EOF
+$STAGED_ALL
+EOF
+fi

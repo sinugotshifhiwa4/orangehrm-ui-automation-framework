@@ -1,0 +1,72 @@
+#!/usr/bin/env sh
+set -e
+
+zero="0000000000000000000000000000000000000000"
+
+while IFS=' ' read -r local_ref local_sha remote_ref remote_sha; do
+  # Skip deletes
+  [ "$local_sha" = "$zero" ] && continue
+
+  if [ "$remote_sha" = "$zero" ]; then
+    # New branch — compare against merge base with main
+    base=$(git merge-base "$local_sha" origin/main 2>/dev/null || echo "${local_sha}^")
+    range="$base..$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+
+  CHANGED_FILES=$(git diff --name-only "$range" -- '*.ts' '*.js' 2>/dev/null || true)
+
+  # Enforce capitalized file names under tests/ — every file name must start with a
+  # capital letter (e.g. Login.spec.ts). Runs independently of the TS/JS guards below.
+  TEST_FILES=$(git diff --name-only "$range" -- 'tests/' 2>/dev/null || true)
+  for file in $TEST_FILES; do
+    base=$(basename "$file")
+    if ! printf '%s\n' "$base" | grep -E -q '^[A-Z]'; then
+      echo "Invalid test file name (must start with a capital letter): $file"
+      echo "  -> rename so the file name starts with a capital letter"
+      NAME_ERROR=1
+    fi
+  done
+  if [ "${NAME_ERROR:-0}" -eq 1 ]; then
+    echo ""
+    echo "Pre-push failed. Rename the above files before pushing."
+    echo ""
+    exit 1
+  fi
+
+  [ -z "$CHANGED_FILES" ] && continue
+
+  HAS_ERROR=0
+
+  for file in $CHANGED_FILES; do
+    content=$(git show "$local_sha:$file" 2>/dev/null) || continue
+
+    if echo "$content" | grep -E -q '\.[[:space:]]*only[[:space:]]*\('; then
+      echo "Focused test (.only) detected: $file"
+      echo "$content" | grep -E -n '\.[[:space:]]*only[[:space:]]*\('
+      HAS_ERROR=1
+    fi
+
+    if echo "$content" | grep -E -q '\.[[:space:]]*skip[[:space:]]*\('; then
+      echo "Skipped test (.skip) detected: $file"
+      echo "$content" | grep -E -n '\.[[:space:]]*skip[[:space:]]*\('
+      HAS_ERROR=1
+    fi
+
+    if echo "$content" | grep -E -q '//[[:space:]]*eslint-disable(-next-line|-line)?[[:space:]].*playwright/'; then
+      echo "Playwright eslint-disable detected: $file"
+      echo "$content" | grep -E -n '//[[:space:]]*eslint-disable(-next-line|-line)?[[:space:]].*playwright/'
+      HAS_ERROR=1
+    fi
+  done
+
+  if [ "$HAS_ERROR" -eq 1 ]; then
+    echo ""
+    echo "Pre-push failed. Resolve the above issues before pushing."
+    echo ""
+    exit 1
+  fi
+done
+
+exit 0

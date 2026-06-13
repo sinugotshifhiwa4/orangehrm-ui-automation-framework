@@ -1,0 +1,27 @@
+export default [
+  {
+    ignores: [
+      "node_modules/**",
+      "dist/**",
+      "src/testData/**/*.json",
+      "src/testData/**/*.pdf",
+      "logs/**",
+      "playwright-report/**",
+      "test-results/**",
+      ".github",
+      ".gitlab",
+      ".gitlab-ci",
+      ".azure",
+      ".azuredevops",
+      ".jenkins",
+      ".circleci",
+      ".travis",
+      ".buildkite",
+      ".teamcity",
+      ".drone",
+      ".argo",
+      ".ci",
+      "ci",
+    ],
+  },
+];
