@@ -12,7 +12,6 @@ export class AuthenticationExecutor {
   /**
    * Creates an authentication executor with the required page objects and orchestrator.
    * @param loginOrchestrator - Orchestrator that manages the login flow and auth-state persistence.
-   * @param heroPage - Page object for the Orange HRM hero/header page.
    * @param loginPage - Page object for the login form page.
    */
   constructor(loginOrchestrator: LoginOrchestrator, loginPage: LoginPage) {
