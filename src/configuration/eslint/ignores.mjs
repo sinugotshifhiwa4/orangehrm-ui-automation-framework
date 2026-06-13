@@ -7,6 +7,7 @@ export default [
       "src/testData/**/*.pdf",
       "logs/**",
       "playwright-report/**",
+      "ortoni-report/**",
       "test-results/**",
       ".github",
       ".gitlab",

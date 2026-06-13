@@ -41,7 +41,9 @@
     "stabilised",
     "stabilises",
     "Normalises",
-    "esac"
+    "esac",
+    "Ortoni",
+    "ortoni-report"
   ],
   "cSpell.ignorePaths": [
     "node_modules",

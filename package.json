@@ -23,6 +23,7 @@
     "eslint-plugin-unused-imports": "^4.4.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
+    "ortoni-report": "^4.0.9",
     "playwright": "^1.60.0",
     "prettier": "^3.8.4",
     "tsx": "^4.22.4",
@@ -46,7 +47,9 @@
     "ui": "cross-env TEST_LAYER=ui tsx scripts/execution/test-executor.ts --ui",
     "codegen": "npx playwright codegen",
     "debug": "cross-env TEST_LAYER=ui tsx scripts/execution/test-executor.ts --debug",
-    "report": "npx playwright show-report --host 127.0.0.1 --port 0"
+    "report": "npx playwright show-report --host 127.0.0.1 --port 0",
+    "ortoni-report": "tsx scripts/reports/show-ortoni-report.ts",
+    "ortoni-report:stop": "tsx scripts/reports/stop-ortoni-report.ts"
   },
   "repository": {
     "type": "git",
