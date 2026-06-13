@@ -2,21 +2,58 @@
 
 **[← Back to Main Documentation](../../README.md)**
 
-This page is the complete command reference for the framework. It covers all npm scripts, local execution templates, parameters, and runtime flags.
+This page is the complete command reference for the framework. It covers all parameters, npm scripts, local execution templates, and reporting commands.
 
 ## Table of Contents
 
+- [Parameters](#parameters)
+  - [`WORKER_PERCENTAGE`](#worker_percentage)
+  - [`SKIP_BROWSER_INIT=true`](#skip_browser_inittrue)
 - [Quality Commands](#quality-commands)
 - [Test Commands](#test-commands)
 - [Local Execution Templates](#local-execution-templates)
   - [Authentication Setup](#authentication-setup)
   - [UI Test Execution](#ui-test-execution)
-- [Parameters](#parameters)
-- [Runtime Flags](#runtime-flags)
-  - [`HEADED=true`](#headedtrue)
-  - [`TEST_TAGS=@tag-name`](#test_tagstag-name)
-  - [`WORKER_PERCENTAGE`](#worker_percentage)
-  - [`SKIP_BROWSER_INIT=true`](#skip_browser_inittrue)
+- [Local Reports](#local-reports)
+
+## Parameters
+
+All runtime configuration is passed via `cross-env` as environment variables. The local execution templates below use the placeholders `<env>`, `<tag>`, and `<percentage>`, which map to `ENV`, `TEST_TAGS`, and `WORKER_PERCENTAGE` respectively. See [Test Tags](../05-testing/03-test-tags.md) for the available `<tag>` patterns.
+
+| Variable            | Values                                | Default   | Purpose                        |
+| ------------------- | ------------------------------------- | --------- | ------------------------------ |
+| `ENV`               | `qa` \| `uat` \| `preprod`            | `qa`      | Target environment stage       |
+| `HEADED`            | `true` \| `false`                     | `false`   | Run the browser in headed mode |
+| `TEST_TAGS`         | `@tag-name`                           | —         | Filter tests by tag            |
+| `WORKER_PERCENTAGE` | `10` \| `25` \| `50` \| `75` \| `100` | `10`      | Worker allocation percentage   |
+| `SKIP_BROWSER_INIT` | `true` \| `false`                     | `false`\* | Skip browser initialization    |
+
+\* The runtime layer may override the default — see [`SKIP_BROWSER_INIT=true`](#skip_browser_inittrue).
+
+### `WORKER_PERCENTAGE`
+
+Controls how many workers a local run uses — handled by the worker allocator. Useful when a developer wants to:
+
+- reduce machine load
+- increase local parallelism
+- tune execution speed for their machine
+
+### `SKIP_BROWSER_INIT=true`
+
+This allows browser initialization to be explicitly skipped.
+
+The rule is:
+
+1. if `SKIP_BROWSER_INIT` is explicitly passed, that value is used
+2. otherwise `scripts/execution/test-executor.ts` applies the layer default
+
+Layer defaults:
+
+- `ui` — browser init enabled
+- `api` — browser init skipped
+- `db` — browser init skipped
+
+The script then forwards the resolved value into the Playwright execution environment. See [Browser Initialisation](./browser-init.md) for how this flows into `playwright.config.ts`.
 
 ## Quality Commands
 
@@ -51,6 +88,8 @@ npm run type-check
 ```
 
 ## Test Commands
+
+These run with default parameters. See [Local Execution Templates](#local-execution-templates) to pass `ENV`, tags, or worker allocation.
 
 Run UI tests:
 
@@ -88,12 +127,6 @@ Run tests in debug mode with the Playwright inspector:
 npm run debug
 ```
 
-Open the last HTML test report in the browser:
-
-```powershell
-npm run report
-```
-
 Generate a test with Playwright Codegen:
 
 ```powershell
@@ -102,21 +135,7 @@ npm run codegen
 
 ## Local Execution Templates
 
-Local runs combine `cross-env` with the existing npm scripts so a developer can choose the environment, browser, headed mode, and tag filtering without changing framework code.
-
-## Parameters
-
-- `<env>`: `qa` | `uat` | `preprod` (defaults to `qa` when omitted)
-- `<tag>`: see [Test Tags](../05-testing/03-test-tags.md) for tag usage and available framework tag patterns
-- `<percentage>`: `10` | `25` | `50` | `75` | `100` (defaults to `10` when omitted)
-
-## Runtime Flags
-
-- `ENV=qa|uat|preprod` (defaults to `qa` when omitted)
-- `HEADED=true|false` (defaults to `false` when omitted)
-- `TEST_TAGS=@tag-name`
-- `WORKER_PERCENTAGE=10|25|50|75|100` (defaults to `10` when omitted)
-- `SKIP_BROWSER_INIT=true|false` (defaults to `false` when omitted, but runtime layer conditions may override it)
+Local runs combine `cross-env` with the existing npm scripts so a developer can choose the environment, browser, headed mode, and tag filtering without changing framework code. See [Parameters](#parameters) for the available variables.
 
 ### Authentication Setup
 
@@ -136,61 +155,30 @@ Authentication runs the `Authentication.setup.ts` test file via the UI layer. It
 
 ### UI Test Execution
 
-Execute UI tests:
+Prefix any test command with `cross-env` and the variables from [Parameters](#parameters), combining as many as needed:
 
 ```powershell
-cross-env ENV=<env> npm run test:ui
+cross-env ENV=<env> TEST_TAGS=@<tag> WORKER_PERCENTAGE=<percentage> npm run test:ui
 ```
 
-Execute UI tests with tag filtering:
+## Local Reports
+
+All report commands start a **local** server (bound to `127.0.0.1`) and open the report in the browser.
+
+Open the last Playwright HTML report in the browser:
 
 ```powershell
-cross-env ENV=<env> TEST_TAGS=@<tag> npm run test:ui
+npm run report
 ```
 
-Execute UI tests with custom worker allocation:
+Open the Ortoni report:
 
 ```powershell
-cross-env ENV=<env> WORKER_PERCENTAGE=<percentage> npm run test:ui
+npm run ortoni-report
 ```
 
-### `HEADED=true`
+Stop the running Ortoni report server:
 
-This runs the browser in headed mode.
-
-This is mainly used locally when the developer wants to observe the run directly.
-
-### `TEST_TAGS=@tag-name`
-
-This allows running a filtered subset of tests by tag.
-
-This is useful when a developer wants to focus only on one feature area instead of running the full UI layer.
-
-### `WORKER_PERCENTAGE`
-
-This allows the local run to control how many workers are used.
-
-This is useful when a developer wants to:
-
-- reduce machine load
-- increase local parallelism
-- tune execution speed for their machine
-
-Available values are `10`, `25`, `50`, `75`, `100`. These values are controlled by the worker allocator.
-
-### `SKIP_BROWSER_INIT=true`
-
-This allows browser initialization to be explicitly skipped.
-
-The rule is:
-
-1. if `SKIP_BROWSER_INIT` is explicitly passed, that value is used
-2. otherwise `scripts/execution/test-executor.ts` applies the layer default
-
-Layer defaults:
-
-- `ui` — browser init enabled
-- `api` — browser init skipped
-- `db` — browser init skipped
-
-The script then forwards the resolved value into the Playwright execution environment. See [Browser Initialisation](./browser-init.md) for how this flows into `playwright.config.ts`.
+```powershell
+npm run ortoni-report:stop
+```
