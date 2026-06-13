@@ -133,6 +133,7 @@ docs/PRODUCT-5678/update-branching-guide
 - follow Conventional Commit formatting
 - include the Jira ticket in the format `[PRODUCT-xxxx]`
 - keep the subject short, clear, and action-oriented
+- keep each commit to one coherent change — when the work is large, split it into related groups and commit each group separately rather than committing everything at once (see [commit-workflow.md](./commit-workflow.md))
 - keep the body to 1–3 lines maximum
 - write only the main reason the change was made — do not list every file or change touched
 - include the relevant spec file in the body only when a test or spec file was affected

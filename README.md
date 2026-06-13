@@ -29,8 +29,8 @@ The current active execution path is **UI** only.
 
 ```text
 src/          Framework implementation — configuration, layers, utilities
-fixtures/     Test fixtures — base, UI layer
-tests/        Test suites — organized by layer (ui)
+fixtures/     Test fixtures — base, UI layer, API layer
+tests/        Test suites — organized by layer (ui, api, db)
 scripts/      Execution scripts — test runner and executor
 docs/         Framework documentation
 envs/         Environment files — not committed to source control

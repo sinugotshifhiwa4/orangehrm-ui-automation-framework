@@ -18,7 +18,8 @@ The goal is to keep the user in control of what gets committed and when. Claude 
   - [Step 2: Wait for User Approval](#step-2-wait-for-user-approval)
   - [Step 3: Draft the Commit Message](#step-3-draft-the-commit-message)
   - [Step 4: Ask for the Jira Ticket](#step-4-ask-for-the-jira-ticket)
-  - [Step 5: Commit](#step-5-commit)
+  - [Step 5: Group Large Changes Into Related Commits](#step-5-group-large-changes-into-related-commits)
+  - [Step 6: Commit](#step-6-commit)
 - [Rules](#rules)
 - [Practical Outcome](#practical-outcome)
 
@@ -72,9 +73,30 @@ If the user confirms they do not have a ticket number, proceed without it.
 
 Do not guess or invent a ticket number.
 
-### Step 5: Commit
+### Step 5: Group Large Changes Into Related Commits
 
-Only after Steps 2, 3, and 4 are complete, create the commit.
+If the change set is too big to belong in a single commit, do not stage everything at once. Split it into smaller, logically related groups and commit each group on its own.
+
+For each group:
+
+1. Identify changes that belong together (same feature, fix, or concern).
+2. Stage only those files together (`git add <related files>`).
+3. Draft a commit message for that group following [commit-messages.md](./commit-messages.md).
+4. Commit that group.
+5. Repeat with the next related group until **all** changes are committed.
+
+Guidelines:
+
+- each commit should represent one coherent, self-contained change
+- never mix unrelated concerns (e.g. a bug fix and a refactor) in the same commit
+- do not leave changes uncommitted after the process — continue until the working tree is clean
+- if the grouping is not obvious, present your proposed grouping to the user and confirm before staging
+
+If the change is small enough to be a single coherent commit, skip this step.
+
+### Step 6: Commit
+
+Only after Steps 2, 3, and 4 are complete, create the commit (one per group when Step 5 applies).
 
 ## Rules
 
@@ -86,6 +108,8 @@ Only after Steps 2, 3, and 4 are complete, create the commit.
 - Always ask for the Jira ticket after approval, not before.
 - If the user says "commit it" without having reviewed, still show the summary and ask for confirmation.
 - If the user asks for a commit message directly, ask "Do you approve the changes? Reply with Y or N." before writing anything.
+- If the change set is too big for one commit, split it into related groups, stage and commit each group separately, and repeat until all changes are committed.
+- Never stage unrelated changes together just to commit them in one action.
 
 ## Practical Outcome
 
