@@ -3,7 +3,7 @@ import { test as authentication } from "../../../../fixtures/test.ui.fixtures.js
 authentication(
   "Authenticates the user with valid credentials",
   {
-    tag: ["@authenticate", "@sanity", "@regression", "@dashboard"],
+    tag: ["@authenticate", "@sanity", "@regression", "@login", "@dashboard"],
   },
   async ({ authenticationExecutor, environmentResolver, topBar }) => {
     const credentials = environmentResolver.getPortalCredentials();
