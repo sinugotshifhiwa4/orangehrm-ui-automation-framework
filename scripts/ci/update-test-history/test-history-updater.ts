@@ -58,17 +58,19 @@ export class TestHistoryUpdater {
 
   /** Builds the full TestRun record from parsed stats + the run environment. */
   private buildRun(parsed: ParseResult): TestRun {
-    const { passed, failed, skipped, flaky, durationMs, failedTests } = parsed;
+    const { passed, failed, skipped, flaky, durationMs, failedTests, flakyTests } =
+      parsed;
 
     const total = passed + failed + skipped + flaky;
     const passRate =
       total > 0 ? Math.round((passed / (passed + failed || 1)) * 1000) / 10 : 0;
 
     const environment = env("ENV", "qa");
+    const testType = env("TEST_TYPE", "regression");
     const runNumber = parseInt(env("GITHUB_RUN_NUMBER", "0"), 10);
     const now = Date.now();
 
-    const { reportUrl, allureUrl } = buildReportUrls(runNumber, environment);
+    const { reportUrl, ortoniUrl } = buildReportUrls(runNumber, environment, testType);
 
     return {
       runNumber,
@@ -78,8 +80,7 @@ export class TestHistoryUpdater {
       branch: env("GITHUB_REF_NAME", "unknown"),
       commitSha: env("GITHUB_SHA").slice(0, 7),
       env: environment,
-      testType: env("TEST_TYPE", "regression"),
-      userRole: env("USER_ROLE", "unknown"),
+      testType,
       passed,
       failed,
       skipped,
@@ -90,8 +91,9 @@ export class TestHistoryUpdater {
       durationMs,
       durationMin: formatDuration(durationMs),
       reportUrl,
-      allureUrl,
+      ortoniUrl,
       failedTests,
+      flakyTests,
     };
   }
 
@@ -107,8 +109,8 @@ export class TestHistoryUpdater {
   // ─── Summary logging ─────────────────────────────────────────────────────
 
   private logSummary(newRun: TestRun, parsed: ParseResult): void {
-    const { passed, failed, skipped, flaky, failedTests } = parsed;
-    const { branch, testType, runNumber, reportUrl, allureUrl } = newRun;
+    const { passed, failed, skipped, flaky, failedTests, flakyTests } = parsed;
+    const { branch, testType, runNumber, reportUrl, ortoniUrl } = newRun;
     const bucket = this.store.getBucket(branch, testType);
 
     logger.info(
@@ -128,8 +130,18 @@ export class TestHistoryUpdater {
       }
     }
 
+    if (flakyTests.length > 0) {
+      logger.info(`[update-test-history]    Flaky tests:`);
+      for (const ft of flakyTests) {
+        logger.info(
+          `[update-test-history]      • [${ft.kind}] ${ft.name} (${ft.durationSec}s)`,
+        );
+        logger.info(`[update-test-history]        ${ft.classname}`);
+      }
+    }
+
     logger.info(`[update-test-history]    reportUrl: ${reportUrl}`);
-    logger.info(`[update-test-history]    allureUrl: ${allureUrl}`);
+    logger.info(`[update-test-history]    ortoniUrl: ${ortoniUrl}`);
     logger.info(
       `[update-test-history]    Index: ${this.store.indexLength}/${MAX_INDEX_RUNS} rows`,
     );

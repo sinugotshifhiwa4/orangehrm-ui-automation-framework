@@ -5,11 +5,12 @@
 
 import path from "path";
 
-import { r2PublicBase } from "../../shared/r2.constants.js";
+import { TEST_HISTORY_FILE } from "../../shared/r2.constants.js";
 
 // ─── File paths ───────────────────────────────────────────────────────────────
 
-export const HISTORY_FILE = path.resolve("./test-results-history.json");
+// Same filename the R2 CLI downloads/uploads, so the read-modify-write round-trips.
+export const HISTORY_FILE = path.resolve(`./${TEST_HISTORY_FILE}`);
 export const RESULTS_JSON = path.resolve("./playwright-report/results.json");
 
 // ─── History size limits ──────────────────────────────────────────────────────
@@ -29,7 +30,5 @@ export const DETAIL_WINDOW = 20;
 /** Hard cap on the number of failed test entries stored per run. */
 export const MAX_FAILED_TESTS_STORED = 50;
 
-// ─── Remote storage ───────────────────────────────────────────────────────────
-
-/** Public base URL for report links, sourced from the shared R2 constants. */
-export const R2_PUBLIC_BASE = r2PublicBase();
+/** Hard cap on the number of flaky test entries stored per run. */
+export const MAX_FLAKY_TESTS_STORED = 50;

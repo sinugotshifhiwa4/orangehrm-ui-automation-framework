@@ -80,6 +80,9 @@ env:
   TEST_LAYER: ${{ github.event.inputs.test_layer || 'ui' }}
   SHARD_COUNT: ${{ github.event.inputs.shard_count || '4' }}
   SKIP_BROWSER_INIT: ${{ github.event.inputs.skip_browser_init || 'false' }}
+  # Branch to check out: scheduled runs target their paired environment branch;
+  # everything else uses the triggering ref. Shared by every job that checks out.
+  CHECKOUT_REF: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'environment/UAT') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'environment/PreProd') || (github.event_name == 'schedule' && 'environment/QA') || github.ref }}
 
 permissions:
   checks: write
@@ -218,7 +221,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
-          ref: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'environment/UAT') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'environment/PreProd') || (github.event_name == 'schedule' && 'environment/QA') || github.ref }}
+          ref: ${{ env.CHECKOUT_REF }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -296,29 +299,19 @@ jobs:
           if-no-files-found: warn
 
   # ---------------------------------------------------------------------------
-  # JOB 4 — Merge blob reports and publish HTML
+  # JOB 4 — Merge blob reports into the merged Playwright + Ortoni reports
   # ---------------------------------------------------------------------------
-  merge-reports:
-    name: Merge reports & publish
+  merge:
+    name: Merge reports
     needs: test
     runs-on: ubuntu-latest
     if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
-    # Serialise the R2 test-history read-modify-write across overlapping runs
-    # (e.g. a push racing the nightly schedule). Queue, never cancel — a
-    # cancelled job would silently drop its history record.
-    concurrency:
-      group: test-history-${{ github.workflow }}
-      cancel-in-progress: false
-    permissions:
-      checks: write
-      pull-requests: write
-      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
-          ref: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'environment/UAT') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'environment/PreProd') || (github.event_name == 'schedule' && 'environment/QA') || github.ref }}
+          ref: ${{ env.CHECKOUT_REF }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -368,6 +361,38 @@ jobs:
           name: ortoni-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
           path: ortoni-report/
           retention-days: 14
+
+  # ---------------------------------------------------------------------------
+  # JOB 5 — Publish the merged report (JUnit check, GitHub Pages, summary)
+  # ---------------------------------------------------------------------------
+  publish:
+    name: Publish reports
+    needs: merge
+    runs-on: ubuntu-latest
+    # No always(): only publish when merge succeeded — a failed merge means no report.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ env.CHECKOUT_REF }}
+
+      - name: Download merged HTML report
+        uses: actions/download-artifact@v4.3.0
+        with:
+          name: playwright-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: playwright-report
+
+      - name: Download merged Ortoni report
+        uses: actions/download-artifact@v4.3.0
+        with:
+          name: ortoni-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: ortoni-report
 
       - name: Publish test results (JUnit)
         if: always()
@@ -427,6 +452,60 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: publish Playwright report for run #${{ github.run_number }}"
           git push origin gh-pages
 
+      - name: Job summary
+        if: always()
+        run: |
+          REPO_NAME="${{ github.event.repository.name }}"
+          BASE="https://${{ github.repository_owner }}.github.io/${REPO_NAME}/reports/${{ github.run_number }}"
+          {
+            echo "### Run #${{ github.run_number }} — ${{ env.ENV }} / ${{ env.TEST_TYPE }} (${{ env.SHARD_COUNT }} shards)"
+            echo ""
+            echo "[Playwright report]($BASE/index.html) · [Ortoni report]($BASE/ortoni/index.html)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------------------
+  # JOB 6 — R2: update test-results history and upload build reports
+  # ---------------------------------------------------------------------------
+  r2:
+    name: Upload to R2
+    needs: merge
+    runs-on: ubuntu-latest
+    # No always(): only run when merge succeeded — a failed merge means no data to upload.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    # Serialise the R2 test-history read-modify-write across overlapping runs
+    # (e.g. a push racing the nightly schedule). Queue, never cancel — a
+    # cancelled job would silently drop its history record.
+    concurrency:
+      group: test-history-${{ github.workflow }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ env.CHECKOUT_REF }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download merged HTML report
+        uses: actions/download-artifact@v4.3.0
+        with:
+          name: playwright-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: playwright-report
+
+      - name: Download merged Ortoni report
+        uses: actions/download-artifact@v4.3.0
+        with:
+          name: ortoni-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: ortoni-report
+
       # ── Update test-results-history.json via R2 ─────────────────────────
       - name: Download test history from R2
         if: always()
@@ -465,14 +544,18 @@ jobs:
           ENV: ${{ env.ENV }}
           TEST_TYPE: ${{ env.TEST_TYPE }}
         run: npx tsx scripts/ci/r2/r2.ts upload-reports
-      # ── END ──────────────────────────────────────────────────────────────
-      - name: Job summary
+
+      # Direct, openable links to the reports just uploaded to the R2 bucket.
+      # URLs are derived from the shared R2 constants, so there's no drift.
+      - name: Job summary (R2 build reports)
         if: always()
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          ENV: ${{ env.ENV }}
+          TEST_TYPE: ${{ env.TEST_TYPE }}
         run: |
-          REPO_NAME="${{ github.event.repository.name }}"
-          BASE="https://${{ github.repository_owner }}.github.io/${REPO_NAME}/reports/${{ github.run_number }}"
           {
-            echo "### Run #${{ github.run_number }} — ${{ env.ENV }} / ${{ env.TEST_TYPE }} (${{ env.SHARD_COUNT }} shards)"
+            echo "### R2 build reports — run #${{ github.run_number }} (${{ env.ENV }} / ${{ env.TEST_TYPE }})"
             echo ""
-            echo "[Playwright report]($BASE/index.html) · [Ortoni report]($BASE/ortoni/index.html)"
+            npx tsx scripts/ci/r2/r2.ts report-urls
           } >> "$GITHUB_STEP_SUMMARY"
