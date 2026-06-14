@@ -10,6 +10,19 @@ A Playwright + TypeScript UI automation framework for OrangeHRM, built on a laye
 
 The binding behavioral rules are imported above and load with this file. They link the detailed rules in `docs/02-rules/`. If they are not present in context (e.g. subagents that don't receive CLAUDE.md), read `docs/00-skills/always-apply.md` before acting.
 
+## Question-Only Rule
+
+**If the user asks a question, answer it directly. Do not modify any files or code. No exceptions.**
+
+When the user's message is a question (e.g., "What does this do?", "How does X work?", "Where is Y?"), respond with an answer only. Do not:
+
+- Create files
+- Edit files
+- Run commands
+- Make suggestions for changes
+
+Just answer the question thoroughly and clearly.
+
 ## Commands
 
 Tests are not run with `npx playwright test` directly — they go through a wrapper (`scripts/execution/test-executor.ts`) that resolves the layer, browser project, sharding, tag grep, and browser-init flag, then invokes Playwright.
@@ -83,7 +96,7 @@ Environment stages have a single source of truth: `src/configuration/environment
 `docs/` is the canonical reference, organized by area:
 
 - `00-skills/` — always-apply rules (see Project Rules above)
-- `01-setup/` — environment, fixtures, execution commands, timeouts
+- `01-setup/` — environment, fixtures, execution commands, timeouts, reports
 - `02-rules/` — binding conventions (commits, branching, code quality, logging, tests)
 - `03-layer-ui/` — base page, context, authentication, page structure
 - `04-utils/` — shared utilities
