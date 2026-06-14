@@ -1,9 +1,13 @@
 import type { OrtoniReportConfig } from "ortoni-report";
 import * as os from "os";
 import DateFormatter from "../../utils/shared/dateFormatter.js";
+import EnvironmentDetector from "../resolution/detector/environmentDetector.js";
 
+// The Ortoni report is generated once — locally per run, or in CI during the
+// merge phase from the combined blob reports — so it always uses a single,
+// non-sharded output location.
 export const reportConfig: OrtoniReportConfig = {
-  open: process.env.CI ? "never" : "always",
+  open: EnvironmentDetector.isCI() ? "never" : "always",
   folderPath: "ortoni-report",
   filename: "index.html",
   title: "Orange HRM Automation Report",

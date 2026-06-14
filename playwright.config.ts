@@ -24,6 +24,10 @@ const workerPercentage = WorkerAllocator.resolveWorkerPercentage(
 // Determine shard index for parallel execution in CI
 const shardIndex = process.env.SHARD_INDEX || "0";
 
+// Set by the CI merge job: regenerate the human-readable reports (HTML + Ortoni)
+// from the combined blob reports instead of running tests.
+const isReportMerge = process.env.REPORTER_MERGE === "true";
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -44,12 +48,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: WorkerAllocator.getOptimalWorkerCount(workerPercentage),
 
-  reporter: isCI
-    ? [
-        ["blob", { outputDir: `blob-report-${shardIndex}`, alwaysReport: true }],
-        ["ortoni-report", reportConfig],
-      ]
-    : [["html"], ["line"], ["ortoni-report", reportConfig]],
+  reporter: isReportMerge
+    ? [["html"], ["junit"], ["json"], ["ortoni-report", reportConfig]]
+    : isCI
+      ? [["blob", { outputDir: `blob-report-${shardIndex}`, alwaysReport: true }]]
+      : [["html"], ["line"], ["ortoni-report", reportConfig]],
 
   /**
    * The `grep` option enables running tests by tag or keyword.
