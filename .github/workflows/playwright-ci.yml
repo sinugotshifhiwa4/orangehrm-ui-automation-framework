@@ -266,6 +266,7 @@ jobs:
             SKIP_BROWSER_INIT=${{ env.SKIP_BROWSER_INIT }} \
             tsx scripts/execution/test-executor.ts
           EXIT_CODE=$?
+          set -e
 
           mkdir -p all-blob-reports
           SHARD_DIR="blob-report-${{ matrix.shard }}"
