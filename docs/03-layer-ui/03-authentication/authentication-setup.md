@@ -13,6 +13,7 @@ It covers the files responsible for auth state storage, skip-auth tag evaluation
   - [Step 1 — Global Setup Initializes the Auth File](#step-1--global-setup-initializes-the-auth-file)
   - [Step 2 — The Auth Setup Project Runs Login](#step-2--the-auth-setup-project-runs-login)
   - [Step 3 — Browser Projects Depend on the Auth Setup](#step-3--browser-projects-depend-on-the-auth-setup)
+- [Refreshing a Stale Session](#refreshing-a-stale-session)
 - [Files and Responsibilities](#files-and-responsibilities)
   - [authSkipEvaluator.ts](#authskipevaluatorts)
   - [authenticationFileManager.ts](#authenticationfilemanagerts)
@@ -104,6 +105,21 @@ const setupDeps = ["setup-auth-state"];
 ```
 
 Playwright runs `setup-auth-state` first and only starts `chromium`, `firefox`, and `webkit` after it completes. Each browser project then reads the saved storage state so every test begins with an active session.
+
+## Refreshing a Stale Session
+
+The steps above produce the shared session once, before the suite runs. By the time a feature test executes, that injected session can have expired. Specs that need an authenticated session do not trust the storage state blindly — they call `ensureAuthenticated` instead:
+
+```ts
+test.beforeEach(async ({ authenticationExecutor, environmentResolver }) => {
+  const credentials = environmentResolver.getPortalCredentials();
+  await authenticationExecutor.ensureAuthenticated(credentials);
+});
+```
+
+`ensureAuthenticated` navigates to the portal and checks whether the injected session is still active (an expired session is redirected to `/auth/login`). If it is still valid, the test proceeds with no second login. If it has gone stale, it performs a full login and re-saves the storage state. This keeps the one-login-per-run benefit while tolerating sessions that expire mid-run.
+
+This pattern is used in `tests/layers/ui/login/ValidLogin.spec.ts`. See [Login Orchestration](./login-orchestration.md) for the underlying `ensureAuthenticated` → `isAuthenticatedSessionActive` → `run` flow.
 
 ## Files and Responsibilities
 
@@ -214,7 +230,7 @@ When running with CI sharding (`SHARD_INDEX` and `SHARD_TOTAL` environment varia
 .auth/ci-login-shard-2.json
 ```
 
-`AuthenticationPathResolver.getFilePath()` detects the shard variables and resolves the correct path automatically. No manual configuration is needed per shard.
+`AuthenticationFileManager.getFilePath()` detects the shard variables and resolves the correct path automatically. No manual configuration is needed per shard.
 
 ## Skip Auth — Source of Truth
 
@@ -280,7 +296,7 @@ This is used for API-only or DB-only runs where no browser is needed.
 To run the auth setup without running any feature tests:
 
 ```powershell
-cross-env ENV=<env> COUNTRY=<country> TEST_TAGS=@authenticate npm run test:ui
+cross-env ENV=<env> TEST_TAGS=@authenticate npm run test:ui
 ```
 
 This runs `Authentication.setup.ts` through the `setup-auth-state` project and populates `.auth/ci-login.json`. This is useful when:
