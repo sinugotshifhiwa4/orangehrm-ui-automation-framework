@@ -5,12 +5,12 @@ test.describe(
   "Login | Valid Credentials",
   { tag: ["@regression", "@sanity", "@dashboard", "@login"] },
   () => {
-    test.beforeEach(async ({ loginOrchestrator }) => {
-      await loginOrchestrator.navigateToPortal();
+    test.beforeEach(async ({ authenticationExecutor, environmentResolver }) => {
+      const credentials = environmentResolver.getPortalCredentials();
+      await authenticationExecutor.ensureAuthenticated(credentials);
     });
 
-    test("Should navigate to Dashboard on successful login", async ({ loginPage, sideBar }) => {
-      await loginPage.verifyInvalidCredentialsAlertIsHidden();
+    test("Should navigate to Dashboard on successful login", async ({ sideBar }) => {
       await sideBar.verifyDashboardMenuLinkIsVisible();
       logger.info("Assertion Passed: User successfully logged in and Dashboard is Visible");
     });

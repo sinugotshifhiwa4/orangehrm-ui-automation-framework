@@ -4,6 +4,9 @@ import type { EnvironmentResolver } from "../../../../configuration/resolution/r
 import type { AuthenticationStateManager } from "../../authentication/authenticationStateManager.js";
 import ErrorHandler from "../../../../utils/errorHandling/errorHandler.js";
 
+/**
+ * Coordinates portal navigation, login execution, and authentication-state persistence.
+ */
 export class LoginOrchestrator extends BasePage {
   private environmentResolver: EnvironmentResolver;
 
@@ -32,6 +35,20 @@ export class LoginOrchestrator extends BasePage {
   public async navigateToPortal(): Promise<void> {
     const portalUrl = this.environmentResolver.getPortalBaseUrl();
     await this.navigation.navigateToUrl(portalUrl, "navigateToPortal");
+  }
+
+  /**
+   * Navigates to the portal and reports whether the injected session is still authenticated.
+   * An unauthenticated session is redirected by the portal to the login page.
+   * @returns A promise that resolves to true if the portal did not redirect to the login page.
+   */
+  public async isAuthenticatedSessionActive(): Promise<boolean> {
+    await this.navigateToPortal();
+    const redirectedToLogin = await this.navigation.urlContains(
+      "/auth/login",
+      "isAuthenticatedSessionActive",
+    );
+    return !redirectedToLogin;
   }
 
   /**
