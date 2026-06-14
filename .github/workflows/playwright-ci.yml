@@ -1,0 +1,478 @@
+name: Orange HRM UI Automation CI
+
+on:
+  push:
+    branches:
+      - "develop"
+      - "environment/QA"
+      - "environment/UAT"
+      - "environment/PreProd"
+  pull_request:
+    branches:
+      - "develop"
+  schedule:
+    # Times are UTC; SAST is UTC+2. Each cron maps to an env/branch/test-type below.
+    - cron: "0 4 * * *" # 06:00 SAST daily — sanity on environment/QA
+    - cron: "0 5 * * *" # 07:00 SAST daily — sanity on environment/UAT
+    - cron: "0 2 * * 1" # 04:00 SAST Monday — regression on environment/PreProd
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment"
+        required: true
+        default: "qa"
+        type: choice
+        options:
+          - qa
+          - uat
+          - preprod
+      test_type:
+        # NOTE: these options are the manual-run dropdown only. The valid tags are
+        # gated by .github/config/test-tags.json — keep both lists in sync.
+        description: "Test Type"
+        required: true
+        default: "regression"
+        type: choice
+        options:
+          - regression
+          - sanity
+          - authenticate
+          - dashboard
+          - skip-auth
+      test_layer:
+        description: "Test layer"
+        required: true
+        default: "ui"
+        type: choice
+        options:
+          - ui
+          - api
+          - db
+      shard_count:
+        description: "Number of shards"
+        required: true
+        default: "4"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "6"
+          - "8"
+          - "10"
+      skip_browser_init:
+        description: "Skip browser install & auth setup (for non-browser api/db layers)"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  # ENV resolution order: manual input → branch-paired env (push) → qa default.
+  # PR refs (e.g. "123/merge") and scheduled runs fall through to qa.
+  ENV: ${{ github.event.inputs.env || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'uat') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'preprod') || (github.ref_name == 'environment/UAT' && 'uat') || (github.ref_name == 'environment/PreProd' && 'preprod') || 'qa' }}
+  ENV_SLUG: ${{ github.event.inputs.env || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'uat') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'preprod') || (github.ref_name == 'environment/UAT' && 'uat') || (github.ref_name == 'environment/PreProd' && 'preprod') || 'qa' }}
+  TEST_TYPE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.test_type) || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'regression') || (github.event_name == 'schedule' && 'sanity') || 'regression' }}
+  TEST_LAYER: ${{ github.event.inputs.test_layer || 'ui' }}
+  SHARD_COUNT: ${{ github.event.inputs.shard_count || '4' }}
+  SKIP_BROWSER_INIT: ${{ github.event.inputs.skip_browser_init || 'false' }}
+
+permissions:
+  checks: write
+  pull-requests: write
+  contents: write
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # JOB 0a — Validation gate (format + lint + types). Runs on every trigger.
+  # Pushes and pull requests stop here; tests run only on schedule/manual.
+  # ---------------------------------------------------------------------------
+  validate:
+    name: Validate (format + lint + types)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run checks
+        run: npm run check
+
+  # ---------------------------------------------------------------------------
+  # JOB 0b — Branch ↔ ENV pairing guard. Mirrors GitLab validate_environment_branch.
+  # Skips schedule (ENV trusted from cron target) and pull_request (validation only).
+  # ---------------------------------------------------------------------------
+  validate-environment-branch:
+    name: Validate branch / ENV pairing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch and ENV pairing
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          TARGET_REF: ${{ github.ref_name }}
+          RESOLVED_ENV: ${{ env.ENV }}
+        run: |
+          echo "Validating ENV=${RESOLVED_ENV} against ref ${TARGET_REF} for event ${EVENT_NAME}"
+
+          if [ "${EVENT_NAME}" = "schedule" ]; then
+            echo "Scheduled run; skipping branch/env pairing check."
+            exit 0
+          fi
+          if [ "${EVENT_NAME}" = "pull_request" ]; then
+            echo "Pull request; skipping branch/env pairing check."
+            exit 0
+          fi
+
+          case "${TARGET_REF}" in
+            develop)
+              [ "${RESOLVED_ENV}" = "qa" ] || { echo "develop may only run with ENV=qa."; exit 1; }
+              echo "develop is correctly paired with ENV=qa." ;;
+            environment/QA)
+              [ "${RESOLVED_ENV}" = "qa" ] || { echo "environment/QA may only run with ENV=qa."; exit 1; }
+              echo "environment/QA is correctly paired with ENV=qa." ;;
+            environment/UAT)
+              [ "${RESOLVED_ENV}" = "uat" ] || { echo "environment/UAT may only run with ENV=uat."; exit 1; }
+              echo "environment/UAT is correctly paired with ENV=uat." ;;
+            environment/PreProd)
+              [ "${RESOLVED_ENV}" = "preprod" ] || { echo "environment/PreProd may only run with ENV=preprod."; exit 1; }
+              echo "environment/PreProd is correctly paired with ENV=preprod." ;;
+            feature/*)
+              echo "Feature branches are not allowed to run Playwright pipelines."; exit 1 ;;
+            *)
+              echo "Unsupported branch/ENV combination: ref=${TARGET_REF} ENV=${RESOLVED_ENV}."; exit 1 ;;
+          esac
+
+  # ---------------------------------------------------------------------------
+  # JOB 1 — Resolve the test tag from TEST_TYPE
+  # ---------------------------------------------------------------------------
+  resolve-tag:
+    name: Resolve test tag
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: [validate, validate-environment-branch]
+    runs-on: ubuntu-latest
+    outputs:
+      test_tag: ${{ steps.tag.outputs.test_tag }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Map TEST_TYPE → Playwright grep tag
+        id: tag
+        env:
+          TEST_TYPE: ${{ env.TEST_TYPE }}
+        run: |
+          if jq -e --arg k "$TEST_TYPE" 'index($k)' .github/config/test-tags.json >/dev/null; then
+            echo "test_tag=@$TEST_TYPE" >> "$GITHUB_OUTPUT"
+            echo "Resolved tag: @$TEST_TYPE"
+          else
+            echo "ERROR: Unknown TEST_TYPE '$TEST_TYPE'. Valid tags:" >&2
+            jq -r '.[]' .github/config/test-tags.json >&2
+            exit 1
+          fi
+
+  # ---------------------------------------------------------------------------
+  # JOB 2 — Build a shard matrix from SHARD_COUNT
+  # ---------------------------------------------------------------------------
+  build-matrix:
+    name: Build shard matrix
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: [validate, validate-environment-branch]
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - name: Generate shard indices
+        id: matrix
+        run: |
+          COUNT=${{ env.SHARD_COUNT }}
+          INDICES=$(python3 -c "import json; print(json.dumps(list(range(1, $COUNT + 1))))")
+          echo "matrix={\"shard\":$INDICES}" >> "$GITHUB_OUTPUT"
+          echo "Shard matrix: $INDICES"
+
+  # ---------------------------------------------------------------------------
+  # JOB 3 — Run sharded tests in parallel
+  # ---------------------------------------------------------------------------
+  test:
+    name: "Shard ${{ matrix.shard }} / ${{ github.event.inputs.shard_count || '4' }}"
+    needs: [resolve-tag, build-matrix]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.build-matrix.outputs.matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'environment/UAT') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'environment/PreProd') || (github.event_name == 'schedule' && 'environment/QA') || github.ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4.2.3
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            playwright-browsers-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install chromium --with-deps
+
+      - name: Install Playwright browser system deps (cached hit)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: Run shard ${{ matrix.shard }}
+        env:
+          CI: "true"
+          CI_PORTAL_BASE_URL: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+          CI_PORTAL_USERNAME: ${{ secrets.CI_PORTAL_USERNAME }}
+          CI_PORTAL_PASSWORD: ${{ secrets.CI_PORTAL_PASSWORD }}
+        run: |
+          set +e
+          npx cross-env \
+            TEST_LAYER=${{ env.TEST_LAYER }} \
+            SHARD_INDEX=${{ matrix.shard }} \
+            SHARD_TOTAL=${{ env.SHARD_COUNT }} \
+            TEST_TAGS="${{ needs.resolve-tag.outputs.test_tag }}" \
+            ENV=${{ env.ENV }} \
+            SKIP_BROWSER_INIT=${{ env.SKIP_BROWSER_INIT }} \
+            tsx scripts/execution/test-executor.ts
+          EXIT_CODE=$?
+          set -e
+
+          mkdir -p all-blob-reports
+          SHARD_DIR="blob-report-${{ matrix.shard }}"
+
+          for i in {1..5}; do
+            ls "$SHARD_DIR"/*.zip >/dev/null 2>&1 && break
+            echo "Waiting for report files... ($i)"
+            sleep 1
+          done
+
+          if ls "$SHARD_DIR"/*.zip >/dev/null 2>&1; then
+            echo "Reports found for shard ${{ matrix.shard }}"
+            for f in "$SHARD_DIR"/*.zip; do
+              [ -e "$f" ] || continue
+              cp "$f" "all-blob-reports/$(basename "$f" .zip)-shard-${{ matrix.shard }}.zip"
+            done
+          else
+            echo "No tests executed in shard ${{ matrix.shard }}"
+          fi
+
+          exit $EXIT_CODE
+
+      - name: Upload blob report
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: blob-report-shard-${{ matrix.shard }}-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: all-blob-reports/
+          retention-days: 1
+          if-no-files-found: warn
+
+  # ---------------------------------------------------------------------------
+  # JOB 4 — Merge blob reports and publish HTML
+  # ---------------------------------------------------------------------------
+  merge-reports:
+    name: Merge reports & publish
+    needs: test
+    runs-on: ubuntu-latest
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    # Serialise the R2 test-history read-modify-write across overlapping runs
+    # (e.g. a push racing the nightly schedule). Queue, never cancel — a
+    # cancelled job would silently drop its history record.
+    concurrency:
+      group: test-history-${{ github.workflow }}
+      cancel-in-progress: false
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'environment/UAT') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'environment/PreProd') || (github.event_name == 'schedule' && 'environment/QA') || github.ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download all blob reports
+        uses: actions/download-artifact@v4.3.0
+        with:
+          pattern: blob-report-shard-*
+          path: all-blob-reports
+          merge-multiple: true
+
+      - name: Merge reports
+        env:
+          REPORTER_MERGE: "true"
+        run: |
+          COUNT=$(ls all-blob-reports/*.zip 2>/dev/null | wc -l)
+          echo "Found $COUNT blob report(s)"
+          if [ "$COUNT" -eq 0 ]; then
+            echo "ERROR: No blob reports found — nothing to merge"
+            exit 1
+          fi
+
+          mkdir -p playwright-report
+          PLAYWRIGHT_HTML_REPORT=playwright-report \
+          PLAYWRIGHT_JUNIT_OUTPUT_NAME=playwright-report/results.xml \
+          PLAYWRIGHT_JSON_OUTPUT_NAME=playwright-report/results.json \
+          npx playwright merge-reports --config playwright.config.ts ./all-blob-reports
+
+      - name: Upload merged HTML report
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: playwright-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: playwright-report/
+          retention-days: 14
+
+      - name: Upload merged Ortoni report
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: ortoni-report-${{ env.ENV }}-${{ env.TEST_TYPE }}
+          path: ortoni-report/
+          retention-days: 14
+
+      - name: Publish test results (JUnit)
+        if: always()
+        uses: dorny/test-reporter@v1.9.1
+        with:
+          name: Playwright Results
+          path: playwright-report/results.xml
+          reporter: java-junit
+          fail-on-error: false
+
+      - name: Publish report to GitHub Pages
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf gh-pages-worktree
+          git fetch origin gh-pages || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git worktree add -B gh-pages gh-pages-worktree origin/gh-pages
+          else
+            git worktree add --detach gh-pages-worktree
+            cd gh-pages-worktree
+            git checkout --orphan gh-pages
+            git rm -rf . >/dev/null 2>&1 || true
+            cd ..
+          fi
+
+          mkdir -p gh-pages-worktree/reports/${{ github.run_number }}
+          cp -R playwright-report/. gh-pages-worktree/reports/${{ github.run_number }}/
+          if [ -d ortoni-report ]; then
+            mkdir -p gh-pages-worktree/reports/${{ github.run_number }}/ortoni
+            cp -R ortoni-report/. gh-pages-worktree/reports/${{ github.run_number }}/ortoni/
+          else
+            echo "No Ortoni report found — skipping Ortoni publish"
+          fi
+
+          cat > gh-pages-worktree/index.html << EOF
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>Redirecting to latest Playwright report...</title>
+              <meta http-equiv="refresh" content="0; url=reports/${{ github.run_number }}/index.html" />
+              <script>window.location.href = "reports/${{ github.run_number }}/index.html";</script>
+            </head>
+            <body>
+              <p>Redirecting to latest report... <a href="reports/${{ github.run_number }}/index.html">Click here if not redirected</a></p>
+            </body>
+          </html>
+          EOF
+
+          touch gh-pages-worktree/.nojekyll
+
+          cd gh-pages-worktree
+          git add .
+          git diff --cached --quiet || git commit -m "chore: publish Playwright report for run #${{ github.run_number }}"
+          git push origin gh-pages
+
+      # ── Update test-results-history.json via R2 ─────────────────────────
+      - name: Download test history from R2
+        if: always()
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: npx tsx scripts/ci/r2/r2.ts download-history
+
+      - name: Update test results history
+        if: always()
+        env:
+          TEST_TYPE: ${{ env.TEST_TYPE }}
+          ENV: ${{ env.ENV }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: npx tsx scripts/ci/update-test-history/index.ts
+
+      - name: Upload test history to R2
+        if: always()
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: npx tsx scripts/ci/r2/r2.ts upload-history
+
+      # ── Upload build report artifacts to R2 ─────────────────────────────
+      - name: Upload build reports to R2
+        if: always()
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          ENV: ${{ env.ENV }}
+          TEST_TYPE: ${{ env.TEST_TYPE }}
+        run: npx tsx scripts/ci/r2/r2.ts upload-reports
+      # ── END ──────────────────────────────────────────────────────────────
+      - name: Job summary
+        if: always()
+        run: |
+          REPO_NAME="${{ github.event.repository.name }}"
+          BASE="https://${{ github.repository_owner }}.github.io/${REPO_NAME}/reports/${{ github.run_number }}"
+          {
+            echo "### Run #${{ github.run_number }} — ${{ env.ENV }} / ${{ env.TEST_TYPE }} (${{ env.SHARD_COUNT }} shards)"
+            echo ""
+            echo "[Playwright report]($BASE/index.html) · [Ortoni report]($BASE/ortoni/index.html)"
+          } >> "$GITHUB_STEP_SUMMARY"
