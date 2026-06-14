@@ -4,7 +4,7 @@
  * No side-effects, no I/O — safe to unit-test in isolation.
  */
 
-import { R2_PUBLIC_BASE } from "./constants.js";
+import { r2PublicReportsBase } from "../../shared/r2.constants.js";
 import type { TestRun, RunSummary } from "../types/types.js";
 
 // ─── String / formatting ──────────────────────────────────────────────────────
@@ -41,29 +41,39 @@ export function truncate(s: string, maxLen: number): string {
 // ─── URL builders ─────────────────────────────────────────────────────────────
 
 /**
- * Builds the Playwright report and Allure report URLs for a given run.
+ * Builds the public Playwright and Ortoni report URLs for a given run. The base
+ * mirrors the R2 upload prefix exactly (run number + env + test type), so the
+ * stored links resolve to the objects the pipeline actually uploaded.
+ * @param runNumber - The GitHub Actions run number.
+ * @param environment - The environment slug (qa | uat | preprod).
+ * @param testType - The test type for the run (e.g. regression | sanity).
+ * @returns The public Playwright and Ortoni report URLs.
  */
 export function buildReportUrls(
   runNumber: number,
   environment: string,
-): { reportUrl: string; allureUrl: string } {
-  const base = `${R2_PUBLIC_BASE}/build-reports/run-${runNumber}-${environment}`;
+  testType: string,
+): { reportUrl: string; ortoniUrl: string } {
+  const base = r2PublicReportsBase(String(runNumber), environment, testType);
   return {
     reportUrl: `${base}/playwright/index.html`,
-    allureUrl: `${base}/allure/index.html`,
+    ortoniUrl: `${base}/ortoni/index.html`,
   };
 }
 
 // ─── History helpers ──────────────────────────────────────────────────────────
 
 /**
- * Strips `failedTests` from runs outside the detail window (in-place).
- * Runs are expected to be sorted newest-first.
+ * Strips `failedTests` and `flakyTests` from runs outside the detail window
+ * (in-place). Runs are expected to be sorted newest-first.
  */
 export function applyDetailWindow(runs: TestRun[], detailWindow: number): void {
   for (let i = detailWindow; i < runs.length; i++) {
-    if ((runs[i].failedTests?.length ?? 0) > 0 || !runs[i].failedTestsStripped) {
+    const hasDetail =
+      (runs[i].failedTests?.length ?? 0) > 0 || (runs[i].flakyTests?.length ?? 0) > 0;
+    if (hasDetail || !runs[i].failedTestsStripped) {
       runs[i].failedTests = [];
+      runs[i].flakyTests = [];
       runs[i].failedTestsStripped = true;
     }
   }
@@ -71,10 +81,10 @@ export function applyDetailWindow(runs: TestRun[], detailWindow: number): void {
 
 /**
  * Converts a full `TestRun` to a lightweight `RunSummary` by removing
- * the `failedTests` and `failedTestsStripped` fields.
+ * the `failedTests`, `flakyTests`, and `failedTestsStripped` fields.
  */
 export function toSummary(run: TestRun): RunSummary {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { failedTests, failedTestsStripped, ...summary } = run;
+  const { failedTests, flakyTests, failedTestsStripped, ...summary } = run;
   return summary;
 }

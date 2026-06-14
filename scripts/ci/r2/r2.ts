@@ -4,7 +4,7 @@
  * replaces an inline `aws s3` block in the workflow, pulling the endpoint, bucket,
  * and key layout from shared/r2.constants.ts so nothing is hardcoded in the YAML.
  *
- * Usage: tsx scripts/ci/r2/r2.ts <download-history | upload-history | upload-reports>
+ * Usage: tsx scripts/ci/r2/r2.ts <download-history | upload-history | upload-reports | report-urls>
  * Credentials are read by the aws CLI from AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY.
  */
 
@@ -16,6 +16,7 @@ import {
   TEST_HISTORY_FILE,
   r2HistoryUri,
   r2BuildReportsBase,
+  r2PublicReportsBase,
 } from "../shared/r2.constants.js";
 
 const LOCAL_HISTORY_PATH = `./${TEST_HISTORY_FILE}`;
@@ -65,19 +66,26 @@ function uploadHistory(): void {
 }
 
 /**
- * Uploads the merged Playwright and Ortoni reports for the current run to R2.
- * Each report directory is skipped if it was not produced by the run.
+ * Reads the per-run identifiers from the environment, exiting if any are absent.
+ * @returns The GitHub run number, environment slug, and test type.
  */
-function uploadReports(): void {
+function runContext(): { runNumber: string; env: string; testType: string } {
   const runNumber = process.env.GITHUB_RUN_NUMBER;
   const env = process.env.ENV;
   const testType = process.env.TEST_TYPE;
   if (!runNumber || !env || !testType) {
-    logger.error(
-      "GITHUB_RUN_NUMBER, ENV and TEST_TYPE must be set to upload build reports.",
-    );
+    logger.error("GITHUB_RUN_NUMBER, ENV and TEST_TYPE must be set.");
     process.exit(1);
   }
+  return { runNumber, env, testType };
+}
+
+/**
+ * Uploads the merged Playwright and Ortoni reports for the current run to R2.
+ * Each report directory is skipped if it was not produced by the run.
+ */
+function uploadReports(): void {
+  const { runNumber, env, testType } = runContext();
 
   const base = r2BuildReportsBase(runNumber, env, testType);
 
@@ -96,6 +104,19 @@ function uploadReports(): void {
 }
 
 /**
+ * Prints the public Playwright and Ortoni report URLs for the current run as a
+ * single Markdown links line on stdout, for embedding in the job summary.
+ */
+function reportUrls(): void {
+  const { runNumber, env, testType } = runContext();
+  const base = r2PublicReportsBase(runNumber, env, testType);
+  // Plain stdout (not the logger) so the workflow can append it to the summary.
+  process.stdout.write(
+    `[Playwright report](${base}/playwright/index.html) · [Ortoni report](${base}/ortoni/index.html)\n`,
+  );
+}
+
+/**
  * Dispatches the requested R2 subcommand.
  */
 function main(): void {
@@ -110,9 +131,12 @@ function main(): void {
     case "upload-reports":
       uploadReports();
       break;
+    case "report-urls":
+      reportUrls();
+      break;
     default:
       logger.error(
-        `Unknown command "${command ?? ""}". Expected: download-history | upload-history | upload-reports.`,
+        `Unknown command "${command ?? ""}". Expected: download-history | upload-history | upload-reports | report-urls.`,
       );
       process.exit(1);
   }

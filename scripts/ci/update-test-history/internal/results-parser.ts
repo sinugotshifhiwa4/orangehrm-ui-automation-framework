@@ -7,7 +7,7 @@
 
 import fs from "fs";
 
-import { MAX_FAILED_TESTS_STORED } from "./constants.js";
+import { MAX_FAILED_TESTS_STORED, MAX_FLAKY_TESTS_STORED } from "./constants.js";
 import { logger } from "../../../logger/logger.js";
 import { truncate } from "./helpers.js";
 import type {
@@ -37,9 +37,12 @@ export class ResultsParser {
     );
 
     const failedTests: FailedTest[] = [];
-    this.collectFailedSpecs(suites, failedTests);
+    const flakyTests: FailedTest[] = [];
+    this.collectSpecs(suites, failedTests, flakyTests);
 
-    logger.info(`[update-test-history] Failed specs captured: ${failedTests.length}`);
+    logger.info(
+      `[update-test-history] Specs captured — failed=${failedTests.length} flaky=${flakyTests.length}`,
+    );
 
     return {
       passed: stats.expected,
@@ -48,31 +51,35 @@ export class ResultsParser {
       flaky: stats.flaky,
       durationMs: stats.duration,
       failedTests,
+      flakyTests,
     };
   }
 
   /**
-   * Recursively walks the suite tree to collect all failed specs.
-   * Playwright nests suites as: file suite → describe suite → specs.
+   * Recursively walks the suite tree to collect failed and flaky specs.
+   * Playwright nests suites as: file suite → describe suite → specs. A flaky
+   * spec passes overall (`spec.ok === true`) but has a test that ran again and
+   * was marked "flaky", so it must be detected separately from failures.
+   * @param suites - The suite nodes to walk.
+   * @param failedTests - Accumulator for failed spec entries (mutated in place).
+   * @param flakyTests - Accumulator for flaky spec entries (mutated in place).
+   * @returns Nothing; both accumulators are populated by reference.
    */
-  private collectFailedSpecs(
+  private collectSpecs(
     suites: PlaywrightJsonSuite[],
     failedTests: FailedTest[],
+    flakyTests: FailedTest[],
   ): void {
     for (const suite of suites) {
       // Recurse into nested describe blocks first
       if (suite.suites && suite.suites.length > 0) {
-        this.collectFailedSpecs(suite.suites, failedTests);
+        this.collectSpecs(suite.suites, failedTests, flakyTests);
       }
 
       for (const spec of suite.specs) {
-        if (spec.ok) continue;
-        if (failedTests.length >= MAX_FAILED_TESTS_STORED) return;
-
-        // A spec can have multiple test entries (retries).
-        // Determine kind from the first non-passing test result.
-        const failingTest = spec.tests.find((t) => t.status === "unexpected");
-        const kind: "failure" | "error" = failingTest ? "failure" : "error";
+        const isFlaky = spec.tests.some((t) => t.status === "flaky");
+        const isFailed = !spec.ok;
+        if (!isFailed && !isFlaky) continue;
 
         // Setup-project failures can report tests with an undefined `duration`,
         // which would propagate NaN here and become `null` in JSON. Coerce to 0.
@@ -80,14 +87,20 @@ export class ResultsParser {
           (sum, t) => sum + (Number.isFinite(t.duration) ? t.duration : 0),
           0,
         );
-        const durationSec = Math.round(totalMs) / 1000;
-
-        failedTests.push({
+        const base = {
           name: truncate(spec.title, 200),
           classname: truncate(spec.file, 200),
-          durationSec,
-          kind,
-        });
+          durationSec: Math.round(totalMs) / 1000,
+        };
+
+        if (isFailed) {
+          if (failedTests.length >= MAX_FAILED_TESTS_STORED) continue;
+          // Determine kind from the first non-passing test result.
+          const failingTest = spec.tests.find((t) => t.status === "unexpected");
+          failedTests.push({ ...base, kind: failingTest ? "failure" : "error" });
+        } else if (flakyTests.length < MAX_FLAKY_TESTS_STORED) {
+          flakyTests.push({ ...base, kind: "flaky" });
+        }
       }
     }
   }

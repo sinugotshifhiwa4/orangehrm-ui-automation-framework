@@ -21,13 +21,14 @@ export interface FailedTest {
   classname: string;
   /** Duration of this individual test case in seconds. */
   durationSec: number;
-  /** "failure" = assertion; "error" = unexpected exception. */
-  kind: "failure" | "error";
+  /** "failure" = assertion; "error" = unexpected exception; "flaky" = passed on retry. */
+  kind: "failure" | "error" | "flaky";
 }
 
 /**
  * TIER 3 — full detail row, stored in byBranch buckets.
- * `failedTests` may be stripped (set to []) on older runs to save space.
+ * `failedTests` and `flakyTests` may be stripped (set to []) on older runs to
+ * save space.
  */
 export interface TestRun {
   runNumber: number;
@@ -38,7 +39,6 @@ export interface TestRun {
   commitSha: string;
   env: string;
   testType: string;
-  userRole: string;
   passed: number;
   failed: number;
   skipped: number;
@@ -49,13 +49,17 @@ export interface TestRun {
   durationMs: number;
   durationMin: string;
   reportUrl: string;
-  allureUrl: string;
+  ortoniUrl: string;
   failedTests: FailedTest[];
+  flakyTests: FailedTest[];
   failedTestsStripped?: boolean;
 }
 
-/** TIER 2 — lightweight summary row, omits failedTests detail. */
-export type RunSummary = Omit<TestRun, "failedTests" | "failedTestsStripped">;
+/** TIER 2 — lightweight summary row, omits failedTests/flakyTests detail. */
+export type RunSummary = Omit<
+  TestRun,
+  "failedTests" | "flakyTests" | "failedTestsStripped"
+>;
 
 export interface TestTypeHistory {
   testType: string;
@@ -124,4 +128,5 @@ export interface ParseResult {
   flaky: number;
   durationMs: number;
   failedTests: FailedTest[];
+  flakyTests: FailedTest[];
 }
