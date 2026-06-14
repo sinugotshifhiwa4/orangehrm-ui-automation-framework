@@ -42,7 +42,7 @@ The framework uses three broad kinds of tags.
   - `@regression` — the broader regression set.
 - **Feature tags** — describe the area under test. These map to the module or feature.
   - `@dashboard` is the feature tag in current use.
-  - Patterns for other areas look like `@purchase-orders` or `@shipping`.
+  - Patterns for other areas look like `@admin` or `@pim`.
 - **Behavior tags** — control framework behavior rather than scope.
   - `@authenticate` — marks the authentication setup spec.
   - `@skip-auth` — opts a test out of the shared authenticated state.
