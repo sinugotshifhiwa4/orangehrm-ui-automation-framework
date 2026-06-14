@@ -2,6 +2,9 @@ import type { Page } from "@playwright/test";
 import { PageActionsContainer } from "./internal/pageActionsContainer.js";
 import type { IPageActions } from "./internal/types/pageActions.js";
 
+/**
+ * Base class for all page objects, exposing shared action helpers bound to the page.
+ */
 export class BasePage {
   public readonly page: Page;
 

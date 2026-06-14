@@ -8,6 +8,9 @@ import { FrameActions } from "./actions/frameActions.js";
 import { FileActions } from "./actions/fileActions.js";
 import type { IPageActions } from "./types/pageActions.js";
 
+/**
+ * Aggregates all action helpers for a page, eagerly creating common ones and lazy-loading the rest.
+ */
 export class PageActionsContainer implements IPageActions {
   public readonly page: Page;
 
@@ -45,9 +48,8 @@ export class PageActionsContainer implements IPageActions {
   // Lazy getters for rarely used actions
 
   /**
-   * Returns the BrowserActions object.
-   *
-   * @returns {BrowserActions} The BrowserActions object.
+   * Returns the BrowserActions object, instantiating it on first access.
+   * @returns The BrowserActions object.
    */
   get browser(): BrowserActions {
     if (!this._browser) {
@@ -57,8 +59,8 @@ export class PageActionsContainer implements IPageActions {
   }
 
   /**
-   * Returns the FrameActions object.
-   * @returns {FrameActions} The FrameActions object.
+   * Returns the FrameActions object, instantiating it on first access.
+   * @returns The FrameActions object.
    */
   get frame(): FrameActions {
     if (!this._frame) {
@@ -73,8 +75,8 @@ export class PageActionsContainer implements IPageActions {
   }
 
   /**
-   * Returns the FileActions object.
-   * @returns {FileActions} The FileActions object.
+   * Returns the FileActions object, instantiating it on first access.
+   * @returns The FileActions object.
    */
   get file(): FileActions {
     if (!this._file) {

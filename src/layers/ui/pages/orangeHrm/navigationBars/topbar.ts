@@ -2,6 +2,9 @@ import type { Locator, Page } from "@playwright/test";
 import { BasePage } from "../../../base/basePage.js";
 import type { DashboardPage } from "../menuItems/dashboardPage.js";
 
+/**
+ * Page object for the OrangeHRM top navigation bar shown after login.
+ */
 export class TopBar extends BasePage {
   private dashboardPage: DashboardPage;
 

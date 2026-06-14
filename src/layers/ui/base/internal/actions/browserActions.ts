@@ -3,6 +3,9 @@ import { ActionBase } from "./actionBase.js";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 import logger from "../../../../../configuration/logger/loggerManager.js";
 
+/**
+ * Browser- and context-level actions: tabs, dialogs, cookies, scrolling, and screenshots.
+ */
 export class BrowserActions extends ActionBase {
   /**
    * Creates browser-level action helpers for the active page context.
@@ -13,7 +16,9 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Refresh the current page
+   * Reloads the current page.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves with the navigation response, or null.
    */
   public refreshPage(callerMethodName: string): Promise<Response | null> {
     return this.performAction(
@@ -25,12 +30,10 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Switches tab index to the specified index.
-   public async switchTab(index: number, callerMethodName: string,): Promise<void>
-   * await this.performAction
-   * @param index The index of the tab to switch to.
-   param callerMethodName The name of the method that called this function
-   * @returns A promise that resolves with void if the tab is switched successfully, or throws an error if the tab index does not exist
+   * Switches focus to the tab at the specified index.
+   * @param index - The index of the tab to switch to.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves when the tab is brought to front, or throws if the index does not exist.
    */
   public async switchTab(index: number, callerMethodName: string): Promise<void> {
     await this.performAction(
@@ -50,7 +53,9 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Close current tab
+   * Closes the current tab.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves when the tab has been closed.
    */
   public async closeTab(callerMethodName: string): Promise<void> {
     await this.performAction(
@@ -62,9 +67,11 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Handle JavaScript alert/confirm/prompt dialogs
-   * @param action Action to take: 'accept' or 'dismiss'
-   * @param promptText Text to enter for prompt dialogs (optional, only used for prompt type)
+   * Handles the next JavaScript alert/confirm/prompt dialog raised by the page.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param action - Action to take: "accept" or "dismiss".
+   * @param promptText - Text to enter for prompt dialogs (only used for prompt type).
+   * @returns A promise that resolves once the dialog has been handled.
    */
   public handleDialog(
     callerMethodName: string,
@@ -96,8 +103,9 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Get all cookies from current context
-   * @returns Array of cookies
+   * Gets all cookies from the current browser context.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves with the array of cookies.
    */
   public async getCookies(callerMethodName: string): Promise<Cookie[]> {
     return this.performAction(
@@ -109,8 +117,10 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Add cookie to current context
-   * @param cookie Cookie object to add
+   * Adds a cookie to the current browser context.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param cookie - The cookie object to add.
+   * @returns A promise that resolves when the cookie has been added.
    */
   public async addCookie(callerMethodName: string, cookie: Cookie): Promise<void> {
     await this.performAction(
@@ -122,7 +132,9 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Clear all cookies
+   * Clears all cookies from the current browser context.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves when all cookies have been cleared.
    */
   public async clearCookies(callerMethodName: string): Promise<void> {
     await this.performAction(
@@ -135,9 +147,9 @@ export class BrowserActions extends ActionBase {
 
   /**
    * Scrolls an element into view if it is not already visible.
-   * @param element The element locator to scroll into view.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element being scrolled into view.
+   * @param element - The element locator to scroll into view.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element being scrolled into view.
    * @returns A promise that resolves with the result of the scroll action if it succeeds, or rejects with the error if it fails.
    */
   public async scrollElementIntoView(
@@ -154,9 +166,11 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Scroll page to specific coordinates
-   * @param x X coordinate
-   * @param y Y coordinate
+   * Scrolls the page to specific coordinates.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param x - The X coordinate to scroll to.
+   * @param y - The Y coordinate to scroll to.
+   * @returns A promise that resolves when the page has scrolled.
    */
   public async scrollTo(callerMethodName: string, x: number, y: number): Promise<void> {
     await this.performAction(
@@ -168,10 +182,11 @@ export class BrowserActions extends ActionBase {
   }
 
   /**
-   * Attach a screenshot to the test report (Playwright HTML report).
-   * @param fileName The name to show in the report
-   * @param testInfo Playwright testInfo object
-   * @param page Optional: page to capture (defaults to `this.page`)
+   * Attaches a screenshot to the test report (Playwright HTML report).
+   * @param fileName - The name to show in the report.
+   * @param testInfo - The Playwright testInfo object.
+   * @param page - Optional page to capture (defaults to `this.page`).
+   * @returns A promise that resolves once the screenshot is attached.
    */
   public async attachScreenshotToReport(
     fileName: string,

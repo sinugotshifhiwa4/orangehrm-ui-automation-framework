@@ -2,6 +2,9 @@ import { type Page, type Locator, expect } from "@playwright/test";
 import { ActionBase } from "./actionBase.js";
 import type { AssertionElementState, ElementPropertyMap } from "../types/actions.type.js";
 
+/**
+ * Element assertions and property readers: visibility, state, count, attributes, and classes.
+ */
 export class ElementAssertions extends ActionBase {
   /**
    * Creates element assertion helpers for the active page.
@@ -13,11 +16,11 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Retrieves an element property.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called the action.
-   * @param propertyType The type of property to retrieve.
-   * @param elementName The name of the element.
-   * @param options Optional: options for retrieving the property.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param propertyType - The type of property to retrieve.
+   * @param elementName - The name of the element.
+   * @param options - Optional: options for retrieving the property.
    * @returns The retrieved property value.
    */
   public async getElementProperty<K extends keyof ElementPropertyMap>(
@@ -73,9 +76,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Retrieves all text content from multiple elements.
-   * @param elements The Locator of elements to retrieve text content from.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the elements.
+   * @param elements - The Locator of elements to retrieve text content from.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the elements.
    * @returns An array of text content from all matching elements.
    */
   public async getAllTextContents(
@@ -95,9 +98,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Checks if an element is visible.
-   * @param element The Locator of the element to check.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to check.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with true if the element is visible, or false otherwise.
    */
   public async isElementVisible(
@@ -115,9 +118,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Retrieves the count of matching elements.
-   * @param element The Locator of elements to retrieve the count from.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the elements.
+   * @param element - The Locator of elements to retrieve the count from.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the elements.
    * @returns A promise that resolves with the count of matching elements.
    */
   public async getElementCount(
@@ -136,10 +139,10 @@ export class ElementAssertions extends ActionBase {
   /**
    * Verifies that a locator resolves to an exact number of matching elements.
    * Uses Playwright's auto-retrying assertion so it waits for elements to render.
-   * @param element The Locator of elements to count.
-   * @param callerMethodName The name of the method that called the action.
-   * @param expectedCount The exact number of elements expected.
-   * @param elementName The name of the elements.
+   * @param element - The Locator of elements to count.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param expectedCount - The exact number of elements expected.
+   * @param elementName - The name of the elements.
    * @returns A promise that resolves once the expected count is matched.
    */
   public async verifyElementCount(
@@ -160,9 +163,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Retrieves the bounding box of an element.
-   * @param element The Locator of the element to retrieve the bounding box from.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to retrieve the bounding box from.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the bounding box, or null if unavailable.
    */
   public async getBoundingBox(
@@ -180,10 +183,11 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Verifies that an element is in a specified state.
-   * @param element The Locator of the element to verify.
-   * @param callerMethodName The name of the method that called the action.
-   * @param state The desired state: "enabled", "disabled", "visible", or "hidden".
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to verify.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param state - The desired state: "enabled", "disabled", "visible", or "hidden".
+   * @param elementName - The name of the element.
+   * @returns A promise that resolves when the element state assertion passes.
    */
   public async verifyElementState(
     element: Locator,
@@ -216,9 +220,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Checks if an element is editable.
-   * @param element The Locator of the element to check.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to check.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with true if the element is editable, or false otherwise.
    */
   public async isElementEditable(
@@ -236,9 +240,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Checks if an element is checked.
-   * @param element The Locator of the element to check.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to check.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with true if the element is checked, or false otherwise.
    */
   public async isElementChecked(
@@ -256,9 +260,9 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Checks if an element is disabled.
-   * @param element The Locator of the element to check.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to check.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with true if the element is disabled, or false otherwise.
    */
   public async isElementDisabled(
@@ -276,10 +280,10 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Verifies the state of a checkbox.
-   * @param element The Locator of the element to verify.
-   * @param callerMethodName The name of the method that called the action.
-   * @param isChecked Whether the checkbox should be checked or not.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to verify.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param isChecked - Whether the checkbox should be checked or not.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves if the verification succeeds, or rejects with an error if it fails.
    */
   public async verifyCheckboxState(
@@ -304,9 +308,10 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Check whether a locator has a given attribute (regardless of its value).
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param attr The attribute name to check.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param attr - The attribute name to check.
+   * @returns A promise that resolves with true if the attribute is present, false otherwise.
    */
   public async hasAttribute(
     element: Locator,
@@ -323,9 +328,10 @@ export class ElementAssertions extends ActionBase {
 
   /**
    * Returns the value of an attribute, or null if it is absent.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param attr The attribute name to retrieve.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param attr - The attribute name to retrieve.
+   * @returns A promise that resolves with the attribute value, or null if absent.
    */
   public async getAttributeValue(
     element: Locator,
@@ -343,9 +349,10 @@ export class ElementAssertions extends ActionBase {
   /**
    * Check whether a locator contains a specific CSS class.
    * Uses a word-boundary regex to avoid partial matches (e.g. "btn" inside "btn-primary").
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param className The CSS class name to look for.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param className - The CSS class name to look for.
+   * @returns A promise that resolves with true if the class is present, false otherwise.
    */
   public async hasClass(
     element: Locator,

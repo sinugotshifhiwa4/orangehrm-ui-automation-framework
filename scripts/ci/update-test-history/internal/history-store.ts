@@ -31,6 +31,7 @@ export class HistoryStore {
   /**
    * Reads and parses the backing file, applying any necessary migrations.
    * Falls back to a fresh empty history if the file is missing or corrupt.
+   * @returns This store, for chaining.
    */
   load(): this {
     if (!fs.existsSync(this.filePath)) {
@@ -56,6 +57,8 @@ export class HistoryStore {
    *   TIER 3 — byBranch bucket (with detail-window enforcement)
    *   TIER 2 — lightweight index
    *   TIER 1 — meta counters
+   * @param newRun - The run to insert into the history.
+   * @returns This store, for chaining.
    */
   update(newRun: TestRun): this {
     const { branch, testType, timestamp } = newRun;
@@ -95,7 +98,12 @@ export class HistoryStore {
     fs.writeFileSync(this.filePath, JSON.stringify(this.history, null, 2), "utf-8");
   }
 
-  /** Returns the detail bucket for a given branch + testType. */
+  /**
+   * Returns the detail bucket for a given branch + testType.
+   * @param branch - The branch name the bucket belongs to.
+   * @param testType - The test type the bucket belongs to.
+   * @returns The detail bucket for the branch and test type.
+   */
   getBucket(branch: string, testType: string): TestTypeHistory {
     return this.history.byBranch[branch].byTestType[testType];
   }
@@ -112,6 +120,11 @@ export class HistoryStore {
 
   // ─── Internal ────────────────────────────────────────────────────────────
 
+  /**
+   * Builds a fresh, empty history structure.
+   * @param now - Timestamp (ms) used for the initial `lastUpdated` value.
+   * @returns An empty history file with zeroed counters.
+   */
   private static emptyHistory(now: number): HistoryFile {
     return {
       meta: {
@@ -124,7 +137,11 @@ export class HistoryStore {
     };
   }
 
-  /** Migrates the old flat shape (`byTestType` at root) → branch-scoped shape. */
+  /**
+   * Migrates the old flat shape (`byTestType` at root) → branch-scoped shape.
+   * @param raw - The parsed file contents, possibly in the legacy shape.
+   * @returns A history file in the current branch-scoped shape.
+   */
   private static migrateIfNeeded(
     raw: Partial<HistoryFile> & Record<string, unknown>,
   ): HistoryFile {

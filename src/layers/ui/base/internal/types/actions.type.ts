@@ -13,6 +13,9 @@ export type WaitForElementState = "visible" | "hidden" | "attached" | "detached"
  */
 export type FileUploadMethod = "fileChooser" | "input";
 
+/**
+ * Maps each supported element property type to the value shape its getter returns.
+ */
 export type ElementPropertyMap = {
   attribute: string | null;
   dimensions: { width: number; height: number };

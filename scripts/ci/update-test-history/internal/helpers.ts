@@ -11,6 +11,9 @@ import type { TestRun, RunSummary } from "../types/types.js";
 
 /**
  * Reads an environment variable, returning `fallback` when absent or empty.
+ * @param key - The environment variable name to read.
+ * @param fallback - Value returned when the variable is unset.
+ * @returns The variable value, or the fallback.
  */
 export function env(key: string, fallback = ""): string {
   return process.env[key] ?? fallback;
@@ -18,6 +21,8 @@ export function env(key: string, fallback = ""): string {
 
 /**
  * Formats a millisecond duration as a human-readable string.
+ * @param ms - The duration in milliseconds.
+ * @returns The formatted duration (e.g. "2m 5s" or "45s").
  * @example formatDuration(125_000) // "2m 5s"
  * @example formatDuration(45_000)  // "45s"
  */
@@ -31,6 +36,9 @@ export function formatDuration(ms: number): string {
 
 /**
  * Truncates a string to `maxLen` characters, appending "…" when trimmed.
+ * @param s - The string to truncate.
+ * @param maxLen - The maximum length of the returned string.
+ * @returns The trimmed string, shortened with an ellipsis if it exceeded the limit.
  */
 export function truncate(s: string, maxLen: number): string {
   const trimmed = s.trim();
@@ -66,6 +74,8 @@ export function buildReportUrls(
 /**
  * Strips `failedTests` and `flakyTests` from runs outside the detail window
  * (in-place). Runs are expected to be sorted newest-first.
+ * @param runs - The runs to process, newest-first; mutated in place.
+ * @param detailWindow - Number of leading runs that keep their full detail.
  */
 export function applyDetailWindow(runs: TestRun[], detailWindow: number): void {
   for (let i = detailWindow; i < runs.length; i++) {
@@ -82,6 +92,8 @@ export function applyDetailWindow(runs: TestRun[], detailWindow: number): void {
 /**
  * Converts a full `TestRun` to a lightweight `RunSummary` by removing
  * the `failedTests`, `flakyTests`, and `failedTestsStripped` fields.
+ * @param run - The full run to convert.
+ * @returns The run without its detail fields.
  */
 export function toSummary(run: TestRun): RunSummary {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

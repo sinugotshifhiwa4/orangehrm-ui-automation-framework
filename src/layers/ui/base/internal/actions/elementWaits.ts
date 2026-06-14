@@ -8,6 +8,9 @@ import {
 } from "../../../../../configuration/timeouts/ui.timeouts.js";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 
+/**
+ * Element wait helpers: waiting for states, attributes, classes, and UI stabilization.
+ */
 export class ElementWaits extends ActionBase {
   /**
    * Creates element wait helpers for the active page.
@@ -19,11 +22,11 @@ export class ElementWaits extends ActionBase {
 
   /**
    * Waits for an element to be in a specified state.
-   * @param element The Locator of the element to wait for.
-   * @param callerMethodName The name of the method that called the action.
-   * @param state The desired state: "attached", "detached", "visible", or "hidden".
-   * @param elementName The name of the element.
-   * @param options Optional: timeout for the wait action.
+   * @param element - The Locator of the element to wait for.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param state - The desired state: "attached", "detached", "visible", or "hidden".
+   * @param elementName - The name of the element.
+   * @param options - Optional: timeout for the wait action.
    * @returns A promise that resolves when the element reaches the state, or rejects if it fails.
    */
   public async waitForElementState(
@@ -48,11 +51,11 @@ export class ElementWaits extends ActionBase {
 
   /**
    * Checks if an element reaches a specified state within the timeout period.
-   * @param element The Locator of the element to wait for.
-   * @param callerMethodName The name of the method that called the action.
-   * @param state The desired state: "attached", "detached", "visible", or "hidden".
-   * @param elementName The name of the element.
-   * @param options Optional: timeout for the wait action.
+   * @param element - The Locator of the element to wait for.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param state - The desired state: "attached", "detached", "visible", or "hidden".
+   * @param elementName - The name of the element.
+   * @param options - Optional: timeout for the wait action.
    * @returns A promise that resolves with true if the state is reached, or false if it times out.
    */
   public async isElementStateReached(
@@ -90,10 +93,10 @@ export class ElementWaits extends ActionBase {
    * Waits for an element to stabilize with a specific keyword.
    * Uses expect-poll to continuously check the input value until it matches
    * the keyword four times in a row. Useful for dynamically updated fields.
-   * @param element The Locator of the element to wait for.
-   * @param callerMethodName The name of the method that called this function.
-   * @param keyword The keyword to wait for.
-   * @param elementName The name of the element.
+   * @param element - The Locator of the element to wait for.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param keyword - The keyword to wait for.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves when the element stabilizes, or rejects if it fails.
    */
   public async waitForUIToStabilize(
@@ -136,10 +139,10 @@ export class ElementWaits extends ActionBase {
    * Waits for the first visible locator from a list of locator-result pairs.
    * Returns the result corresponding to whichever locator becomes visible first.
    * Throws if no locator becomes visible within the timeout.
-   * @param locatorResultPairs An array of objects containing a locator and its corresponding result.
-   * @param timeout The timeout in milliseconds.
-   * @param methodName The name of the method that called this function.
-   * @param errorMessage The error message to throw on timeout.
+   * @param locatorResultPairs - An array of objects containing a locator and its corresponding result.
+   * @param timeout - The timeout in milliseconds.
+   * @param methodName - The name of the method that called this function.
+   * @param errorMessage - The error message to throw on timeout.
    * @returns A promise that resolves with the result of the first visible locator.
    *
    * @example
@@ -180,11 +183,12 @@ export class ElementWaits extends ActionBase {
 
   /**
    * Polls until a locator's attribute equals the expected value, or timeout is reached.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param attr The attribute name to watch.
-   * @param value The expected attribute value.
-   * @param timeout Maximum wait time in milliseconds (default: UI_SHORT_TIMEOUT).
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param attr - The attribute name to watch.
+   * @param value - The expected attribute value.
+   * @param timeout - Maximum wait time in milliseconds (default: UI_SHORT_TIMEOUT).
+   * @returns A promise that resolves when the attribute reaches the expected value.
    */
   public async waitForAttributeValue(
     element: Locator,
@@ -220,10 +224,11 @@ export class ElementWaits extends ActionBase {
 
   /**
    * Polls until a locator has a specific CSS class, or timeout is reached.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param className The CSS class to wait for.
-   * @param timeout Maximum wait time in milliseconds (default: UI_SHORT_TIMEOUT).
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param className - The CSS class to wait for.
+   * @param timeout - Maximum wait time in milliseconds (default: UI_SHORT_TIMEOUT).
+   * @returns A promise that resolves when the class appears on the element.
    */
   public async waitForClass(
     element: Locator,

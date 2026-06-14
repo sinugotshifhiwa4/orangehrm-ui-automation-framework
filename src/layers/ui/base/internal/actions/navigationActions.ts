@@ -1,6 +1,9 @@
 import { type Page, type Response, expect } from "@playwright/test";
 import { ActionBase } from "./actionBase.js";
 
+/**
+ * Navigation actions: visiting URLs, history, page load waits, and URL/title assertions.
+ */
 export class NavigationActions extends ActionBase {
   /**
    * Creates navigation helpers for the active page.
@@ -12,9 +15,9 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Navigates to a specified URL.
-   * @param url The URL to navigate to.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional navigation options.
+   * @param url - The URL to navigate to.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional navigation options.
    * @returns A promise that resolves with the response or null.
    */
   public async navigateToUrl(
@@ -35,8 +38,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Reloads the current page.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional reload options.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional reload options.
    * @returns A promise that resolves with the response or null.
    */
   public async reloadPage(
@@ -56,8 +59,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Navigates back in browser history.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional navigation options.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional navigation options.
    * @returns A promise that resolves with the response or null.
    */
   public async goBack(
@@ -77,8 +80,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Navigates forward in browser history.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional navigation options.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional navigation options.
    * @returns A promise that resolves with the response or null.
    */
   public async goForward(
@@ -98,7 +101,7 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Gets the current page URL.
-   * @param callerMethodName The name of the method that called this function.
+   * @param callerMethodName - The name of the method that called this function.
    * @returns The current URL as a string.
    */
   public async getCurrentUrl(callerMethodName: string): Promise<string> {
@@ -112,7 +115,7 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Gets the current page title.
-   * @param callerMethodName The name of the method that called this function.
+   * @param callerMethodName - The name of the method that called this function.
    * @returns A promise that resolves with the page title.
    */
   public async getPageTitle(callerMethodName: string): Promise<string> {
@@ -126,9 +129,10 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Verifies that the current page URL matches the expected URL.
-   * @param expectedUrl The expected URL or pattern to verify against.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional timeout configuration.
+   * @param expectedUrl - The expected URL or pattern to verify against.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional timeout configuration.
+   * @returns A promise that resolves when the URL assertion passes.
    */
   public async verifyPageUrl(
     expectedUrl: string | RegExp,
@@ -149,9 +153,10 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Verifies that the page title matches the expected title.
-   * @param expectedTitle The expected title or pattern to verify against.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional timeout configuration.
+   * @param expectedTitle - The expected title or pattern to verify against.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional timeout configuration.
+   * @returns A promise that resolves when the title assertion passes.
    */
   public async verifyPageTitle(
     expectedTitle: string | RegExp,
@@ -172,9 +177,10 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Waits for the URL to match a specified pattern.
-   * @param pattern URL pattern (string or regex) to match.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional timeout and waitUntil options.
+   * @param pattern - URL pattern (string or regex) to match.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional timeout and waitUntil options.
+   * @returns A promise that resolves when the URL matches the pattern.
    */
   public async waitForURL(
     pattern: string | RegExp,
@@ -194,9 +200,10 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Waits for the page to be fully loaded.
-   * @param callerMethodName The name of the method that called this function.
-   * @param state The load state to wait for.
-   * @param options Optional timeout.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param state - The load state to wait for.
+   * @param options - Optional timeout.
+   * @returns A promise that resolves when the page reaches the load state.
    */
   public async waitForPageLoad(
     callerMethodName: string,
@@ -213,9 +220,9 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Waits for navigation to complete after an action.
-   * @param action The action that triggers navigation.
-   * @param callerMethodName The name of the method that called this function.
-   * @param options Optional timeout and waitUntil options.
+   * @param action - The action that triggers navigation.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param options - Optional timeout and waitUntil options.
    * @returns A promise that resolves with the response or null.
    */
   public async waitForNavigation(
@@ -242,8 +249,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Checks if the current URL contains a specific substring.
-   * @param substring The substring to check for in the URL.
-   * @param callerMethodName The name of the method that called this function.
+   * @param substring - The substring to check for in the URL.
+   * @param callerMethodName - The name of the method that called this function.
    * @returns True if the URL contains the substring, false otherwise.
    */
   public async urlContains(
@@ -260,8 +267,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Checks if the current URL matches a regex pattern.
-   * @param pattern The regex pattern to match against the URL.
-   * @param callerMethodName The name of the method that called this function.
+   * @param pattern - The regex pattern to match against the URL.
+   * @param callerMethodName - The name of the method that called this function.
    * @returns True if the URL matches the pattern, false otherwise.
    */
   public async urlMatches(pattern: RegExp, callerMethodName: string): Promise<boolean> {
@@ -275,7 +282,8 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Brings the page to the front (activates the tab).
-   * @param callerMethodName The name of the method that called this function.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves when the page has been brought to front.
    */
   public async bringToFront(callerMethodName: string): Promise<void> {
     await this.performAction(
@@ -288,9 +296,10 @@ export class NavigationActions extends ActionBase {
 
   /**
    * Sets the viewport size.
-   * @param width The viewport width.
-   * @param height The viewport height.
-   * @param callerMethodName The name of the method that called this function.
+   * @param width - The viewport width.
+   * @param height - The viewport height.
+   * @param callerMethodName - The name of the method that called this function.
+   * @returns A promise that resolves when the viewport size has been set.
    */
   public async setViewportSize(
     width: number,

@@ -5,6 +5,9 @@ import type { ElementAssertions } from "./elementAssertions.js";
 import type { ElementWaits } from "./elementWaits.js";
 import { UI_FRAME_TIMEOUT } from "../../../../../configuration/timeouts/ui.timeouts.js";
 
+/**
+ * Frame interaction actions: locating frames and performing element actions within them.
+ */
 export class FrameActions extends ActionBase {
   private elementActions: ElementActions;
 
@@ -33,8 +36,8 @@ export class FrameActions extends ActionBase {
 
   /**
    * Retrieves a frame by its name.
-   * @param frameName The name attribute of the frame.
-   * @param callerMethodName The name of the method that called the action.
+   * @param frameName - The name attribute of the frame.
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A promise that resolves with the frame if found, or null if not found.
    */
   public async getFrameByName(
@@ -51,8 +54,8 @@ export class FrameActions extends ActionBase {
 
   /**
    * Retrieves a frame by its URL.
-   * @param frameUrl The URL of the frame (can be a string or regex).
-   * @param callerMethodName The name of the method that called the action.
+   * @param frameUrl - The URL of the frame (can be a string or regex).
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A promise that resolves with the frame if found, or null if not found.
    */
   public async getFrameByUrl(
@@ -69,8 +72,8 @@ export class FrameActions extends ActionBase {
 
   /**
    * Retrieves a FrameLocator by its name.
-   * @param frameName The name attribute of the frame.
-   * @param callerMethodName The name of the method that called the action.
+   * @param frameName - The name attribute of the frame.
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A FrameLocator for the specified frame.
    */
   public async getFrameLocator(
@@ -87,7 +90,7 @@ export class FrameActions extends ActionBase {
 
   /**
    * Retrieves all frames on the page.
-   * @param callerMethodName The name of the method that called the action.
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A promise that resolves with an array of all frames.
    */
   public async getAllFrames(callerMethodName: string): Promise<Frame[]> {
@@ -101,9 +104,9 @@ export class FrameActions extends ActionBase {
 
   /**
    * Waits for a frame to be available.
-   * @param frameName The name attribute of the frame.
-   * @param callerMethodName The name of the method that called the action.
-   * @param timeout Optional timeout in milliseconds.
+   * @param frameName - The name attribute of the frame.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param timeout - Optional timeout in milliseconds.
    * @returns A promise that resolves with the frame when available.
    */
   public async waitForFrame(
@@ -132,8 +135,8 @@ export class FrameActions extends ActionBase {
 
   /**
    * Switches to a frame and returns its context.
-   * @param frameName The name attribute of the frame.
-   * @param callerMethodName The name of the method that called the action.
+   * @param frameName - The name attribute of the frame.
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A promise that resolves with the frame context.
    */
   public async switchToFrame(
@@ -154,9 +157,9 @@ export class FrameActions extends ActionBase {
 
   /**
    * Gets a locator for an element within a specific frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
    * @returns A promise that resolves with the element locator.
    */
   public async getElementInFrame(
@@ -178,11 +181,12 @@ export class FrameActions extends ActionBase {
 
   /**
    * Clicks an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
-   * @param options Optional click options.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @param options - Optional click options.
+   * @returns A promise that resolves when the element has been clicked.
    */
   public async clickElementInFrame(
     frameName: string,
@@ -213,12 +217,13 @@ export class FrameActions extends ActionBase {
 
   /**
    * Fills an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param value The value to fill.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
-   * @param options Optional fill options.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param value - The value to fill.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @param options - Optional fill options.
+   * @returns A promise that resolves when the element has been filled.
    */
   public async fillElementInFrame(
     frameName: string,
@@ -251,10 +256,11 @@ export class FrameActions extends ActionBase {
 
   /**
    * Checks a checkbox or radio button within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the element has been checked.
    */
   public async checkElementInFrame(
     frameName: string,
@@ -285,10 +291,11 @@ export class FrameActions extends ActionBase {
 
   /**
    * Unchecks a checkbox within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the element has been unchecked.
    */
   public async uncheckElementInFrame(
     frameName: string,
@@ -319,11 +326,12 @@ export class FrameActions extends ActionBase {
 
   /**
    * Selects an option from a dropdown within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param optionValue The value of the option to select.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param optionValue - The value of the option to select.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the option has been selected.
    */
   public async selectOptionInFrame(
     frameName: string,
@@ -354,10 +362,11 @@ export class FrameActions extends ActionBase {
 
   /**
    * Hovers over an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the element has been hovered.
    */
   public async hoverElementInFrame(
     frameName: string,
@@ -382,11 +391,12 @@ export class FrameActions extends ActionBase {
 
   /**
    * Double-clicks an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
-   * @param options Optional double-click options.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @param options - Optional double-click options.
+   * @returns A promise that resolves when the element has been double-clicked.
    */
   public async doubleClickElementInFrame(
     frameName: string,
@@ -417,11 +427,12 @@ export class FrameActions extends ActionBase {
 
   /**
    * Right-clicks an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
-   * @param options Optional right-click options.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @param options - Optional right-click options.
+   * @returns A promise that resolves when the element has been right-clicked.
    */
   public async rightClickElementInFrame(
     frameName: string,
@@ -452,10 +463,10 @@ export class FrameActions extends ActionBase {
 
   /**
    * Gets text content from an element within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
    * @returns A promise that resolves with the text content.
    */
   public async getTextFromFrame(
@@ -487,11 +498,12 @@ export class FrameActions extends ActionBase {
 
   /**
    * Verifies element state within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param state The expected state.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param state - The expected state.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the element state assertion passes.
    */
   public async verifyElementStateInFrame(
     frameName: string,
@@ -522,10 +534,11 @@ export class FrameActions extends ActionBase {
 
   /**
    * Waits for an element to be visible within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
+   * @returns A promise that resolves when the element is visible in the frame.
    */
   public async waitForElementInFrame(
     frameName: string,
@@ -555,10 +568,10 @@ export class FrameActions extends ActionBase {
 
   /**
    * Checks if an element is visible within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the element.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the element.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the element.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the element.
    * @returns A promise that resolves with true if visible, false otherwise.
    */
   public async isElementVisibleInFrame(
@@ -588,10 +601,10 @@ export class FrameActions extends ActionBase {
 
   /**
    * Gets the count of elements matching a selector within a frame.
-   * @param frameName The name attribute of the frame.
-   * @param selector The CSS selector for the elements.
-   * @param callerMethodName The name of the method that called the action.
-   * @param elementName Name of the elements.
+   * @param frameName - The name attribute of the frame.
+   * @param selector - The CSS selector for the elements.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param elementName - Name of the elements.
    * @returns A promise that resolves with the count.
    */
   public async getElementCountInFrame(

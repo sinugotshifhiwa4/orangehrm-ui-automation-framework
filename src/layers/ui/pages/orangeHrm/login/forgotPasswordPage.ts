@@ -3,6 +3,9 @@ import { BasePage } from "../../../base/basePage.js";
 import type { Username } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 
+/**
+ * Page object for the OrangeHRM forgot/reset password page.
+ */
 export class ForgotPasswordPage extends BasePage {
   private readonly resetPasswordHeader: Locator;
 
@@ -16,6 +19,10 @@ export class ForgotPasswordPage extends BasePage {
 
   private readonly resetPasswordSentMessage: Locator;
 
+  /**
+   * Creates the forgot password page object and resolves its form locators.
+   * @param page - Active Playwright page instance.
+   */
   constructor(page: Page) {
     super(page);
 
@@ -37,7 +44,7 @@ export class ForgotPasswordPage extends BasePage {
 
   /**
    * Submits a password reset request for the given username.
-   * @param username - The username to request a reset link for.
+   * @param option - The username to request a reset link for.
    * @returns A promise that resolves once the reset request has been submitted.
    */
   public async requestPasswordReset(option: Username): Promise<void> {
@@ -55,6 +62,10 @@ export class ForgotPasswordPage extends BasePage {
     }
   }
 
+  /**
+   * Verifies that the Reset Password header is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyResetPasswordHeaderIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.resetPasswordHeader,
@@ -64,6 +75,10 @@ export class ForgotPasswordPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies the reset-password success page: success header and sent message.
+   * @returns A promise that resolves when both visibility checks pass.
+   */
   public async verifyResetPasswordSuccessPageIsVisible(): Promise<void> {
     await Promise.all([
       this.verifyResetPasswordSuccessHeaderIsVisible(),
@@ -71,6 +86,10 @@ export class ForgotPasswordPage extends BasePage {
     ]);
   }
 
+  /**
+   * Verifies that the reset-password success header is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   private async verifyResetPasswordSuccessHeaderIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.resetPasswordSuccessHeader,
@@ -80,6 +99,10 @@ export class ForgotPasswordPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the "reset link sent" confirmation message is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   private async verifyResetPasswordSentMessageIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.resetPasswordSentMessage,
@@ -122,6 +145,10 @@ export class ForgotPasswordPage extends BasePage {
     );
   }
 
+  /**
+   * Clicks the Cancel button to return to the login page.
+   * @returns A promise that resolves when the button has been clicked.
+   */
   public async clickCancelButton(): Promise<void> {
     await this.elementActions.clickElement(
       this.cancelButton,

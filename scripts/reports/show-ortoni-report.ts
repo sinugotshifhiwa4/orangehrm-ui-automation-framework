@@ -45,6 +45,7 @@ function probePort(port: number): Promise<number | null> {
 /**
  * Resolves the port to serve the report on: the first free candidate port,
  * otherwise a random free port assigned by the OS.
+ * @returns The resolved free port number.
  */
 async function resolvePort(): Promise<number> {
   for (const candidate of CANDIDATE_PORTS) {
@@ -65,6 +66,10 @@ async function resolvePort(): Promise<number> {
   return fallback;
 }
 
+/**
+ * Resolves a free port and starts the Ortoni report server on it.
+ * @returns A promise that resolves when the report server process is spawned.
+ */
 async function main(): Promise<void> {
   const port = await resolvePort();
   logger.info(`Starting Ortoni report on http://${HOST}:${port}`);

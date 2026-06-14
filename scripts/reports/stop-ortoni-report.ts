@@ -58,6 +58,9 @@ function killPid(pid: number): void {
   }
 }
 
+/**
+ * Stops any Ortoni report servers listening on the candidate ports.
+ */
 function main(): void {
   let stopped = 0;
 
