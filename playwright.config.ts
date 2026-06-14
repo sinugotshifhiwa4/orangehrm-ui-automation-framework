@@ -68,7 +68,7 @@ export default defineConfig({
       mode: "retain-on-failure",
       size: resolvedViewport,
     },
-    screenshot: isCI ? "only-on-failure" : "on",
+    screenshot: "on",
     headless: !isHeaded,
 
     viewport: resolvedViewport,
