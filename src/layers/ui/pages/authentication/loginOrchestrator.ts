@@ -4,6 +4,9 @@ import type { EnvironmentResolver } from "../../../../configuration/resolution/r
 import type { AuthenticationStateManager } from "../../authentication/authenticationStateManager.js";
 import ErrorHandler from "../../../../utils/errorHandling/errorHandler.js";
 
+/**
+ * Coordinates portal navigation, login execution, and authentication-state persistence.
+ */
 export class LoginOrchestrator extends BasePage {
   private environmentResolver: EnvironmentResolver;
 
@@ -35,6 +38,20 @@ export class LoginOrchestrator extends BasePage {
   }
 
   /**
+   * Navigates to the portal and reports whether the injected session is still authenticated.
+   * An unauthenticated session is redirected by the portal to the login page.
+   * @returns A promise that resolves to true if the portal did not redirect to the login page.
+   */
+  public async isAuthenticatedSessionActive(): Promise<boolean> {
+    await this.navigateToPortal();
+    const redirectedToLogin = await this.navigation.urlContains(
+      "/auth/login",
+      "isAuthenticatedSessionActive",
+    );
+    return !redirectedToLogin;
+  }
+
+  /**
    * Navigates to the portal, performs login, validates success, and saves authentication state.
    * @param loginFn - A function that performs the login action.
    * @param validateLoginFn - A function that validates the success of the login attempt.
@@ -51,25 +68,6 @@ export class LoginOrchestrator extends BasePage {
       "loginWithValidCredentials",
       "Failed to log into portal",
       () => this.authenticationStateManager.saveAuthenticationState(),
-    );
-  }
-
-  /**
-   * Navigates to the portal, performs login, and validates the failure response.
-   * @param loginFn - A function that performs the login action.
-   * @param validateInvalidLoginFn - A function that validates the failure of the login attempt.
-   * @returns A promise that resolves when the login attempt has been validated.
-   * @throws Error if the validation fails.
-   */
-  public async loginWithInvalidCredentials(
-    loginFn: () => Promise<void>,
-    validateInvalidLoginFn: () => Promise<void>,
-  ): Promise<void> {
-    await this.executeLoginFlow(
-      loginFn,
-      validateInvalidLoginFn,
-      "loginWithInvalidCredentials",
-      "Failed to verify invalid login",
     );
   }
 

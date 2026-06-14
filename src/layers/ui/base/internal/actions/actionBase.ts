@@ -2,6 +2,9 @@ import type { Page } from "@playwright/test";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 import logger from "../../../../../configuration/logger/loggerManager.js";
 
+/**
+ * Base class for action helpers, providing shared error-handled action execution.
+ */
 export class ActionBase {
   protected readonly page: Page;
 
@@ -14,12 +17,12 @@ export class ActionBase {
   }
 
   /**
-   * Execute an action and handle any errors that may occur.
-   * @param {() => Promise<T>} action The action to execute.
-   * @param {string} callerMethodName The name of the method that called the action.
-   * @param {string} [successMessage] Message to log if the action succeeds.
-   * @param {string} [errorMessage] Message to log if the action fails.
-   * @returns {Promise<T>} A promise that resolves with the result of the action if it succeeds, or rejects with the error if it fails.
+   * Executes an action and handles any errors that may occur.
+   * @param action - The action to execute.
+   * @param callerMethodName - The name of the method that called the action.
+   * @param successMessage - Optional message to log if the action succeeds.
+   * @param errorMessage - Optional message to log if the action fails.
+   * @returns A promise that resolves with the result of the action, or rejects with the error if it fails.
    */
   public async performAction<T>(
     action: () => Promise<T>,

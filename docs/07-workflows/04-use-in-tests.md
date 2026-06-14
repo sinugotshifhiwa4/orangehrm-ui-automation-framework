@@ -21,7 +21,7 @@ It focuses on the **workflow** of wiring a fixture into a test. It does not rest
 
 ## Step 1: Request The Fixture In The Test
 
-Once the class is registered in `fixtures/test.fixture.ts`, request it from the test callback.
+Once the class is registered in `fixtures/test.ui.fixtures.ts`, request it from the test callback.
 
 Example pattern:
 

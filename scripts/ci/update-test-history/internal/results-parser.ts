@@ -22,7 +22,7 @@ export class ResultsParser {
 
   /**
    * Parses the Playwright JSON report and returns normalised stats.
-   *
+   * @returns The normalised parse result (counts, duration, failed/flaky specs).
    * @throws If the file cannot be read or parsed.
    */
   parse(): ParseResult {

@@ -2,9 +2,11 @@
 
 **[← Back to Main Documentation](../../../README.md)**
 
-This page explains how to register a new class in `fixtures/test.fixture.ts`.
+This page explains how to register a new class in `fixtures/test.ui.fixtures.ts`.
 
 In this framework, reusable classes are often exposed through fixtures so they can be injected into tests and other fixture-created classes.
+
+Fixtures are split across two files. `fixtures/config.fixtures.ts` is the base layer (`environmentResolver`, `testInfo`). `fixtures/test.ui.fixtures.ts` extends that base with the context, authentication, and page-object fixtures. New UI classes are registered in `fixtures/test.ui.fixtures.ts`.
 
 ## Table of Contents
 
@@ -33,21 +35,19 @@ If a class is only a small private implementation detail, fixture registration i
 
 ## Step 1: Import The Class
 
-Add the import in `fixtures/test.fixture.ts` in the correct grouped section.
+Add the import in `fixtures/test.ui.fixtures.ts` in the correct grouped section.
 
-Examples of existing groups include:
+The existing grouped sections are:
 
-- configuration
-- context
-- shared
-- pages
-- cleanup
+- Context
+- Authentication
+- Pages
 
 Keep the new import in the section that matches the class responsibility.
 
 ## Step 2: Add The Fixture Type
 
-Add the new class type to the `TestFixtures` type in `fixtures/test.fixture.ts`.
+Add the new class type to the `TestFixtures` type in `fixtures/test.ui.fixtures.ts`.
 
 This is what makes the fixture available with correct typing in tests and other fixtures.
 
@@ -95,15 +95,15 @@ Examples:
 
 ## Step 5: Keep Grouping Clean
 
-Register the new fixture in the correct section of `test.fixture.ts`.
+Register the new fixture in the correct section of `test.ui.fixtures.ts`.
 
 Good grouping matters because this file is already a central framework map.
 
 Examples:
 
-- shared helper -> shared section
-- page object -> pages section
-- cleanup helper -> cleanup section
+- context helper -> Context section
+- authentication helper -> Authentication section
+- page object -> Pages section
 
 ## When Not To Register In Fixtures
 

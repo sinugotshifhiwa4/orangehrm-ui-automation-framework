@@ -61,11 +61,13 @@ export type RunSummary = Omit<
   "failedTests" | "flakyTests" | "failedTestsStripped"
 >;
 
+// Detail bucket holding all stored runs for a single test type within a branch.
 export interface TestTypeHistory {
   testType: string;
   runs: TestRun[];
 }
 
+// Per-branch container grouping its detail buckets by test type.
 export interface BranchHistory {
   byTestType: Record<string, TestTypeHistory>;
 }
@@ -77,6 +79,7 @@ export interface FileMeta {
   indexSize: number;
 }
 
+// Root shape of the persisted test-history file (the 3 tiers combined).
 export interface HistoryFile {
   meta: FileMeta;
   index: RunSummary[];
@@ -85,6 +88,7 @@ export interface HistoryFile {
 
 // ─── Playwright JSON report types ─────────────────────────────────────────────
 
+// Aggregate run counters from the Playwright JSON report `stats` block.
 export interface PlaywrightJsonStats {
   expected: number;
   unexpected: number;
@@ -93,6 +97,7 @@ export interface PlaywrightJsonStats {
   duration: number;
 }
 
+// A single test result within a spec in the Playwright JSON report.
 export interface PlaywrightJsonTest {
   title: string;
   /** "expected" | "unexpected" | "skipped" | "flaky" */
@@ -100,6 +105,7 @@ export interface PlaywrightJsonTest {
   duration: number;
 }
 
+// A spec entry (one test case) in the Playwright JSON report.
 export interface PlaywrightJsonSpec {
   title: string;
   /** Relative file path e.g. "layers/ui/login/InvalidLogin.spec.ts" */
@@ -108,6 +114,7 @@ export interface PlaywrightJsonSpec {
   tests: PlaywrightJsonTest[];
 }
 
+// A suite node in the Playwright JSON report; suites nest and contain specs.
 export interface PlaywrightJsonSuite {
   title: string;
   file?: string;
@@ -115,6 +122,7 @@ export interface PlaywrightJsonSuite {
   suites?: PlaywrightJsonSuite[];
 }
 
+// Root shape of the merged Playwright JSON report consumed by ResultsParser.
 export interface PlaywrightJsonReport {
   stats: PlaywrightJsonStats;
   suites: PlaywrightJsonSuite[];

@@ -1,6 +1,9 @@
 import type { Browser, BrowserContext, Page } from "@playwright/test";
 import type { BrowserContextWithPage } from "./types/browserContext.type.js";
 
+/**
+ * Creates and tears down isolated browser contexts and their pages.
+ */
 export class BrowserContextManager {
   private readonly browser: Browser;
 

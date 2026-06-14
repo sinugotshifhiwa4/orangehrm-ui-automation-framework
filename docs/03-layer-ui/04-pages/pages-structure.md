@@ -36,7 +36,7 @@ A structure that follows the application's navigation removes that guesswork:
 
 ## The Organising Principle: Mirror the Navigation
 
-Group page objects the same way the applAication groups its screens:
+Group page objects the same way the application groups its screens:
 
 > **module (menu) → sub-module → tab**
 
@@ -46,39 +46,26 @@ This is about **where files live**, not about what any individual page object do
 
 ## Folder Layout
 
-A representative layout for the UI pages folder:
+The current layout of the UI pages folder:
 
-```
+```text
 src/layers/ui/pages/
 ├── authentication/          # cross-cutting: login orchestration / executor
-├── login/                   # the login module
-├── navigationBars/          # sidebar, topbar — shell navigation
-├── module1/                 # a module → its sub-modules / tabs nested inside
-├── module2/                 # a module
-├── module3/                 # a module
-└── shared/                  # generic, reusable building blocks
-    ├── components/          # reusable UI component objects
-    │   ├── calendar/
-    │   ├── dialog/
-    │   ├── dropdown/
-    │   ├── filters/
-    │   ├── loading/
-    │   ├── pagination/
-    │   ├── sort/
-    │   ├── table/
-    │   ├── toast/
-    │   ├── toggle/
-    │   └── validators/
-    └── network/             # request/response helpers, API-on-the-side calls
+└── orangeHrm/               # the application
+    ├── login/               # login + forgot-password pages (with types/)
+    ├── menuItems/           # dashboard and other menu landing pages (with types/)
+    └── navigationBars/      # sidebar, topbar — shell navigation
 ```
 
-Top-level folders such as `module1/`, `module2/`, and `module3/` correspond to the application's main menus — replace these placeholder names with the actual menu names. Inside each, sub-modules and tabs are nested to match the navigation underneath that menu.
+`authentication/` holds the cross-cutting login flow (orchestrator and executor) and is not an app screen. Everything under `orangeHrm/` mirrors the application's own navigation: each top-level menu becomes a folder, and sub-modules and tabs are nested to match the navigation underneath that menu. As more of the app is automated, new module folders are added under `orangeHrm/` following the same module → sub-module → tab nesting.
+
+There is no `shared/` folder yet. Add it under `pages/` only once a reusable building block actually has a second consumer — see [The `shared/` Folder](#the-shared-folder).
 
 ## Grouping Pages by Module → Sub-Module → Tab
 
 Within a module folder, keep nesting until the layout matches what the user sees:
 
-```
+```text
 module1/
 ├── module1Page.ts               # the module landing page (if it has one)
 ├── subModule1/                  # a sub-module under module1

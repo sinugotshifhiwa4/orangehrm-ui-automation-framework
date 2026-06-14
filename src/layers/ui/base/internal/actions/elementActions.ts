@@ -5,6 +5,9 @@ import FieldValidator from "../../../../../utils/shared/fieldValidator.js";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 import logger from "../../../../../configuration/logger/loggerManager.js";
 
+/**
+ * Element interaction actions: fill, click, clear, select, hover, drag, and check.
+ */
 export class ElementActions extends ActionBase {
   /**
    * Creates element interaction helpers for the active page.
@@ -92,12 +95,12 @@ export class ElementActions extends ActionBase {
 
   /**
    * Clicks an element
-   * @param element The element locator
-   * @param callerMethodName The name of the method that called this function
-   * @param elementName The name of the element
-   * @param options Optional parameters for the click action
-   * @param options.force A boolean indicating whether to force the action
-   * @param options.trial A boolean indicating whether to attempt the click action in a retry loop
+   * @param element - The element locator
+   * @param callerMethodName - The name of the method that called this function
+   * @param elementName - The name of the element
+   * @param options - Optional parameters for the click action
+   * @param options.force - A boolean indicating whether to force the action
+   * @param options.trial - A boolean indicating whether to attempt the click action in a retry loop
    * @returns A promise that resolves with the result of the click action if it succeeds, or rejects with the error if it fails
    */
   public async clickElement(
@@ -123,9 +126,9 @@ export class ElementActions extends ActionBase {
 
   /**
    * Clears an element.
-   * @param element The element locator
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
+   * @param element - The element locator
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the clear action if it succeeds, or rejects with the error if it fails.
    */
   public async clearElement(
@@ -144,9 +147,9 @@ export class ElementActions extends ActionBase {
   /**
    * Clears an element by clicking on it three times and then pressing the backspace key.
    * This method is useful for clearing text fields that do not support the 'clear' method.
-   * @param element The element locator
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
+   * @param element - The element locator
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the clear action if it succeeds, or rejects with the error if it fails.
    */
   public async clearElementWithBackSpace(
@@ -167,10 +170,10 @@ export class ElementActions extends ActionBase {
 
   /**
    * Selects an option in an element.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param optionValue The value of the option to select.
-   * @param elementName The name of the element.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param optionValue - The value of the option to select.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the select action if it succeeds, or rejects with the error if it fails.
    */
   public async selectOption(
@@ -191,9 +194,9 @@ export class ElementActions extends ActionBase {
 
   /**
    * Focuses an element, i.e., sets focus on it.
-   * @param element The element locator
-   * @param callerMethodName The name of the method that called this function
-   * @param elementName The name of the element
+   * @param element - The element locator
+   * @param callerMethodName - The name of the method that called this function
+   * @param elementName - The name of the element
    * @returns A promise that resolves with the result of the focus action if it succeeds, or rejects with the error if it fails.
    */
   public async focusElement(
@@ -211,9 +214,9 @@ export class ElementActions extends ActionBase {
 
   /**
    * Blurs an element, i.e., removes focus from it.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the blur action if it succeeds, or rejects with the error if it fails.
    */
   public async blurElement(
@@ -231,11 +234,11 @@ export class ElementActions extends ActionBase {
 
   /**
    * Checks an element, i.e., adds the checked state to it.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
-   * @param options Optional parameters for the check action.
-   * @param options.force A boolean indicating whether to force the action.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
+   * @param options - Optional parameters for the check action.
+   * @param options.force - A boolean indicating whether to force the action.
    * @returns A promise that resolves with the result of the check action if it succeeds, or rejects with the error if it fails.
    * @example
    * await checkElement(element, "checkElement", "checkbox");
@@ -256,11 +259,11 @@ export class ElementActions extends ActionBase {
 
   /**
    * Unchecks an element, i.e., removes the checked state from it.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
-   * @param options Optional parameters for the uncheck action.
-   * @param options.force A boolean indicating whether to force the action.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
+   * @param options - Optional parameters for the uncheck action.
+   * @param options.force - A boolean indicating whether to force the action.
    * @returns A promise that resolves with the result of the uncheck action if it succeeds, or rejects with the error if it fails.
    */
   public async uncheckElement(
@@ -279,9 +282,9 @@ export class ElementActions extends ActionBase {
 
   /**
    * Hovers over an element.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the hover action if it succeeds, or rejects with the error if it fails.
    * @example
    * await hoverElement(element, "hoverElement", "button");
@@ -303,9 +306,9 @@ export class ElementActions extends ActionBase {
 
   /**
    * Hovers over an element and then clicks on it.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
    * @returns A promise that resolves with the result of the hover and click action if it succeeds, or rejects with the error if it fails.
    * @example
    * await hoverThenClick(element, "hoverThenClick", "button");
@@ -328,10 +331,10 @@ export class ElementActions extends ActionBase {
 
   /**
    * Double-clicks an element.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
-   * @param options Optional parameters for the double-click action.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
+   * @param options - Optional parameters for the double-click action.
    * @returns A promise that resolves with the result of the double-click action if it succeeds, or rejects with the error if it fails.
    * @example
    * await doubleClickElement(element, "doubleClickElement", "button", { force: true });
@@ -352,10 +355,10 @@ export class ElementActions extends ActionBase {
 
   /**
    * Right-clicks an element.
-   * @param element The element locator.
-   * @param callerMethodName The name of the method that called this function.
-   * @param elementName The name of the element.
-   * @param options Optional parameters for the right-click action.
+   * @param element - The element locator.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param elementName - The name of the element.
+   * @param options - Optional parameters for the right-click action.
    * @returns A promise that resolves with the result of the right-click action if it succeeds, or rejects with the error if it fails.
    * @example
    * await rightClickElement(element, "rightClickElement", "button", { force: true });
@@ -376,12 +379,12 @@ export class ElementActions extends ActionBase {
 
   /**
    * Drags an element to another element.
-   * @param sourceElement The element to drag.
-   * @param targetElement The element to drag to.
-   * @param callerMethodName The name of the method that called this function.
-   * @param sourceElementName The name of the source element.
-   * @param targetElementName The name of the target element.
-   * @param options Optional parameters for the drag action.
+   * @param sourceElement - The element to drag.
+   * @param targetElement - The element to drag to.
+   * @param callerMethodName - The name of the method that called this function.
+   * @param sourceElementName - The name of the source element.
+   * @param targetElementName - The name of the target element.
+   * @param options - Optional parameters for the drag action.
    * @returns A promise that resolves with the result of the drag action if it succeeds, or rejects with the error if it fails.
    * @example
    * await dragTo(sourceElement, targetElement, "dragTo", "source", "target", { force: true });

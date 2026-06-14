@@ -4,7 +4,7 @@
 
 This page explains the login orchestration layer under `src/layers/ui/pages/authentication/`.
 
-The orchestration layer is responsible for navigating to the portal, executing the login flow, validating the outcome, and saving the authenticated browser state. It coordinates the page objects and the auth state manager so tests do not need to manage any of that directly.
+The orchestration layer is responsible for navigating to the portal, executing the login flow, validating the outcome, and saving the authenticated browser state. It coordinates the page objects and the auth state manager so tests do not need to manage any of that directly. It also exposes a session-aware entry point that re-authenticates only when an injected session has gone stale.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ The orchestration layer is responsible for navigating to the portal, executing t
   - [Public Methods](#public-methods)
   - [Private Methods](#private-methods)
 - [`AuthenticationExecutor`](#authenticationexecutor)
-  - [Main Operation](#main-operation)
+  - [Operations](#operations)
 - [How the Two Classes Work Together](#how-the-two-classes-work-together)
 - [How This Layer Connects to Fixtures](#how-this-layer-connects-to-fixtures)
 - [How This Layer Connects to the Auth Setup Test](#how-this-layer-connects-to-the-auth-setup-test)
@@ -53,12 +53,12 @@ It extends `BasePage` (for the page and navigation helpers) and depends on:
 ### Public Methods
 
 - `navigateToPortal()` — resolves the portal base URL and navigates to it
+- `isAuthenticatedSessionActive()` — navigates to the portal and reports whether the injected session is still authenticated; the portal redirects an expired session to `/auth/login`, so a redirect means the session is stale
 - `loginWithValidCredentials(loginFn, validateLoginFn)` — runs the full login flow using the provided callbacks; saves auth state on success
-- `loginWithInvalidCredentials(loginFn, validateInvalidLoginFn)` — runs the login flow expecting a failure; validates the failure response using the provided callback
 
 ### Private Methods
 
-- `executeLoginFlow(loginFn, validateFn, source, context, afterFn?)` — the shared execution wrapper used by both public login methods; navigates, executes login, validates, and optionally runs a post-validation callback (used to save state)
+- `executeLoginFlow(loginFn, validateFn, source, context, afterFn?)` — the shared execution wrapper behind `loginWithValidCredentials`; navigates, executes login, validates, and optionally runs a post-validation callback (used to save auth state)
 
 ## `AuthenticationExecutor`
 
@@ -69,11 +69,14 @@ It depends on:
 - `LoginOrchestrator` — for navigation and flow execution
 - `LoginPage` — to fill in credentials, submit the login form, and confirm no invalid-credentials alert is shown
 
-### Main Operation
+### Operations
 
-- `run(credentials)` — calls `loginOrchestrator.loginWithValidCredentials`, providing two callbacks:
+- `run(credentials)` — performs a full login. Calls `loginOrchestrator.loginWithValidCredentials`, providing two callbacks:
   - `loginFn` — calls `LoginPage.login` with the supplied credentials
   - `validateLoginFn` — calls `LoginPage.verifyInvalidCredentialsAlertIsHidden` to confirm no error alert appeared, indicating login succeeded
+- `ensureAuthenticated(credentials)` — the session-aware entry point. It asks `loginOrchestrator.isAuthenticatedSessionActive()` first; if the injected session is still valid it returns without logging in again, and it only calls `run(credentials)` — a full re-login that refreshes the saved storage state — when the session has gone stale.
+
+Invalid-credential scenarios are not handled here. Login-failure tests drive `LoginPage` directly (`login` then `verifyInvalidCredentialsAlertIsVisible`); see `tests/layers/ui/login/InvalidLogin.spec.ts`.
 
 ## How the Two Classes Work Together
 
@@ -84,6 +87,15 @@ The flow for a successful login looks like this:
 3. `LoginOrchestrator` calls the `loginFn` callback — `LoginPage.login`
 4. `LoginOrchestrator` calls the `validateLoginFn` callback — `LoginPage.verifyInvalidCredentialsAlertIsHidden`
 5. `LoginOrchestrator` calls `AuthenticationStateManager.saveAuthenticationState()` to persist the session
+
+When a spec only needs to _be_ authenticated rather than force a fresh login, it calls `ensureAuthenticated(credentials)` instead. The re-authentication flow is:
+
+1. `AuthenticationExecutor.ensureAuthenticated(credentials)` calls `loginOrchestrator.isAuthenticatedSessionActive()`
+2. `LoginOrchestrator` navigates to the portal and checks whether the URL was redirected to `/auth/login`
+3. if the session is still active, `ensureAuthenticated` returns immediately — no second login
+4. if the session is stale, `ensureAuthenticated` calls `run(credentials)`, which performs the full login flow above and re-saves the storage state
+
+This is used by feature specs that start from the shared authenticated state but must tolerate that state having expired between the auth-setup step and the test. The pattern is used in `tests/layers/ui/login/ValidLogin.spec.ts`.
 
 ## How This Layer Connects to Fixtures
 
@@ -116,5 +128,5 @@ See [Authentication Setup](./authentication-setup.md) for how that saved state i
 The orchestration layer means that:
 
 - the auth setup test stays small and focused on intent, not on navigation or form mechanics
-- `LoginOrchestrator` can support both valid and invalid credential flows without duplicating navigation logic
+- feature specs can guarantee an authenticated session with one call (`ensureAuthenticated`) and only pay for a re-login when the session has actually expired
 - adding a new login variant only requires a new callback pair passed to `loginOrchestrator` — the navigation and state-saving behavior is already handled

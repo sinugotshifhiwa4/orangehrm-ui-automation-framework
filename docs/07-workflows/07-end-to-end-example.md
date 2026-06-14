@@ -21,25 +21,24 @@ You add a new page or helper class for a UI feature and want it to be fully usab
 2. Follow naming rules and keep the responsibility focused.
 3. Extend `BasePage` if it is a Playwright-driven UI class.
 4. Inject any shared dependencies through the constructor.
-5. Import and register the class in `fixtures/test.fixture.ts`.
+5. Import and register the class in `fixtures/test.ui.fixtures.ts`.
 6. Add the new fixture type in `TestFixtures`.
 7. Use the fixture in the test spec.
 8. Add the required test tags.
 9. Add the same tags to authentication setup specs if the feature needs auth.
 10. Add cleanup coverage if the flow creates or mutates risky data.
-11. Add the CI tag option in `.gitlab/test-tags.yml` without the `@`.
+11. Add the CI tag option in `.github/config/test-tags.json` without the `@`.
 
 ## Example Change Areas
 
 A real contribution may touch files such as:
 
 - `src/layers/ui/pages/...`
-- `src/layers/ui/shared/...`
-- `fixtures/test.fixture.ts`
+- `src/layers/ui/pages/shared/...`
+- `fixtures/test.ui.fixtures.ts`
 - `tests/layers/ui/...`
 - `tests/layers/ui/authentication/...`
-- `tests/layers/ui/cleanup/...`
-- `.gitlab/test-tags.yml`
+- `.github/config/test-tags.json`
 
 ## Why This Flow Matters
 

@@ -190,10 +190,10 @@ public async verifyLoginWelcomeTextIsVisible(): Promise<void> { ... }
 
 #### Fixtures
 
-- Use `name.fixture.ts`.
+- Use `name.fixtures.ts`.
 - Examples:
-  - `test.fixture.ts`
-  - `auth.fixture.ts`
+  - `config.fixtures.ts`
+  - `test.ui.fixtures.ts`
 
 #### Enums
 

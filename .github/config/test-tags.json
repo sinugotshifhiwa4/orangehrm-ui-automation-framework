@@ -1,1 +1,1 @@
-["authenticate", "sanity", "regression", "dashboard", "skip-auth"]
+["authenticate", "sanity", "regression", "skip-auth", "login", "dashboard"]

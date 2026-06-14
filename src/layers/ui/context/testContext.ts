@@ -1,5 +1,8 @@
 import ErrorHandler from "../../../utils/errorHandling/errorHandler.js";
 
+/**
+ * In-memory key-value store for sharing data between steps within a test.
+ */
 export class TestContext {
   /**
    * The data store for the TestContext.
@@ -8,8 +11,8 @@ export class TestContext {
 
   /**
    * Sets a key-value pair in the TestContext data store.
-   * @param {string} key The key of the value to be stored in the data store.
-   * @param {unknown} value The value to be associated with the provided key in the data store.
+   * @param key - The key of the value to be stored in the data store.
+   * @param value - The value to be associated with the provided key in the data store.
    */
   public set(key: string, value: unknown): void {
     this.data[key] = value;
@@ -17,10 +20,9 @@ export class TestContext {
 
   /**
    * Retrieves a value from the TestContext data store based on the provided key.
-   * @template T The type of the value to be retrieved.
-   * @param {string} key The key of the value to be retrieved from the data store.
-   * @returns {T} The value associated with the provided key.
-   * @throws {Error} If the key does not exist in the data store.
+   * @param key - The key of the value to be retrieved from the data store.
+   * @returns The value associated with the provided key.
+   * @throws If the key does not exist in the data store.
    */
   public get<T>(key: string): T {
     if (!(key in this.data)) {
@@ -31,8 +33,8 @@ export class TestContext {
 
   /**
    * Checks if a key-value pair exists in the TestContext data store.
-   * @param {string} key The key to be checked for existence in the data store.
-   * @returns {boolean} True if the key exists, false otherwise.
+   * @param key - The key to be checked for existence in the data store.
+   * @returns True if the key exists, false otherwise.
    */
   public has(key: string): boolean {
     return key in this.data;
@@ -41,7 +43,7 @@ export class TestContext {
   /**
    * Removes a key-value pair from the TestContext data store.
    * If the key does not exist in the data store, this function does nothing.
-   * @param {string} key The key to be removed from the data store.
+   * @param key - The key to be removed from the data store.
    */
   public remove(key: string): void {
     delete this.data[key];
@@ -57,10 +59,8 @@ export class TestContext {
   }
 
   /**
-   * Returns an array of strings representing all the keys currently
-   * stored in the TestContext data store.
-   * @return {string[]} An array of strings representing all the keys currently
-   * stored in the TestContext data store.
+   * Returns an array of all the keys currently stored in the TestContext data store.
+   * @returns An array of all the keys currently stored in the data store.
    */
   public keys(): string[] {
     return Object.keys(this.data);

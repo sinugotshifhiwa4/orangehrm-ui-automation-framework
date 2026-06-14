@@ -4,6 +4,9 @@ import AuthenticationFileManager from "../../../configuration/playwright/authent
 import ErrorHandler from "../../../utils/errorHandling/errorHandler.js";
 import logger from "../../../configuration/logger/loggerManager.js";
 
+/**
+ * Persists the current browser authentication state to the shared auth-state file.
+ */
 export class AuthenticationStateManager extends BasePage {
   /**
    * Creates a persister bound to the current Playwright page context.

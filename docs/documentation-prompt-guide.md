@@ -156,7 +156,7 @@ Good documentation usually answers these questions:
 
 When writing docs for this framework:
 
-- use real paths such as `src/layers/ui/pages/`, `fixtures/test.fixture.ts`, and `scripts/execution/test-executor.ts`
+- use real paths such as `src/layers/ui/pages/`, `fixtures/test.ui.fixtures.ts`, and `scripts/execution/test-executor.ts`
 - keep the current practical scope honest
 - if only UI is actively used, say so plainly
 - do not describe inactive areas as fully operational unless they really are

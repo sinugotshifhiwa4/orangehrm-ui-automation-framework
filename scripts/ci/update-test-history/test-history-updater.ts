@@ -40,6 +40,7 @@ export class TestHistoryUpdater {
 
   // ─── Pipeline steps ────────────────────────────────────────────────────────
 
+  /** Exits the process with code 1 if the results.json file is missing. */
   private assertResultsExist(): void {
     if (!fs.existsSync(this.resultsJson)) {
       logger.error(`[update-test-history] ❌ Cannot find ${this.resultsJson}`);
@@ -47,6 +48,10 @@ export class TestHistoryUpdater {
     }
   }
 
+  /**
+   * Parses the results file, exiting the process with code 1 on failure.
+   * @returns The normalised parse result.
+   */
   private parseResults(): ParseResult {
     try {
       return this.parser.parse();
@@ -56,7 +61,11 @@ export class TestHistoryUpdater {
     }
   }
 
-  /** Builds the full TestRun record from parsed stats + the run environment. */
+  /**
+   * Builds the full TestRun record from parsed stats + the run environment.
+   * @param parsed - The normalised stats parsed from the results file.
+   * @returns The assembled run record ready to store.
+   */
   private buildRun(parsed: ParseResult): TestRun {
     const { passed, failed, skipped, flaky, durationMs, failedTests, flakyTests } =
       parsed;
@@ -97,6 +106,7 @@ export class TestHistoryUpdater {
     };
   }
 
+  /** Saves the history to disk, exiting the process with code 1 on failure. */
   private persist(): void {
     try {
       this.store.save();
@@ -108,6 +118,11 @@ export class TestHistoryUpdater {
 
   // ─── Summary logging ─────────────────────────────────────────────────────
 
+  /**
+   * Logs a human-readable summary of the run that was just stored.
+   * @param newRun - The run record that was inserted.
+   * @param parsed - The normalised stats the run was built from.
+   */
   private logSummary(newRun: TestRun, parsed: ParseResult): void {
     const { passed, failed, skipped, flaky, failedTests, flakyTests } = parsed;
     const { branch, testType, runNumber, reportUrl, ortoniUrl } = newRun;

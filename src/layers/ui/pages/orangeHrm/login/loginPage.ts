@@ -1,10 +1,15 @@
-import { type Locator, type Page } from "@playwright/test";
+import { type Locator, type Page, expect } from "@playwright/test";
 import { BasePage } from "../../../base/basePage.js";
 import CredentialValidator from "../../../../../utils/shared/credentialValidator.js";
-import type { Credentials } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
-import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 import DateFormatter from "../../../../../utils/shared/dateFormatter.js";
+import type { Credentials } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
+import type { PageTitleOptions } from "./types/login.types.js";
+import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
+import logger from "../../../../../configuration/logger/loggerManager.js";
 
+/**
+ * Page object for the OrangeHRM login page, its form, validation, and footer.
+ */
 export class LoginPage extends BasePage {
   private readonly orangeHrmLogo: Locator;
 
@@ -19,6 +24,10 @@ export class LoginPage extends BasePage {
   private readonly forgotPasswordLink: Locator;
 
   private readonly invalidCredentialsAlert: Locator;
+
+  private readonly usernameRequiredError: Locator;
+
+  private readonly passwordRequiredError: Locator;
 
   private readonly footerVersionText: Locator;
 
@@ -38,6 +47,10 @@ export class LoginPage extends BasePage {
 
   private readonly footerYoutubeIcon: Locator;
 
+  /**
+   * Creates the login page object and resolves all login form and footer locators.
+   * @param page - Active Playwright page instance.
+   */
   constructor(page: Page) {
     super(page);
 
@@ -50,6 +63,14 @@ export class LoginPage extends BasePage {
     this.invalidCredentialsAlert = page
       .getByRole("alert")
       .filter({ hasText: "Invalid credentials" });
+
+    this.usernameRequiredError = page.locator(
+      '.oxd-input-group:has(input[name="username"]) .oxd-input-field-error-message',
+    );
+
+    this.passwordRequiredError = page.locator(
+      '.oxd-input-group:has(input[name="password"]) .oxd-input-field-error-message',
+    );
 
     const footer = page.locator(".orangehrm-copyright-wrapper");
     const socialFooter = page.locator(".orangehrm-login-footer-sm");
@@ -68,6 +89,32 @@ export class LoginPage extends BasePage {
     this.footerYoutubeIcon = socialFooter.locator('a[href*="youtube.com"]');
   }
 
+  /**
+   * Verifies that the browser page title matches the expected login-page title.
+   * @param options - Options containing the expected page title.
+   * @returns A promise that resolves when the title assertion passes.
+   */
+  public async verifyPageTitleIsDisplayedCorrectly(
+    options: PageTitleOptions,
+  ): Promise<void> {
+    const actualPageTitle = await this.navigation.getPageTitle(
+      "verifyPageTitleIsDisplayedCorrectly",
+    );
+
+    expect(actualPageTitle).toBe(options.title);
+
+    logger.info(
+      `Verified: Page title '${actualPageTitle}' matches expected '${options.title}'`,
+    );
+  }
+
+  /**
+   * Performs a full login: verifies the form is visible, fills credentials, and submits.
+   * @param options - The username and password to log in with.
+   * @param fillOptions - Optional fill configuration; set allowEmpty to bypass required checks.
+   * @returns A promise that resolves when the login form has been submitted.
+   * @throws If any step of the login flow fails.
+   */
   public async login(options: Credentials, fillOptions?: { allowEmpty?: boolean }) {
     try {
       await this.verifyOrangeHrmLogoIsVisible();
@@ -81,6 +128,10 @@ export class LoginPage extends BasePage {
     }
   }
 
+  /**
+   * Verifies that the OrangeHRM company logo is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyOrangeHrmLogoIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.orangeHrmLogo,
@@ -90,6 +141,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the Login header is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyLoginHeaderIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.loginHeader,
@@ -100,8 +155,8 @@ export class LoginPage extends BasePage {
   }
 
   /**
-   * Validates and fills the email input field, skipping validation when allowEmpty is set.
-   * @param email - The email address to enter.
+   * Validates and fills the username input field, skipping validation when allowEmpty is set.
+   * @param username - The username to enter.
    * @param fillOptions - Optional fill configuration; set allowEmpty to bypass required and placeholder checks.
    * @returns A promise that resolves when the field has been filled.
    */
@@ -114,6 +169,11 @@ export class LoginPage extends BasePage {
         "LoginPage.fillUsernameInput",
         "Username input is required.",
       );
+    }
+
+    // Skip filling if empty and allowEmpty is true
+    if (!username && fillOptions?.allowEmpty) {
+      return;
     }
 
     if (!fillOptions?.allowEmpty) {
@@ -149,6 +209,11 @@ export class LoginPage extends BasePage {
       );
     }
 
+    // Skip filling if empty and allowEmpty is true
+    if (!password && fillOptions?.allowEmpty) {
+      return;
+    }
+
     if (!fillOptions?.allowEmpty) {
       CredentialValidator.validateNotPlaceholder(
         "LoginPage.fillUsernameInput",
@@ -177,6 +242,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the invalid credentials alert is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyInvalidCredentialsAlertIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.invalidCredentialsAlert,
@@ -186,6 +255,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the invalid credentials alert is hidden.
+   * @returns A promise that resolves when the hidden-state check passes.
+   */
   public async verifyInvalidCredentialsAlertIsHidden(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.invalidCredentialsAlert,
@@ -195,7 +268,48 @@ export class LoginPage extends BasePage {
     );
   }
 
-  private async clickforgotPasswordLink(): Promise<void> {
+  /**
+   * Verifies that both required-field validation messages are visible.
+   * @returns A promise that resolves when both field-error checks pass.
+   */
+  public async verifyRequiredFieldErrorsAreVisible(): Promise<void> {
+    await Promise.all([
+      this.verifyUsernameRequiredErrorIsVisible(),
+      this.verifyPasswordRequiredErrorIsVisible(),
+    ]);
+  }
+
+  /**
+   * Verifies that the username required-field message is visible.
+   * @returns A promise that resolves when the username error is visible.
+   */
+  private async verifyUsernameRequiredErrorIsVisible(): Promise<void> {
+    await this.elementAssertions.verifyElementState(
+      this.usernameRequiredError,
+      "verifyUsernameRequiredErrorIsVisible",
+      "visible",
+      "username required error",
+    );
+  }
+
+  /**
+   * Verifies that the password required-field message is visible.
+   * @returns A promise that resolves when the password error is visible.
+   */
+  private async verifyPasswordRequiredErrorIsVisible(): Promise<void> {
+    await this.elementAssertions.verifyElementState(
+      this.passwordRequiredError,
+      "verifyPasswordRequiredErrorIsVisible",
+      "visible",
+      "password required error",
+    );
+  }
+
+  /**
+   * Clicks the "Forgot your password?" link to open the reset password page.
+   * @returns A promise that resolves when the link has been clicked.
+   */
+  public async clickforgotPasswordLink(): Promise<void> {
     await this.elementActions.clickElement(
       this.forgotPasswordLink,
       "clickforgotPasswordLink",
@@ -224,6 +338,10 @@ export class LoginPage extends BasePage {
     }
   }
 
+  /**
+   * Verifies that the footer version text is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyFooterVersionTextIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.footerVersionText,
@@ -233,6 +351,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the footer copyright year is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyFooterCopyrightYearIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.footerCopyrightYear,
@@ -242,6 +364,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the footer copyright owner link is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyFooterCopyrightOwnerLinkIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.footerCopyrightOwnerLink,
@@ -251,6 +377,10 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that the footer "All rights reserved" text is visible.
+   * @returns A promise that resolves when the visibility check passes.
+   */
   public async verifyFooterRightsTextIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.footerRightsText,
@@ -260,19 +390,17 @@ export class LoginPage extends BasePage {
     );
   }
 
+  /**
+   * Verifies that all four footer social media icons are present and visible.
+   * @returns A promise that resolves when the count and visibility checks pass.
+   */
   public async verifyFooterSocialMediaIconsAreVisible(): Promise<void> {
-    const iconCount = await this.elementAssertions.getElementCount(
+    await this.elementAssertions.verifyElementCount(
       this.footerSocialMediaIcons,
       "verifyFooterSocialMediaIconsAreVisible",
+      4,
       "Footer Social Media Icons",
     );
-
-    if (iconCount !== 4) {
-      ErrorHandler.logAndThrow(
-        "LoginPage.verifyFooterSocialMediaIconsAreVisible",
-        `Expected 4 social media icons but found ${iconCount}.`,
-      );
-    }
 
     await Promise.all([
       this.elementAssertions.verifyElementState(

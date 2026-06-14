@@ -36,7 +36,7 @@ Examples:
 
 ```ts
 {
-  tag: ["@regression", "@supply-chain", "@shipping"];
+  tag: ["@regression", "@sanity", "@dashboard"];
 }
 ```
 
@@ -48,9 +48,7 @@ Examples:
 
 - `@sanity`
 - `@regression`
-- `@supply-chain`
-- `@system-administration`
-- feature tags like `@purchase-orders` or `@shipping`
+- feature tags like `@login` or `@dashboard`
 
 This keeps filtering practical and predictable.
 
@@ -58,40 +56,35 @@ This keeps filtering practical and predictable.
 
 If the tagged tests need authenticated execution, the same tag must be added to:
 
-- `tests/layers/ui/authentication/Auth.admin-user.setup.ts`
-- `tests/layers/ui/authentication/Auth.general-user.setup.ts`
+- `tests/layers/ui/authentication/Authentication.setup.ts`
 
-This matters because tagged runs still need the setup projects to match the selected tag group.
+This matters because tagged runs still need the setup project to match the selected tag group.
 
 ## Step 4: Add Matching Tags To Cleanup When Data Risk Exists
 
-If the tagged feature creates or mutates data that can affect later runs, add matching cleanup coverage under:
-
-- `tests/layers/ui/cleanup`
-
-The cleanup path should carry the relevant tag so the same feature group can be cleaned consistently.
+There is no cleanup layer yet. If one is added under `tests/layers/ui/cleanup` and the tagged feature creates or mutates data that can affect later runs, the cleanup path should carry the relevant tag so the same feature group can be cleaned consistently.
 
 ## Step 5: Add The CI Tag Option
 
 Add the tag to:
 
-- `.gitlab/test-tags.yml`
+- `.github/config/test-tags.json`
 
 Important rule:
 
 - in tests, use `@tag-name`
-- in `.gitlab/test-tags.yml`, use `tag-name` without `@`
+- in `.github/config/test-tags.json`, use `tag-name` without `@`
 
 Example:
 
 - test: `@sanity`
-- GitLab CI option: `sanity`
+- CI tag option: `sanity`
 
 ## Final Checklist
 
 When adding a new tag, confirm all related places were updated:
 
 - test spec
-- authentication setup specs
-- cleanup specs when needed
-- `.gitlab/test-tags.yml`
+- authentication setup spec
+- cleanup specs when a cleanup layer exists
+- `.github/config/test-tags.json`

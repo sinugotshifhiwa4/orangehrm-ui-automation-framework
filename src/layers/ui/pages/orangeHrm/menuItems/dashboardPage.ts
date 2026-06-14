@@ -3,6 +3,9 @@ import { BasePage } from "../../../base/basePage.js";
 import type { DefaultPageOptions } from "./types/dashboard.type.js";
 import logger from "../../../../../configuration/logger/loggerManager.js";
 
+/**
+ * Page object for the OrangeHRM dashboard, the default landing page after login.
+ */
 export class DashboardPage extends BasePage {
   private readonly dashboardHeader: Locator;
 
