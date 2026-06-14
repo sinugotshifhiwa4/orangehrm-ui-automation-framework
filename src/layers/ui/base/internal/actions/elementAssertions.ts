@@ -134,6 +134,31 @@ export class ElementAssertions extends ActionBase {
   }
 
   /**
+   * Verifies that a locator resolves to an exact number of matching elements.
+   * Uses Playwright's auto-retrying assertion so it waits for elements to render.
+   * @param element The Locator of elements to count.
+   * @param callerMethodName The name of the method that called the action.
+   * @param expectedCount The exact number of elements expected.
+   * @param elementName The name of the elements.
+   * @returns A promise that resolves once the expected count is matched.
+   */
+  public async verifyElementCount(
+    element: Locator,
+    callerMethodName: string,
+    expectedCount: number,
+    elementName: string,
+  ): Promise<void> {
+    await this.performAction(
+      async () => {
+        await expect(element).toHaveCount(expectedCount);
+      },
+      callerMethodName,
+      `${elementName} count is ${expectedCount}`,
+      `Failed to verify ${elementName} count is ${expectedCount}`,
+    );
+  }
+
+  /**
    * Retrieves the bounding box of an element.
    * @param element The Locator of the element to retrieve the bounding box from.
    * @param callerMethodName The name of the method that called the action.

@@ -55,25 +55,6 @@ export class LoginOrchestrator extends BasePage {
   }
 
   /**
-   * Navigates to the portal, performs login, and validates the failure response.
-   * @param loginFn - A function that performs the login action.
-   * @param validateInvalidLoginFn - A function that validates the failure of the login attempt.
-   * @returns A promise that resolves when the login attempt has been validated.
-   * @throws Error if the validation fails.
-   */
-  public async loginWithInvalidCredentials(
-    loginFn: () => Promise<void>,
-    validateInvalidLoginFn: () => Promise<void>,
-  ): Promise<void> {
-    await this.executeLoginFlow(
-      loginFn,
-      validateInvalidLoginFn,
-      "loginWithInvalidCredentials",
-      "Failed to verify invalid login",
-    );
-  }
-
-  /**
    * Navigates to the portal, calls loginFn, calls validateFn, and optionally runs afterFn.
    * @param loginFn - A function that performs the login action.
    * @param validateFn - A function that validates the outcome of the login attempt.

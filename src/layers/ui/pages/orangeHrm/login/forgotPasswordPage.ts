@@ -1,5 +1,6 @@
 import { type Locator, type Page } from "@playwright/test";
 import { BasePage } from "../../../base/basePage.js";
+import type { Username } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
 import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 
 export class ForgotPasswordPage extends BasePage {
@@ -39,10 +40,10 @@ export class ForgotPasswordPage extends BasePage {
    * @param username - The username to request a reset link for.
    * @returns A promise that resolves once the reset request has been submitted.
    */
-  public async requestPasswordReset(username: string): Promise<void> {
+  public async requestPasswordReset(option: Username): Promise<void> {
     try {
       await this.verifyResetPasswordHeaderIsVisible();
-      await this.fillUsernameInput(username);
+      await this.fillUsernameInput(option.username);
       await this.clickResetPasswordButton();
     } catch (error) {
       ErrorHandler.captureError(
@@ -63,7 +64,14 @@ export class ForgotPasswordPage extends BasePage {
     );
   }
 
-  public async verifyResetPasswordSuccessHeaderIsVisible(): Promise<void> {
+  public async verifyResetPasswordSuccessPageIsVisible(): Promise<void> {
+    await Promise.all([
+      this.verifyResetPasswordSuccessHeaderIsVisible(),
+      this.verifyResetPasswordSentMessageIsVisible(),
+    ]);
+  }
+
+  private async verifyResetPasswordSuccessHeaderIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.resetPasswordSuccessHeader,
       "verifyResetPasswordSuccessHeaderIsVisible",
@@ -72,7 +80,7 @@ export class ForgotPasswordPage extends BasePage {
     );
   }
 
-  public async verifyResetPasswordSentMessageIsVisible(): Promise<void> {
+  private async verifyResetPasswordSentMessageIsVisible(): Promise<void> {
     await this.elementAssertions.verifyElementState(
       this.resetPasswordSentMessage,
       "verifyResetPasswordSentMessageIsVisible",
@@ -86,7 +94,7 @@ export class ForgotPasswordPage extends BasePage {
    * @param username - The username to enter.
    * @returns A promise that resolves when the field has been filled.
    */
-  private async fillUsernameInput(username: string): Promise<void> {
+  public async fillUsernameInput(username: string): Promise<void> {
     if (!username) {
       ErrorHandler.logAndThrow(
         "ForgotPasswordPage.fillUsernameInput",

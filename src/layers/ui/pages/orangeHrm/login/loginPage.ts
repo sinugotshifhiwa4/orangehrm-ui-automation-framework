@@ -1,9 +1,11 @@
-import { type Locator, type Page } from "@playwright/test";
+import { type Locator, type Page, expect } from "@playwright/test";
 import { BasePage } from "../../../base/basePage.js";
 import CredentialValidator from "../../../../../utils/shared/credentialValidator.js";
-import type { Credentials } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
-import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
 import DateFormatter from "../../../../../utils/shared/dateFormatter.js";
+import type { Credentials } from "../../../../../configuration/playwright/authentication/types/credentials.types.js";
+import type { PageTitleOptions } from "./types/login.types.js";
+import ErrorHandler from "../../../../../utils/errorHandling/errorHandler.js";
+import logger from "../../../../../configuration/logger/loggerManager.js";
 
 export class LoginPage extends BasePage {
   private readonly orangeHrmLogo: Locator;
@@ -19,6 +21,10 @@ export class LoginPage extends BasePage {
   private readonly forgotPasswordLink: Locator;
 
   private readonly invalidCredentialsAlert: Locator;
+
+  private readonly usernameRequiredError: Locator;
+
+  private readonly passwordRequiredError: Locator;
 
   private readonly footerVersionText: Locator;
 
@@ -51,6 +57,14 @@ export class LoginPage extends BasePage {
       .getByRole("alert")
       .filter({ hasText: "Invalid credentials" });
 
+    this.usernameRequiredError = page.locator(
+      '.oxd-input-group:has(input[name="username"]) .oxd-input-field-error-message',
+    );
+
+    this.passwordRequiredError = page.locator(
+      '.oxd-input-group:has(input[name="password"]) .oxd-input-field-error-message',
+    );
+
     const footer = page.locator(".orangehrm-copyright-wrapper");
     const socialFooter = page.locator(".orangehrm-login-footer-sm");
     this.footerVersionText = footer.getByText(/OrangeHRM OS \d+(\.\d+)*/);
@@ -66,6 +80,25 @@ export class LoginPage extends BasePage {
     this.footerFacebookIcon = socialFooter.locator('a[href*="facebook.com"]');
     this.footerTwitterIcon = socialFooter.locator('a[href*="twitter.com"]');
     this.footerYoutubeIcon = socialFooter.locator('a[href*="youtube.com"]');
+  }
+
+  /**
+   * Verifies that the browser page title matches the expected login-page title.
+   * @param options - Options containing the expected page title.
+   * @returns A promise that resolves when the title assertion passes.
+   */
+  public async verifyPageTitleIsDisplayedCorrectly(
+    options: PageTitleOptions,
+  ): Promise<void> {
+    const actualPageTitle = await this.navigation.getPageTitle(
+      "verifyPageTitleIsDisplayedCorrectly",
+    );
+
+    expect(actualPageTitle).toBe(options.title);
+
+    logger.info(
+      `Verified: Page title '${actualPageTitle}' matches expected '${options.title}'`,
+    );
   }
 
   public async login(options: Credentials, fillOptions?: { allowEmpty?: boolean }) {
@@ -116,6 +149,11 @@ export class LoginPage extends BasePage {
       );
     }
 
+    // Skip filling if empty and allowEmpty is true
+    if (!username && fillOptions?.allowEmpty) {
+      return;
+    }
+
     if (!fillOptions?.allowEmpty) {
       CredentialValidator.validateNotPlaceholder(
         "LoginPage.fillUsernameInput",
@@ -147,6 +185,11 @@ export class LoginPage extends BasePage {
         "LoginPage.fillPasswordInput",
         "Password input is required.",
       );
+    }
+
+    // Skip filling if empty and allowEmpty is true
+    if (!password && fillOptions?.allowEmpty) {
+      return;
     }
 
     if (!fillOptions?.allowEmpty) {
@@ -195,7 +238,44 @@ export class LoginPage extends BasePage {
     );
   }
 
-  private async clickforgotPasswordLink(): Promise<void> {
+  /**
+   * Verifies that both required-field validation messages are visible.
+   * @returns A promise that resolves when both field-error checks pass.
+   */
+  public async verifyRequiredFieldErrorsAreVisible(): Promise<void> {
+    await Promise.all([
+      this.verifyUsernameRequiredErrorIsVisible(),
+      this.verifyPasswordRequiredErrorIsVisible(),
+    ]);
+  }
+
+  /**
+   * Verifies that the username required-field message is visible.
+   * @returns A promise that resolves when the username error is visible.
+   */
+  private async verifyUsernameRequiredErrorIsVisible(): Promise<void> {
+    await this.elementAssertions.verifyElementState(
+      this.usernameRequiredError,
+      "verifyUsernameRequiredErrorIsVisible",
+      "visible",
+      "username required error",
+    );
+  }
+
+  /**
+   * Verifies that the password required-field message is visible.
+   * @returns A promise that resolves when the password error is visible.
+   */
+  private async verifyPasswordRequiredErrorIsVisible(): Promise<void> {
+    await this.elementAssertions.verifyElementState(
+      this.passwordRequiredError,
+      "verifyPasswordRequiredErrorIsVisible",
+      "visible",
+      "password required error",
+    );
+  }
+
+  public async clickforgotPasswordLink(): Promise<void> {
     await this.elementActions.clickElement(
       this.forgotPasswordLink,
       "clickforgotPasswordLink",
@@ -261,18 +341,12 @@ export class LoginPage extends BasePage {
   }
 
   public async verifyFooterSocialMediaIconsAreVisible(): Promise<void> {
-    const iconCount = await this.elementAssertions.getElementCount(
+    await this.elementAssertions.verifyElementCount(
       this.footerSocialMediaIcons,
       "verifyFooterSocialMediaIconsAreVisible",
+      4,
       "Footer Social Media Icons",
     );
-
-    if (iconCount !== 4) {
-      ErrorHandler.logAndThrow(
-        "LoginPage.verifyFooterSocialMediaIconsAreVisible",
-        `Expected 4 social media icons but found ${iconCount}.`,
-      );
-    }
 
     await Promise.all([
       this.elementAssertions.verifyElementState(

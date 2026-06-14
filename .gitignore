@@ -13,6 +13,7 @@ node_modules/
 /logs/
 /dist/
 /downloads/
+.playwright-mcp
 
 # Environment configuration
 .env*
