@@ -20,13 +20,14 @@ This page is the complete command reference for the framework. It covers all par
 
 All runtime configuration is passed via `cross-env` as environment variables. The local execution templates below use the placeholders `<env>`, `<tag>`, and `<percentage>`, which map to `ENV`, `TEST_TAGS`, and `WORKER_PERCENTAGE` respectively. See [Test Tags](../05-testing/03-test-tags.md) for the available `<tag>` patterns.
 
-| Variable            | Values                                | Default   | Purpose                        |
-| ------------------- | ------------------------------------- | --------- | ------------------------------ |
-| `ENV`               | `qa` \| `uat` \| `preprod`            | `qa`      | Target environment stage       |
-| `HEADED`            | `true` \| `false`                     | `false`   | Run the browser in headed mode |
-| `TEST_TAGS`         | `@tag-name`                           | —         | Filter tests by tag            |
-| `WORKER_PERCENTAGE` | `10` \| `25` \| `50` \| `75` \| `100` | `10`      | Worker allocation percentage   |
-| `SKIP_BROWSER_INIT` | `true` \| `false`                     | `false`\* | Skip browser initialization    |
+| Variable            | Values                                | Default    | Purpose                               |
+| ------------------- | ------------------------------------- | ---------- | ------------------------------------- |
+| `ENV`               | `qa` \| `uat` \| `preprod`            | `qa`       | Target environment stage              |
+| `HEADED`            | `true` \| `false`                     | `false`    | Run the browser in headed mode        |
+| `TEST_TAGS`         | `@tag-name`                           | —          | Filter tests by tag                   |
+| `WORKER_PERCENTAGE` | `10` \| `25` \| `50` \| `75` \| `100` | `10`       | Worker allocation percentage          |
+| `BROWSER`           | `chromium` \| `firefox` \| `webkit`   | `chromium` | Playwright browser project (UI layer) |
+| `SKIP_BROWSER_INIT` | `true` \| `false`                     | `false`\*  | Skip browser initialization           |
 
 \* The runtime layer may override the default — see [`SKIP_BROWSER_INIT=true`](#skip_browser_inittrue).
 

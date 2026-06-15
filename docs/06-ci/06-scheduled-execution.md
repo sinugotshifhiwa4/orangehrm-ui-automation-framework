@@ -90,6 +90,7 @@ back to their workflow defaults:
 | `ENV`               | derived from the cron string |
 | `TEST_TYPE`         | derived from the cron string |
 | `TEST_LAYER`        | default `ui`                 |
+| `BROWSER`           | default `chromium`           |
 | `SHARD_COUNT`       | default `4`                  |
 | `SKIP_BROWSER_INIT` | default `false`              |
 

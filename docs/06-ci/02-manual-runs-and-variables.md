@@ -17,6 +17,7 @@ Manual runs are controlled through:
   - [`env`](#env)
   - [`test_type`](#test_type)
   - [`test_layer`](#test_layer)
+  - [`browser`](#browser)
   - [`shard_count`](#shard_count)
   - [`skip_browser_init`](#skip_browser_init)
 - [Tag Allow-List](#tag-allow-list)
@@ -35,6 +36,7 @@ on:
       env: { ... }
       test_type: { ... }
       test_layer: { ... }
+      browser: { ... }
       shard_count: { ... }
       skip_browser_init: { ... }
 ```
@@ -94,6 +96,19 @@ The test layer to run. Options:
 Only the UI layer is implemented today; `api`/`db` are scaffolded. The value sets
 `TEST_LAYER`, which `scripts/execution/test-executor.ts` maps to `tests/layers/<layer>`.
 
+### `browser`
+
+The Playwright browser project to run on. Options:
+
+- `chromium` (default)
+- `firefox`
+- `webkit`
+
+This sets the `BROWSER` variable, which `scripts/execution/test-executor.ts` resolves into
+the Playwright `--project`. The resolved project is also recorded on each test-history run
+(via `TEST_PROJECT`), so dashboards can filter by browser. The options must match the
+project names in `src/configuration/playwright/projects/projects.config.ts`.
+
 ### `shard_count`
 
 How many parallel Playwright shard jobs to run. Options:
@@ -132,6 +147,7 @@ A typical manual run might use:
 - `env=qa`
 - `test_type=sanity`
 - `test_layer=ui`
+- `browser=chromium`
 - `shard_count=4`
 - `skip_browser_init=false`
 
@@ -139,6 +155,7 @@ That tells the pipeline to:
 
 - run the UI layer
 - against QA
+- on Chromium
 - filtered to `@sanity`
 - across 4 shards
 - with browser/auth setup enabled
