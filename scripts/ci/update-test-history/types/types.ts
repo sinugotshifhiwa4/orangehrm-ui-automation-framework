@@ -39,6 +39,7 @@ export interface TestRun {
   commitSha: string;
   env: string;
   testType: string;
+  project: string;
   passed: number;
   failed: number;
   skipped: number;

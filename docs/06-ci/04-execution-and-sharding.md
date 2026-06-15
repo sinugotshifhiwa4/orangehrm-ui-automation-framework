@@ -56,6 +56,7 @@ npx cross-env \
   SHARD_TOTAL=${{ env.SHARD_COUNT }} \
   TEST_TAGS="${{ needs.resolve-tag.outputs.test_tag }}" \
   ENV=${{ env.ENV }} \
+  BROWSER=${{ env.BROWSER }} \
   SKIP_BROWSER_INIT=${{ env.SKIP_BROWSER_INIT }} \
   tsx scripts/execution/test-executor.ts
 ```
@@ -66,8 +67,8 @@ at the end of the step) rather than aborting the report-collection logic.
 ## What `test-executor.ts` Does
 
 `scripts/execution/test-executor.ts` is the bridge between CI variables and Playwright. It
-reads `TEST_LAYER`, `SHARD_INDEX`, `SHARD_TOTAL`, `TEST_TAGS`, and `SKIP_BROWSER_INIT`, then
-maps the layer to its test directory:
+reads `TEST_LAYER`, `SHARD_INDEX`, `SHARD_TOTAL`, `TEST_TAGS`, `BROWSER`, and
+`SKIP_BROWSER_INIT`, then maps the layer to its test directory:
 
 - `ui` → `tests/layers/ui`
 - `api` → `tests/layers/api`
@@ -75,11 +76,13 @@ maps the layer to its test directory:
 
 It also resolves the Playwright `--project`:
 
-- browser layers (`ui`) → `chromium`
+- browser layers (`ui`) → `BROWSER` (the manual `browser` input), defaulting to `chromium`
 - non-browser layers (`api` / `db`, or when browser init is skipped) → a project named after the layer
 
-> The project is derived only from the layer, never from a user. For UI runs it is always
-> `chromium` (unless `BROWSER` is overridden).
+> For UI runs the project comes from `BROWSER` — scheduled/push runs default to `chromium`,
+> manual runs pick it from the `browser` dispatch input. The executor exports the resolved
+> project as `TEST_PROJECT`, which the test-history pipeline records so dashboards can filter
+> by browser.
 
 It then assembles and runs:
 

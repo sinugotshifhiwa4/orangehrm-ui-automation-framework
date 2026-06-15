@@ -48,6 +48,17 @@ on:
           - ui
           - api
           - db
+      browser:
+        # Playwright browser project to run on. Must match a project name in
+        # src/configuration/playwright/projects/projects.config.ts.
+        description: "Browser project"
+        required: true
+        default: "chromium"
+        type: choice
+        options:
+          - chromium
+          - firefox
+          - webkit
       shard_count:
         description: "Number of shards"
         required: true
@@ -78,6 +89,10 @@ env:
   ENV_SLUG: ${{ github.event.inputs.env || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *' && 'uat') || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'preprod') || (github.ref_name == 'environment/UAT' && 'uat') || (github.ref_name == 'environment/PreProd' && 'preprod') || 'qa' }}
   TEST_TYPE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.test_type) || (github.event_name == 'schedule' && github.event.schedule == '0 2 * * 1' && 'regression') || (github.event_name == 'schedule' && 'sanity') || 'regression' }}
   TEST_LAYER: ${{ github.event.inputs.test_layer || 'ui' }}
+  # Playwright browser project the run executes on. Recorded in the test history
+  # so dashboards can filter by browser. Manual runs pick it; scheduled/push runs
+  # default to chromium.
+  BROWSER: ${{ github.event.inputs.browser || 'chromium' }}
   SHARD_COUNT: ${{ github.event.inputs.shard_count || '4' }}
   SKIP_BROWSER_INIT: ${{ github.event.inputs.skip_browser_init || 'false' }}
   # Branch to check out: scheduled runs target their paired environment branch;
@@ -263,6 +278,7 @@ jobs:
             SHARD_TOTAL=${{ env.SHARD_COUNT }} \
             TEST_TAGS="${{ needs.resolve-tag.outputs.test_tag }}" \
             ENV=${{ env.ENV }} \
+            BROWSER=${{ env.BROWSER }} \
             SKIP_BROWSER_INIT=${{ env.SKIP_BROWSER_INIT }} \
             tsx scripts/execution/test-executor.ts
           EXIT_CODE=$?
@@ -520,6 +536,7 @@ jobs:
         env:
           TEST_TYPE: ${{ env.TEST_TYPE }}
           ENV: ${{ env.ENV }}
+          BROWSER: ${{ env.BROWSER }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_REF_NAME: ${{ github.ref_name }}

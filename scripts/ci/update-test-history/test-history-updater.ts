@@ -76,6 +76,7 @@ export class TestHistoryUpdater {
 
     const environment = env("ENV", "qa");
     const testType = env("TEST_TYPE", "regression");
+    const project = env("TEST_PROJECT") || env("BROWSER", "chromium");
     const runNumber = parseInt(env("GITHUB_RUN_NUMBER", "0"), 10);
     const now = Date.now();
 
@@ -90,6 +91,7 @@ export class TestHistoryUpdater {
       commitSha: env("GITHUB_SHA").slice(0, 7),
       env: environment,
       testType,
+      project,
       passed,
       failed,
       skipped,
@@ -125,11 +127,11 @@ export class TestHistoryUpdater {
    */
   private logSummary(newRun: TestRun, parsed: ParseResult): void {
     const { passed, failed, skipped, flaky, failedTests, flakyTests } = parsed;
-    const { branch, testType, runNumber, reportUrl, ortoniUrl } = newRun;
+    const { branch, testType, project, runNumber, reportUrl, ortoniUrl } = newRun;
     const bucket = this.store.getBucket(branch, testType);
 
     logger.info(
-      `[update-test-history] Run #${runNumber} → branch="${branch}" testType="${testType}" status=${newRun.status}`,
+      `[update-test-history] Run #${runNumber} → branch="${branch}" testType="${testType}" project="${project}" status=${newRun.status}`,
     );
     logger.info(
       `[update-test-history]    passed=${passed} failed=${failed} skipped=${skipped} flaky=${flaky} passRate=${newRun.passRate}%`,

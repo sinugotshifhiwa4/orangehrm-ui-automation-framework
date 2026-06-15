@@ -101,6 +101,7 @@ execSync(command, {
   env: {
     ...process.env,
     TEST_LAYER: layer,
+    TEST_PROJECT: project,
     SKIP_BROWSER_INIT: String(skipAuthSetup),
   },
 });
