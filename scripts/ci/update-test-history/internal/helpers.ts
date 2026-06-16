@@ -1,13 +1,13 @@
-/**
+﻿/**
  * helpers.ts
  * Pure utility functions for the update-test-history pipeline.
- * No side-effects, no I/O — safe to unit-test in isolation.
+ * No side-effects, no I/O â€” safe to unit-test in isolation.
  */
 
 import { r2PublicReportsBase } from "../../shared/r2.constants.js";
 import type { TestRun, RunSummary } from "../types/types.js";
 
-// ─── String / formatting ──────────────────────────────────────────────────────
+// â”€â”€â”€ String / formatting â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /**
  * Reads an environment variable, returning `fallback` when absent or empty.
@@ -35,7 +35,7 @@ export function formatDuration(ms: number): string {
 }
 
 /**
- * Truncates a string to `maxLen` characters, appending "…" when trimmed.
+ * Truncates a string to `maxLen` characters, appending "â€¦" when trimmed.
  * @param s - The string to truncate.
  * @param maxLen - The maximum length of the returned string.
  * @returns The trimmed string, shortened with an ellipsis if it exceeded the limit.
@@ -43,10 +43,23 @@ export function formatDuration(ms: number): string {
 export function truncate(s: string, maxLen: number): string {
   const trimmed = s.trim();
   if (trimmed.length <= maxLen) return trimmed;
-  return trimmed.slice(0, maxLen - 1) + "…";
+  return trimmed.slice(0, maxLen - 1) + "â€¦";
 }
 
-// ─── URL builders ─────────────────────────────────────────────────────────────
+const ANSI_ESCAPE_PATTERN = /\x1b\[[0-9;]*m/g;
+
+/**
+ * Removes ANSI colour escape sequences from a string. Playwright wraps error
+ * messages in colour codes; stripping them keeps the stored text clean and the
+ * dashboard's keyword matching reliable.
+ * @param s - The string to clean.
+ * @returns The string with ANSI escape sequences removed.
+ */
+export function stripAnsi(s: string): string {
+  return s.replace(ANSI_ESCAPE_PATTERN, "");
+}
+
+// â”€â”€â”€ URL builders â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /**
  * Builds the public Playwright and Ortoni report URLs for a given run. The base
@@ -69,7 +82,7 @@ export function buildReportUrls(
   };
 }
 
-// ─── History helpers ──────────────────────────────────────────────────────────
+// â”€â”€â”€ History helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /**
  * Strips `failedTests` and `flakyTests` from runs outside the detail window

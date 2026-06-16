@@ -23,6 +23,12 @@ export interface FailedTest {
   durationSec: number;
   /** "failure" = assertion; "error" = unexpected exception; "flaky" = passed on retry. */
   kind: "failure" | "error" | "flaky";
+  /**
+   * First error message from the Playwright report (ANSI-stripped, truncated).
+   * Carries the matcher line + "waiting for ..." detail so the dashboard can
+   * classify failure type. Absent when the report had no error message.
+   */
+  failureMessage?: string;
 }
 
 /**
@@ -98,12 +104,27 @@ export interface PlaywrightJsonStats {
   duration: number;
 }
 
+// An error entry attached to a test result in the Playwright JSON report.
+export interface PlaywrightJsonError {
+  message?: string;
+  stack?: string;
+}
+
+// A single execution (attempt) of a test in the Playwright JSON report. The
+// error lives here — `error` for the primary failure, `errors` for the full set.
+export interface PlaywrightJsonTestResult {
+  error?: PlaywrightJsonError;
+  errors?: PlaywrightJsonError[];
+}
+
 // A single test result within a spec in the Playwright JSON report.
 export interface PlaywrightJsonTest {
   title: string;
   /** "expected" | "unexpected" | "skipped" | "flaky" */
   status: string;
   duration: number;
+  /** Per-attempt results; the error message is read from here. */
+  results?: PlaywrightJsonTestResult[];
 }
 
 // A spec entry (one test case) in the Playwright JSON report.
