@@ -112,7 +112,7 @@ AWS CLI authenticates with `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` secrets.
 The job maintains a rolling `test-history.json` in the R2 bucket:
 
 1. `r2.ts download-history` — pull the current history (a missing file is fine; a fresh one is created)
-2. `scripts/ci/update-test-history/index.ts` — parse `playwright-report/results.json`, build a `TestRun` record (counts, pass rate, duration, branch, commit, browser project, report URLs, failed/flaky tests), and update the history. The store keeps a capped index (200 runs), a per branch→testType bucket (50 runs), and full failure detail only for the most recent 20 runs.
+2. `scripts/ci/update-test-history/index.ts` — parse `playwright-report/results.json`, build a `TestRun` record (counts, pass rate, duration, branch, commit, browser project, report URLs, failed/flaky tests — each captured with its Playwright error message), and update the history. The store keeps a capped index (200 runs), a per branch→testType bucket (50 runs), and full failure detail only for the most recent 20 runs.
 3. `r2.ts upload-history` — write the updated history back
 
 ### Build report upload
