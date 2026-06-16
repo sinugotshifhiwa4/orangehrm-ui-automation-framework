@@ -72,20 +72,6 @@ export default defineConfig({
     headless: !isHeaded,
 
     viewport: resolvedViewport,
-
-    launchOptions: {
-      args: [
-        "--window-size=1366,768",
-        "--disable-background-timer-throttling",
-        "--disable-backgrounding-occluded-windows",
-        "--disable-renderer-backgrounding",
-        "--disable-extensions",
-        "--no-first-run",
-        "--disable-default-apps",
-        "--disable-translate",
-        ...(isCI ? ["--no-sandbox", "--disable-dev-shm-usage"] : []),
-      ],
-    },
   },
 
   /* Configure projects for major browsers */
