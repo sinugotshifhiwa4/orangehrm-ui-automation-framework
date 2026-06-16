@@ -1,0 +1,9 @@
+node_modules/
+playwright-report/
+ortoni-report/
+all-blob-reports/
+blob-report-*/
+test-results/
+coverage/
+.playwright-browsers/
+.npm/

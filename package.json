@@ -1,0 +1,92 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "luxon": "^3.7.2",
+    "winston": "^3.19.0"
+  },
+  "name": "orangehrm-ui-automation-framework",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript UI automation framework for OrangeHRM — page objects, fixtures, and reusable helpers for E2E testing.",
+  "main": "index.js",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^25.9.3",
+    "cspell": "^9.8.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-playwright": "^2.10.4",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "ortoni-report": "^4.0.9",
+    "playwright": "^1.60.0",
+    "prettier": "^3.8.4",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "check": "prettier \"**/*.{ts,js,mjs,json,md,yml,yaml}\" --check && npm run lint:check",
+    "fix": "prettier \"**/*.{ts,js,mjs,json,md,yml,yaml}\" --write && eslint . --fix --max-warnings 0",
+    "lint:check": "tsc --noEmit && eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "type-check": "tsc --noEmit",
+    "pretest:ui": "npm run lint:check",
+    "pretest:api": "npm run lint:check",
+    "pretest:db": "npm run lint:check",
+    "test:ui": "cross-env TEST_LAYER=ui tsx scripts/execution/test-executor.ts",
+    "test:api": "cross-env TEST_LAYER=api tsx scripts/execution/test-executor.ts",
+    "test:db": "cross-env TEST_LAYER=db tsx scripts/execution/test-executor.ts",
+    "test:failed": "npx playwright test --last-failed",
+    "ui": "cross-env TEST_LAYER=ui tsx scripts/execution/test-executor.ts --ui",
+    "codegen": "npx playwright codegen",
+    "debug": "cross-env TEST_LAYER=ui tsx scripts/execution/test-executor.ts --debug",
+    "report": "npx playwright show-report --host 127.0.0.1 --port 0",
+    "ortoni-report": "tsx scripts/reports/show-ortoni-report.ts",
+    "ortoni-report:stop": "tsx scripts/reports/stop-ortoni-report.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework.git"
+  },
+  "lint-staged": {
+    "*.{ts,js,mjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "e2e",
+    "ui",
+    "pom",
+    "fixtures",
+    "cross-environment",
+    "test-tags",
+    "tag-based-execution",
+    "ci-cd",
+    "sharding",
+    "winston",
+    "eslint",
+    "prettier",
+    "husky",
+    "lint-staged"
+  ],
+  "author": "Tshifhiwa Sinugo",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/issues"
+  },
+  "homepage": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework#readme"
+}

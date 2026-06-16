@@ -1,0 +1,20 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/ortoni-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/blob-report/
+/blob-report-*/
+/.auth/
+/logs/
+/dist/
+/downloads/
+.playwright-mcp
+
+# Environment configuration
+.env*
+!.env.example
