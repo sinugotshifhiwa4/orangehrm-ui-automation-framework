@@ -175,6 +175,7 @@ All docs live under `docs/`.
 | **06 — CI**                                                      | Pipeline, environment resolution, sharding  | [CI Overview](docs/06-ci/01-overview.md) · [Manual Runs and Variables](docs/06-ci/02-manual-runs-and-variables.md) · [Environment Resolution](docs/06-ci/03-environment-resolution.md) · [Execution and Sharding](docs/06-ci/04-execution-and-sharding.md) · [Pipeline Stages and Reporting](docs/06-ci/05-pipeline-stages-and-reporting.md) · [Scheduled Execution](docs/06-ci/06-scheduled-execution.md)                                                                            |
 | **07 — Workflows**                                               | Add class, register, use in tests, examples | [Workflows Overview](docs/07-workflows/01-overview.md) · [Add a Class](docs/07-workflows/02-add-a-class.md) · [Register in Fixtures](docs/07-workflows/03-register-in-fixtures.md) · [Use in Tests](docs/07-workflows/04-use-in-tests.md) · [Test Tags Workflow](docs/07-workflows/05-test-tags-workflow.md) · [End-to-End Example](docs/07-workflows/07-end-to-end-example.md)                                                                                                       |
 | **08 — Test Data**                                               | Test data organisation, builders, fixtures  | [Test Data Structure](docs/08-test-data/structure.md)                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **09 — Dashboard**                                               | External analytics dashboard for CI results | [Dashboard Overview](docs/09-dashboard/01-overview.md)                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ---
 
@@ -185,6 +186,14 @@ Contributions are welcome. Before starting any work, please read the branching a
 - [Branching Strategy](docs/02-rules/branching-strategy.md)
 - [Commit Messages](docs/02-rules/commit-messages.md)
 - [Commit Workflow](docs/02-rules/commit-workflow.md)
+
+---
+
+## Dashboard
+
+Live test results are visualised in an external analytics dashboard. See the [Dashboard Overview](docs/09-dashboard/01-overview.md) for details.
+
+- [Live Test Results Dashboard](https://orangehrm-test-pulse.sinugotshifhiwa4.workers.dev/)
 
 ---
 
