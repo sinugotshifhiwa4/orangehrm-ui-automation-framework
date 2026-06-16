@@ -7,14 +7,19 @@
 
 import fs from "fs";
 
-import { MAX_FAILED_TESTS_STORED, MAX_FLAKY_TESTS_STORED } from "./constants.js";
+import {
+  MAX_FAILED_TESTS_STORED,
+  MAX_FAILURE_MESSAGE_LENGTH,
+  MAX_FLAKY_TESTS_STORED,
+} from "./constants.js";
 import { logger } from "../../../logger/logger.js";
-import { truncate } from "./helpers.js";
+import { stripAnsi, truncate } from "./helpers.js";
 import type {
   FailedTest,
   ParseResult,
   PlaywrightJsonReport,
   PlaywrightJsonSuite,
+  PlaywrightJsonTest,
 } from "../types/types.js";
 
 export class ResultsParser {
@@ -91,6 +96,7 @@ export class ResultsParser {
           name: truncate(spec.title, 200),
           classname: truncate(spec.file, 200),
           durationSec: Math.round(totalMs) / 1000,
+          failureMessage: this.extractFailureMessage(spec.tests),
         };
 
         if (isFailed) {
@@ -103,5 +109,24 @@ export class ResultsParser {
         }
       }
     }
+  }
+
+  /**
+   * Extracts the first error message across a spec's test attempts. Reads
+   * `result.error.message` first, falling back to the first populated
+   * `result.errors[]` entry. The message is ANSI-stripped and truncated so the
+   * dashboard can classify failure type without bloating the history file.
+   * @param tests - The test results belonging to a single spec.
+   * @returns The cleaned failure message, or undefined when none is present.
+   */
+  private extractFailureMessage(tests: PlaywrightJsonTest[]): string | undefined {
+    for (const test of tests) {
+      for (const result of test.results ?? []) {
+        const message =
+          result.error?.message ?? result.errors?.find((e) => e.message)?.message;
+        if (message) return truncate(stripAnsi(message), MAX_FAILURE_MESSAGE_LENGTH);
+      }
+    }
+    return undefined;
   }
 }

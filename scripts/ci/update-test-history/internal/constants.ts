@@ -32,3 +32,10 @@ export const MAX_FAILED_TESTS_STORED = 50;
 
 /** Hard cap on the number of flaky test entries stored per run. */
 export const MAX_FLAKY_TESTS_STORED = 50;
+
+/**
+ * Maximum length of the captured failure message stored per failed/flaky test.
+ * Long enough to retain the matcher line and "waiting for ..." detail the
+ * dashboard classifier needs, short enough to keep the history file lean.
+ */
+export const MAX_FAILURE_MESSAGE_LENGTH = 1000;
