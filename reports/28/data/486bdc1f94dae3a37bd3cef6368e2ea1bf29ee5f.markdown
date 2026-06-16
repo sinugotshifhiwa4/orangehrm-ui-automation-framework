@@ -1,0 +1,33 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: layers/ui/login/Footer.spec.ts >> Login | Footer >> Should display footer copyright year
+- Location: tests/layers/ui/login/Footer.spec.ts:23:7
+
+# Error details
+
+```
+Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+<launched> pid=5816
+[pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+Call log:
+  - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+  - <launched> pid=5816
+  - [pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+  - [pid=5816] <gracefully close start>
+  - [pid=5816] <kill>
+  - [pid=5816] <will force kill>
+  - [pid=5816] <process did exit: exitCode=1, signal=null>
+  - [pid=5816] starting temporary directories cleanup
+  - [pid=5816] finished temporary directories cleanup
+  - [pid=5816] <gracefully close end>
+
+```

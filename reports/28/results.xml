@@ -1,0 +1,1472 @@
+<testsuites id="" name="" tests="13" failures="0" skipped="0" errors="13" time="41.77869091796875">
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="4" failures="0" skipped="0" time="0.03" errors="4">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="0.007">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/43d7ab7092862553c820a19542ebd5ef75a56db7.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b5af53d61989f898fc5d10d2ab066ac317c9953f.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/cc7d778d82aa97c8f1881ab5930cc5d7c70c1858.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6c088e328f70d2dacdd36e7e84243eab5f933f2f.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/30fc29d79d5e3fb33c3683dd9e21f7ab04c1b0e9.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/df1b36c40d9c7fafdcca8e43a1848fb78cf73fa1.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:9:7 › Login | Footer › Should display complete footer with all elements @regression @skip-auth @login @sanity 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5683
+    [pid=5683][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5683
+      - [pid=5683][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5683] <gracefully close start>
+      - [pid=5683] <kill>
+      - [pid=5683] <will force kill>
+      - [pid=5683] <process did exit: exitCode=1, signal=null>
+      - [pid=5683] starting temporary directories cleanup
+      - [pid=5683] finished temporary directories cleanup
+      - [pid=5683] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/43d7ab7092862553c820a19542ebd5ef75a56db7.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b5af53d61989f898fc5d10d2ab066ac317c9953f.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/b5af53d61989f898fc5d10d2ab066ac317c9953f.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5706
+    [pid=5706][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5706
+      - [pid=5706][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5706] <gracefully close start>
+      - [pid=5706] <kill>
+      - [pid=5706] <will force kill>
+      - [pid=5706] <process did exit: exitCode=1, signal=null>
+      - [pid=5706] starting temporary directories cleanup
+      - [pid=5706] finished temporary directories cleanup
+      - [pid=5706] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/cc7d778d82aa97c8f1881ab5930cc5d7c70c1858.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6c088e328f70d2dacdd36e7e84243eab5f933f2f.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6c088e328f70d2dacdd36e7e84243eab5f933f2f.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5728
+    [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5728
+      - [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5728] <gracefully close start>
+      - [pid=5728] <kill>
+      - [pid=5728] <will force kill>
+      - [pid=5728] <process did exit: exitCode=1, signal=null>
+      - [pid=5728] starting temporary directories cleanup
+      - [pid=5728] finished temporary directories cleanup
+      - [pid=5728] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/30fc29d79d5e3fb33c3683dd9e21f7ab04c1b0e9.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/df1b36c40d9c7fafdcca8e43a1848fb78cf73fa1.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/df1b36c40d9c7fafdcca8e43a1848fb78cf73fa1.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer version text" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/bba2a5f67f3641758f187d3d0cbf73c8dfcfbc5e.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/20e8b81e8c0888763832606eaa92e87a844062e7.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e7a21886c3a0527e31322152ddcb9e94cfebe7f1.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/84b5d557e2e9e73e1ce583767af4e4f92a38783e.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/628bc34b6763abadee733eb73b63495149d4c159.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/09610e790d1f1d10b64bd9f8d76986506fd5a26d.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:18:7 › Login | Footer › Should display footer version text @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5750
+    [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5750
+      - [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5750] <gracefully close start>
+      - [pid=5750] <kill>
+      - [pid=5750] <will force kill>
+      - [pid=5750] <process did exit: exitCode=1, signal=null>
+      - [pid=5750] starting temporary directories cleanup
+      - [pid=5750] finished temporary directories cleanup
+      - [pid=5750] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/bba2a5f67f3641758f187d3d0cbf73c8dfcfbc5e.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/20e8b81e8c0888763832606eaa92e87a844062e7.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/20e8b81e8c0888763832606eaa92e87a844062e7.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5772
+    [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5772
+      - [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5772] <gracefully close start>
+      - [pid=5772] <kill>
+      - [pid=5772] <will force kill>
+      - [pid=5772] <process did exit: exitCode=1, signal=null>
+      - [pid=5772] starting temporary directories cleanup
+      - [pid=5772] finished temporary directories cleanup
+      - [pid=5772] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/e7a21886c3a0527e31322152ddcb9e94cfebe7f1.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/84b5d557e2e9e73e1ce583767af4e4f92a38783e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/84b5d557e2e9e73e1ce583767af4e4f92a38783e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5794
+    [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5794
+      - [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5794] <gracefully close start>
+      - [pid=5794] <kill>
+      - [pid=5794] <will force kill>
+      - [pid=5794] <process did exit: exitCode=1, signal=null>
+      - [pid=5794] starting temporary directories cleanup
+      - [pid=5794] finished temporary directories cleanup
+      - [pid=5794] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/628bc34b6763abadee733eb73b63495149d4c159.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/09610e790d1f1d10b64bd9f8d76986506fd5a26d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/09610e790d1f1d10b64bd9f8d76986506fd5a26d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright year" classname="layers/ui/login/Footer.spec.ts" time="0.007">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/4b8760d2b14f4f6bbe736067db00c0cf9a854215.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fdecdeae8a12b47d242d9ad68023c84a191eee02.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/936cb4242a9d00421035f58791ee3137ef21d30e.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c8383ef89b4725ce529ebb82a3d633166a617ae7.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8863355fad33f61e609cabd14dbf7f2c6ee59c7e.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/2cca1812c1a7eca9b3f1ff6264991413c5ebefaf.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:23:7 › Login | Footer › Should display footer copyright year @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5816
+    [pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5816
+      - [pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5816] <gracefully close start>
+      - [pid=5816] <kill>
+      - [pid=5816] <will force kill>
+      - [pid=5816] <process did exit: exitCode=1, signal=null>
+      - [pid=5816] starting temporary directories cleanup
+      - [pid=5816] finished temporary directories cleanup
+      - [pid=5816] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/4b8760d2b14f4f6bbe736067db00c0cf9a854215.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/fdecdeae8a12b47d242d9ad68023c84a191eee02.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/fdecdeae8a12b47d242d9ad68023c84a191eee02.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5838
+    [pid=5838][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5838
+      - [pid=5838][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5838] <gracefully close start>
+      - [pid=5838] <kill>
+      - [pid=5838] <will force kill>
+      - [pid=5838] <process did exit: exitCode=1, signal=null>
+      - [pid=5838] starting temporary directories cleanup
+      - [pid=5838] finished temporary directories cleanup
+      - [pid=5838] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/936cb4242a9d00421035f58791ee3137ef21d30e.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c8383ef89b4725ce529ebb82a3d633166a617ae7.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/c8383ef89b4725ce529ebb82a3d633166a617ae7.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5860
+    [pid=5860][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5860
+      - [pid=5860][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5860] <gracefully close start>
+      - [pid=5860] <kill>
+      - [pid=5860] <will force kill>
+      - [pid=5860] <process did exit: exitCode=1, signal=null>
+      - [pid=5860] starting temporary directories cleanup
+      - [pid=5860] finished temporary directories cleanup
+      - [pid=5860] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/8863355fad33f61e609cabd14dbf7f2c6ee59c7e.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/2cca1812c1a7eca9b3f1ff6264991413c5ebefaf.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/2cca1812c1a7eca9b3f1ff6264991413c5ebefaf.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright owner link" classname="layers/ui/login/Footer.spec.ts" time="0.007">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/927cbfbb612cc2152df4cf47a9e1aa7b7e1df4fc.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a4a33a21343fa2c201462027ec74a0c3a39c9c4a.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/98bafde804fbacb7b17de8f2ce3cf4a9ee1b1a11.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c50b02ad0019c1f026fea029831773c303d30023.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8178c68d4546fd5c6efc05d5fa2c4fadb257b3bc.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f45d73698e9652a4838ca3a9c0a35d64f85c6971.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:28:7 › Login | Footer › Should display footer copyright owner link @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5882
+    [pid=5882][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5882
+      - [pid=5882][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5882] <gracefully close start>
+      - [pid=5882] <kill>
+      - [pid=5882] <will force kill>
+      - [pid=5882] <process did exit: exitCode=1, signal=null>
+      - [pid=5882] starting temporary directories cleanup
+      - [pid=5882] finished temporary directories cleanup
+      - [pid=5882] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/927cbfbb612cc2152df4cf47a9e1aa7b7e1df4fc.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a4a33a21343fa2c201462027ec74a0c3a39c9c4a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/a4a33a21343fa2c201462027ec74a0c3a39c9c4a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5904
+    [pid=5904][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5904
+      - [pid=5904][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5904] <gracefully close start>
+      - [pid=5904] <kill>
+      - [pid=5904] <will force kill>
+      - [pid=5904] <process did exit: exitCode=1, signal=null>
+      - [pid=5904] starting temporary directories cleanup
+      - [pid=5904] finished temporary directories cleanup
+      - [pid=5904] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/98bafde804fbacb7b17de8f2ce3cf4a9ee1b1a11.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c50b02ad0019c1f026fea029831773c303d30023.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/c50b02ad0019c1f026fea029831773c303d30023.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5926
+    [pid=5926][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5926
+      - [pid=5926][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5926] <gracefully close start>
+      - [pid=5926] <kill>
+      - [pid=5926] <will force kill>
+      - [pid=5926] <process did exit: exitCode=1, signal=null>
+      - [pid=5926] starting temporary directories cleanup
+      - [pid=5926] finished temporary directories cleanup
+      - [pid=5926] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/8178c68d4546fd5c6efc05d5fa2c4fadb257b3bc.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f45d73698e9652a4838ca3a9c0a35d64f85c6971.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f45d73698e9652a4838ca3a9c0a35d64f85c6971.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="2" failures="0" skipped="0" time="0.017" errors="2">
+<testcase name="Login | Footer › Should display footer rights text" classname="layers/ui/login/Footer.spec.ts" time="0.008">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/3339562f30a4b3ca905065ee31621dd50cc48552.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/626b6206f5f8ebc4968f91a29921a27b868c2aa8.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/227c5ccb02ee207ac30ff66a14cac2e0d88f94f5.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f957d3e4c3b805fb3ecfc7e58646bbddb55d07c2.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0fc5e2f36a69690ec5a57c2d2c7497fe79f19ee1.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b195ac0c01bcbf0528f4c28c7b829c046bb25295.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:33:7 › Login | Footer › Should display footer rights text @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5662
+    [pid=5662][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5662
+      - [pid=5662][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5662] <gracefully close start>
+      - [pid=5662] <kill>
+      - [pid=5662] <will force kill>
+      - [pid=5662] <process did exit: exitCode=1, signal=null>
+      - [pid=5662] starting temporary directories cleanup
+      - [pid=5662] finished temporary directories cleanup
+      - [pid=5662] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/3339562f30a4b3ca905065ee31621dd50cc48552.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/626b6206f5f8ebc4968f91a29921a27b868c2aa8.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/626b6206f5f8ebc4968f91a29921a27b868c2aa8.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5684
+    [pid=5684][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5684
+      - [pid=5684][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5684] <gracefully close start>
+      - [pid=5684] <kill>
+      - [pid=5684] <will force kill>
+      - [pid=5684] <process did exit: exitCode=1, signal=null>
+      - [pid=5684] starting temporary directories cleanup
+      - [pid=5684] finished temporary directories cleanup
+      - [pid=5684] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/227c5ccb02ee207ac30ff66a14cac2e0d88f94f5.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f957d3e4c3b805fb3ecfc7e58646bbddb55d07c2.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f957d3e4c3b805fb3ecfc7e58646bbddb55d07c2.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5706
+    [pid=5706][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5706
+      - [pid=5706][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5706] <gracefully close start>
+      - [pid=5706] <kill>
+      - [pid=5706] <will force kill>
+      - [pid=5706] <process did exit: exitCode=1, signal=null>
+      - [pid=5706] starting temporary directories cleanup
+      - [pid=5706] finished temporary directories cleanup
+      - [pid=5706] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/0fc5e2f36a69690ec5a57c2d2c7497fe79f19ee1.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b195ac0c01bcbf0528f4c28c7b829c046bb25295.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/b195ac0c01bcbf0528f4c28c7b829c046bb25295.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer social media icons" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/64fc7c36695dca76164e437badd8b2443099dce6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f70f731d8ad4714f99f7c3e5ffc199562715e11a.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9e8d33ab80d9cc54788f45d57bb764506f55a919.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ad309d007490307fa162b0e4ca5ed42c34e26ed2.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/17e43cab90b0287f9fc1e9e4be9767b5343bc7c1.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6d8ebb98b8942c18a14e73c94139ec072397acf6.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/Footer.spec.ts:38:7 › Login | Footer › Should display footer social media icons @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5728
+    [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5728
+      - [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5728] <gracefully close start>
+      - [pid=5728] <kill>
+      - [pid=5728] <will force kill>
+      - [pid=5728] <process did exit: exitCode=1, signal=null>
+      - [pid=5728] starting temporary directories cleanup
+      - [pid=5728] finished temporary directories cleanup
+      - [pid=5728] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/64fc7c36695dca76164e437badd8b2443099dce6.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f70f731d8ad4714f99f7c3e5ffc199562715e11a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f70f731d8ad4714f99f7c3e5ffc199562715e11a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5750
+    [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5750
+      - [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5750] <gracefully close start>
+      - [pid=5750] <kill>
+      - [pid=5750] <will force kill>
+      - [pid=5750] <process did exit: exitCode=1, signal=null>
+      - [pid=5750] starting temporary directories cleanup
+      - [pid=5750] finished temporary directories cleanup
+      - [pid=5750] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/9e8d33ab80d9cc54788f45d57bb764506f55a919.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ad309d007490307fa162b0e4ca5ed42c34e26ed2.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/ad309d007490307fa162b0e4ca5ed42c34e26ed2.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5772
+    [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5772
+      - [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5772] <gracefully close start>
+      - [pid=5772] <kill>
+      - [pid=5772] <will force kill>
+      - [pid=5772] <process did exit: exitCode=1, signal=null>
+      - [pid=5772] starting temporary directories cleanup
+      - [pid=5772] finished temporary directories cleanup
+      - [pid=5772] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/17e43cab90b0287f9fc1e9e4be9767b5343bc7c1.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6d8ebb98b8942c18a14e73c94139ec072397acf6.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6d8ebb98b8942c18a14e73c94139ec072397acf6.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.009" errors="1">
+<testcase name="Login | Forgot Password › Should display reset password success page after requesting password reset" classname="layers/ui/login/ForgotPassword.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/da53e99700637b8e2e31f1e0214f5e5d1333556b.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7d44acf85fe39b18e963667606f47690c4445cb8.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0d5c8c3485cdfe2460e26d57cfebfdc69c2f8579.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5906f8d494134731d6a48894a14c4b675f9e9bc4.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5e113ea6084962c1fba48a59729976ecd435c15f.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b76aaa2a94c926f410a46f9a67fa3fd77f6ed939.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/ForgotPassword.spec.ts:10:7 › Login | Forgot Password › Should display reset password success page after requesting password reset @regression @skip-auth @login @sanity 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5794
+    [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5794
+      - [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5794] <gracefully close start>
+      - [pid=5794] <kill>
+      - [pid=5794] <will force kill>
+      - [pid=5794] <process did exit: exitCode=1, signal=null>
+      - [pid=5794] starting temporary directories cleanup
+      - [pid=5794] finished temporary directories cleanup
+      - [pid=5794] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/da53e99700637b8e2e31f1e0214f5e5d1333556b.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7d44acf85fe39b18e963667606f47690c4445cb8.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7d44acf85fe39b18e963667606f47690c4445cb8.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5818
+    [pid=5818][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5818
+      - [pid=5818][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5818] <gracefully close start>
+      - [pid=5818] <kill>
+      - [pid=5818] <will force kill>
+      - [pid=5818] <process did exit: exitCode=1, signal=null>
+      - [pid=5818] starting temporary directories cleanup
+      - [pid=5818] finished temporary directories cleanup
+      - [pid=5818] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/0d5c8c3485cdfe2460e26d57cfebfdc69c2f8579.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5906f8d494134731d6a48894a14c4b675f9e9bc4.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/5906f8d494134731d6a48894a14c4b675f9e9bc4.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5840
+    [pid=5840][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5840
+      - [pid=5840][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5840] <gracefully close start>
+      - [pid=5840] <kill>
+      - [pid=5840] <will force kill>
+      - [pid=5840] <process did exit: exitCode=1, signal=null>
+      - [pid=5840] starting temporary directories cleanup
+      - [pid=5840] finished temporary directories cleanup
+      - [pid=5840] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/5e113ea6084962c1fba48a59729976ecd435c15f.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b76aaa2a94c926f410a46f9a67fa3fd77f6ed939.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/b76aaa2a94c926f410a46f9a67fa3fd77f6ed939.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.009" errors="1">
+<testcase name="Login | Forgot Password › Should navigate back to login page when cancel button is clicked" classname="layers/ui/login/ForgotPassword.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/83bab22da2e0bdabd0215e9df81b4d4e1c86b4d3.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/39c5048913399835370fcfd823e7f88dd758c3bc.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/dae6ce36505c4f6f6d9e3042ccd3f90a4cbb45ee.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/45c137f214ef012e59ea01d48f6f305e0090c025.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ad92e9d16fe32e906b00b7677c74de173e34c312.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d0bdf0e84c1a66ba5bebed0b50d92c5a149b537a.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/ForgotPassword.spec.ts:24:7 › Login | Forgot Password › Should navigate back to login page when cancel button is clicked @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5683
+    [pid=5683][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5683
+      - [pid=5683][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5683] <gracefully close start>
+      - [pid=5683] <kill>
+      - [pid=5683] <will force kill>
+      - [pid=5683] <process did exit: exitCode=1, signal=null>
+      - [pid=5683] starting temporary directories cleanup
+      - [pid=5683] finished temporary directories cleanup
+      - [pid=5683] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/83bab22da2e0bdabd0215e9df81b4d4e1c86b4d3.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/39c5048913399835370fcfd823e7f88dd758c3bc.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/39c5048913399835370fcfd823e7f88dd758c3bc.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5705
+    [pid=5705][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5705
+      - [pid=5705][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5705] <gracefully close start>
+      - [pid=5705] <kill>
+      - [pid=5705] <will force kill>
+      - [pid=5705] <process did exit: exitCode=1, signal=null>
+      - [pid=5705] starting temporary directories cleanup
+      - [pid=5705] finished temporary directories cleanup
+      - [pid=5705] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/dae6ce36505c4f6f6d9e3042ccd3f90a4cbb45ee.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/45c137f214ef012e59ea01d48f6f305e0090c025.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/45c137f214ef012e59ea01d48f6f305e0090c025.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5728
+    [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5728
+      - [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5728] <gracefully close start>
+      - [pid=5728] <kill>
+      - [pid=5728] <will force kill>
+      - [pid=5728] <process did exit: exitCode=1, signal=null>
+      - [pid=5728] starting temporary directories cleanup
+      - [pid=5728] finished temporary directories cleanup
+      - [pid=5728] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/ad92e9d16fe32e906b00b7677c74de173e34c312.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d0bdf0e84c1a66ba5bebed0b50d92c5a149b537a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d0bdf0e84c1a66ba5bebed0b50d92c5a149b537a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="2" failures="0" skipped="0" time="0.018" errors="2">
+<testcase name="Login | Invalid Credentials › Should display required field errors when credentials are empty" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/9cc45e0498de84498670ef676beecde5b9c687f9.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/34ef36ccd2e26fd31b8e8963cc6952b94c515225.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/33e8f3d6bfb4298ad7fe430aca336f571313aa91.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f087e277a2c1deb1b18777045f63e0c25b2e081c.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/2cd351730511478be49c8f18c205befa06b9c3f0.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/51de29fda4e46dadffd9cf947fa19956acebe248.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/InvalidLogin.spec.ts:13:9 › Login | Invalid Credentials › Should display required field errors when credentials are empty @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5750
+    [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5750
+      - [pid=5750][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5750] <gracefully close start>
+      - [pid=5750] <kill>
+      - [pid=5750] <will force kill>
+      - [pid=5750] <process did exit: exitCode=1, signal=null>
+      - [pid=5750] starting temporary directories cleanup
+      - [pid=5750] finished temporary directories cleanup
+      - [pid=5750] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/9cc45e0498de84498670ef676beecde5b9c687f9.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/34ef36ccd2e26fd31b8e8963cc6952b94c515225.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/34ef36ccd2e26fd31b8e8963cc6952b94c515225.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5772
+    [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5772
+      - [pid=5772][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5772] <gracefully close start>
+      - [pid=5772] <kill>
+      - [pid=5772] <will force kill>
+      - [pid=5772] <process did exit: exitCode=1, signal=null>
+      - [pid=5772] starting temporary directories cleanup
+      - [pid=5772] finished temporary directories cleanup
+      - [pid=5772] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/33e8f3d6bfb4298ad7fe430aca336f571313aa91.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f087e277a2c1deb1b18777045f63e0c25b2e081c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f087e277a2c1deb1b18777045f63e0c25b2e081c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5794
+    [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5794
+      - [pid=5794][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5794] <gracefully close start>
+      - [pid=5794] <kill>
+      - [pid=5794] <will force kill>
+      - [pid=5794] <process did exit: exitCode=1, signal=null>
+      - [pid=5794] starting temporary directories cleanup
+      - [pid=5794] finished temporary directories cleanup
+      - [pid=5794] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/2cd351730511478be49c8f18c205befa06b9c3f0.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/51de29fda4e46dadffd9cf947fa19956acebe248.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/51de29fda4e46dadffd9cf947fa19956acebe248.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/027b652e4b45022a083f665f0f8eeb65d4525670.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6781ebd06db15c6b3c0241671672fa992d22bb3a.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6972157eddd6ef926610b83676cd4cfd1933d3b8.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/58e5a514fc6ffb095d2cca38b55bfc3f613379c2.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/484a25b75ea344922aec92ed5574011b3ee4000a.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e297aac24181bfadf744349f2fa19c900b12294d.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/InvalidLogin.spec.ts:23:9 › Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5816
+    [pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5816
+      - [pid=5816][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5816] <gracefully close start>
+      - [pid=5816] <kill>
+      - [pid=5816] <will force kill>
+      - [pid=5816] <process did exit: exitCode=1, signal=null>
+      - [pid=5816] starting temporary directories cleanup
+      - [pid=5816] finished temporary directories cleanup
+      - [pid=5816] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/027b652e4b45022a083f665f0f8eeb65d4525670.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6781ebd06db15c6b3c0241671672fa992d22bb3a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6781ebd06db15c6b3c0241671672fa992d22bb3a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5838
+    [pid=5838][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5838
+      - [pid=5838][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5838] <gracefully close start>
+      - [pid=5838] <kill>
+      - [pid=5838] <will force kill>
+      - [pid=5838] <process did exit: exitCode=1, signal=null>
+      - [pid=5838] starting temporary directories cleanup
+      - [pid=5838] finished temporary directories cleanup
+      - [pid=5838] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/6972157eddd6ef926610b83676cd4cfd1933d3b8.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/58e5a514fc6ffb095d2cca38b55bfc3f613379c2.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/58e5a514fc6ffb095d2cca38b55bfc3f613379c2.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5860
+    [pid=5860][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5860
+      - [pid=5860][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5860] <gracefully close start>
+      - [pid=5860] <kill>
+      - [pid=5860] <will force kill>
+      - [pid=5860] <process did exit: exitCode=1, signal=null>
+      - [pid=5860] starting temporary directories cleanup
+      - [pid=5860] finished temporary directories cleanup
+      - [pid=5860] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/484a25b75ea344922aec92ed5574011b3ee4000a.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/e297aac24181bfadf744349f2fa19c900b12294d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/e297aac24181bfadf744349f2fa19c900b12294d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="2" failures="0" skipped="0" time="0.019" errors="2">
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.01">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/dee253711558e3c5120e74d8cc02d2f6e0d708fb.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1a74d57469d83d95b2550aa49dbf9e4051f54ad1.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/af1a160ffcf47c7e81eefc325003abccb8598a10.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fb962180e88662c7b93eacde5159eb655055de4b.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/29f38507a8e036b182508f0e6a87da6d8dc1a0b8.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8ca60dc8143834069a5a33dba7a954ef3f10c861.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/InvalidLogin.spec.ts:36:9 › Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5676
+    [pid=5676][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5676
+      - [pid=5676][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5676] <gracefully close start>
+      - [pid=5676] <kill>
+      - [pid=5676] <will force kill>
+      - [pid=5676] <process did exit: exitCode=1, signal=null>
+      - [pid=5676] starting temporary directories cleanup
+      - [pid=5676] finished temporary directories cleanup
+      - [pid=5676] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/dee253711558e3c5120e74d8cc02d2f6e0d708fb.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/1a74d57469d83d95b2550aa49dbf9e4051f54ad1.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/1a74d57469d83d95b2550aa49dbf9e4051f54ad1.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5699
+    [pid=5699][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5699
+      - [pid=5699][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5699] <gracefully close start>
+      - [pid=5699] <kill>
+      - [pid=5699] <will force kill>
+      - [pid=5699] <process did exit: exitCode=1, signal=null>
+      - [pid=5699] starting temporary directories cleanup
+      - [pid=5699] finished temporary directories cleanup
+      - [pid=5699] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/af1a160ffcf47c7e81eefc325003abccb8598a10.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/fb962180e88662c7b93eacde5159eb655055de4b.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/fb962180e88662c7b93eacde5159eb655055de4b.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5721
+    [pid=5721][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5721
+      - [pid=5721][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5721] <gracefully close start>
+      - [pid=5721] <kill>
+      - [pid=5721] <will force kill>
+      - [pid=5721] <process did exit: exitCode=1, signal=null>
+      - [pid=5721] starting temporary directories cleanup
+      - [pid=5721] finished temporary directories cleanup
+      - [pid=5721] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/29f38507a8e036b182508f0e6a87da6d8dc1a0b8.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/8ca60dc8143834069a5a33dba7a954ef3f10c861.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/8ca60dc8143834069a5a33dba7a954ef3f10c861.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/df141fc304331429281bdb22d644a8f56b8ec7d6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/25bf3d12a072bfd867c9db3e35b807577c7044a8.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d4227a0d5f3f78c86b0eff78003fef851756d0a7.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5e80e5ac8533ad6014628413f5b0b8b2d5fabcbd.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/3067d7070742aa6ed9a3e10bbe0807778b3a4e4c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b7249c5dd001bbb0a1c0185a9719138a22d99934.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/InvalidLogin.spec.ts:50:9 › Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password @regression @skip-auth @login 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5743
+    [pid=5743][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5743
+      - [pid=5743][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5743] <gracefully close start>
+      - [pid=5743] <kill>
+      - [pid=5743] <will force kill>
+      - [pid=5743] <process did exit: exitCode=1, signal=null>
+      - [pid=5743] starting temporary directories cleanup
+      - [pid=5743] finished temporary directories cleanup
+      - [pid=5743] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/df141fc304331429281bdb22d644a8f56b8ec7d6.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/25bf3d12a072bfd867c9db3e35b807577c7044a8.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/25bf3d12a072bfd867c9db3e35b807577c7044a8.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5765
+    [pid=5765][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5765
+      - [pid=5765][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5765] <gracefully close start>
+      - [pid=5765] <kill>
+      - [pid=5765] <will force kill>
+      - [pid=5765] <process did exit: exitCode=1, signal=null>
+      - [pid=5765] starting temporary directories cleanup
+      - [pid=5765] finished temporary directories cleanup
+      - [pid=5765] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/d4227a0d5f3f78c86b0eff78003fef851756d0a7.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5e80e5ac8533ad6014628413f5b0b8b2d5fabcbd.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/5e80e5ac8533ad6014628413f5b0b8b2d5fabcbd.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5787
+    [pid=5787][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5787
+      - [pid=5787][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5787] <gracefully close start>
+      - [pid=5787] <kill>
+      - [pid=5787] <will force kill>
+      - [pid=5787] <process did exit: exitCode=1, signal=null>
+      - [pid=5787] starting temporary directories cleanup
+      - [pid=5787] finished temporary directories cleanup
+      - [pid=5787] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/3067d7070742aa6ed9a3e10bbe0807778b3a4e4c.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b7249c5dd001bbb0a1c0185a9719138a22d99934.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/b7249c5dd001bbb0a1c0185a9719138a22d99934.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-06-16T07:20:53.902Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.009" errors="1">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/379a44d48a0f7e48eef8526a0c37e7314ab8c1dc.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9d2b9c6cfb39e46a07dde51d933b3065950db455.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/31338e1c53d39441995b7b80560569a2e4e30702.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9db08c20d6d1c191f5fd03ee89f32b81c23a6b0e.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8802395ee55b02e4f0d92c751be83a14ee0f2ab3.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7051e44951f34a0dde4cc3316b695bb6793d4347.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [webkit] › layers/ui/login/ValidLogin.spec.ts:25:7 › Login | Page Title › Should display page title correctly @regression @sanity @skip-auth 
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5809
+    [pid=5809][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5809
+      - [pid=5809][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5809] <gracefully close start>
+      - [pid=5809] <kill>
+      - [pid=5809] <will force kill>
+      - [pid=5809] <process did exit: exitCode=1, signal=null>
+      - [pid=5809] starting temporary directories cleanup
+      - [pid=5809] finished temporary directories cleanup
+      - [pid=5809] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/379a44d48a0f7e48eef8526a0c37e7314ab8c1dc.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/9d2b9c6cfb39e46a07dde51d933b3065950db455.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/9d2b9c6cfb39e46a07dde51d933b3065950db455.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5831
+    [pid=5831][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5831
+      - [pid=5831][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5831] <gracefully close start>
+      - [pid=5831] <kill>
+      - [pid=5831] <will force kill>
+      - [pid=5831] <process did exit: exitCode=1, signal=null>
+      - [pid=5831] starting temporary directories cleanup
+      - [pid=5831] finished temporary directories cleanup
+      - [pid=5831] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/31338e1c53d39441995b7b80560569a2e4e30702.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/9db08c20d6d1c191f5fd03ee89f32b81c23a6b0e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/9db08c20d6d1c191f5fd03ee89f32b81c23a6b0e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+    <launched> pid=5853
+    [pid=5853][err] Cannot parse arguments: Unknown option --window-size=1366,768
+    Call log:
+      - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+      - <launched> pid=5853
+      - [pid=5853][err] Cannot parse arguments: Unknown option --window-size=1366,768
+      - [pid=5853] <gracefully close start>
+      - [pid=5853] <kill>
+      - [pid=5853] <will force kill>
+      - [pid=5853] <process did exit: exitCode=1, signal=null>
+      - [pid=5853] starting temporary directories cleanup
+      - [pid=5853] finished temporary directories cleanup
+      - [pid=5853] <gracefully close end>
+
+
+    Error Context: ../all-blob-reports/resources/8802395ee55b02e4f0d92c751be83a14ee0f2ab3.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7051e44951f34a0dde4cc3316b695bb6793d4347.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7051e44951f34a0dde4cc3316b695bb6793d4347.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>

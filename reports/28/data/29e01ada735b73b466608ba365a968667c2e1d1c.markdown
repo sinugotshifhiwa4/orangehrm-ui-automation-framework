@@ -1,0 +1,33 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: layers/ui/login/ForgotPassword.spec.ts >> Login | Forgot Password >> Should navigate back to login page when cancel button is clicked
+- Location: tests/layers/ui/login/ForgotPassword.spec.ts:24:7
+
+# Error details
+
+```
+Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+<launched> pid=5728
+[pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+Call log:
+  - <launching> /home/runner/.cache/ms-playwright/webkit-2287/pw_run.sh --inspector-pipe --headless --no-startup-window --window-size=1366,768 --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-extensions --no-first-run --disable-default-apps --disable-translate --no-sandbox --disable-dev-shm-usage
+  - <launched> pid=5728
+  - [pid=5728][err] Cannot parse arguments: Unknown option --window-size=1366,768
+  - [pid=5728] <gracefully close start>
+  - [pid=5728] <kill>
+  - [pid=5728] <will force kill>
+  - [pid=5728] <process did exit: exitCode=1, signal=null>
+  - [pid=5728] starting temporary directories cleanup
+  - [pid=5728] finished temporary directories cleanup
+  - [pid=5728] <gracefully close end>
+
+```
