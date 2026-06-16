@@ -1,0 +1,1373 @@
+<testsuites id="" name="" tests="19" failures="0" skipped="0" errors="15" time="30.837212890625">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="8.468" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="8.468">
+<system-out>
+<![CDATA[2026-06-16T09:02:34+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:36+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:36+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:36+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:36+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:36+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:39+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:39+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:39+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:39+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:39+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:39+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/bf464c211b81845fbc39941bbf8d54b8f5991c52.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="4" failures="0" skipped="0" time="0.035" errors="4">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/834ebf63b7ec904dd7d6fd910f53c803ecbb7cc6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/76a47c6a2fe7a972c9830c3f5e18072615962364.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9b0f7d11b0da490c2b86f9b7e69d7749cf94dbdb.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d45d69f42a655464f4f63f484504793089efad48.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f9ebef14be10ffd8778925598d9620adc97e7630.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5ca3c04f80990efbfe1564b54aeb4168b65a028c.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:9:7 › Login | Footer › Should display complete footer with all elements @regression @skip-auth @login @sanity 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/834ebf63b7ec904dd7d6fd910f53c803ecbb7cc6.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/76a47c6a2fe7a972c9830c3f5e18072615962364.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/76a47c6a2fe7a972c9830c3f5e18072615962364.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/9b0f7d11b0da490c2b86f9b7e69d7749cf94dbdb.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d45d69f42a655464f4f63f484504793089efad48.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d45d69f42a655464f4f63f484504793089efad48.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/f9ebef14be10ffd8778925598d9620adc97e7630.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5ca3c04f80990efbfe1564b54aeb4168b65a028c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/5ca3c04f80990efbfe1564b54aeb4168b65a028c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer version text" classname="layers/ui/login/Footer.spec.ts" time="0.008">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/9a5e98890acb360e5b6a20b5e9466fbe36205317.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4e58bb17bb31d935aa1821a90534900f0517d327.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/48fe88ed249677d57458ef30f3d83026ed76a247.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/480c8257c6134dbc3e941b936c99a5498843720c.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/60800a2076ca17a4aaffd24b62bc1a5a17fed4f7.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/48eaa06e469f990be54be43bb93d0351a50b9f4c.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:18:7 › Login | Footer › Should display footer version text @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/9a5e98890acb360e5b6a20b5e9466fbe36205317.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/4e58bb17bb31d935aa1821a90534900f0517d327.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/4e58bb17bb31d935aa1821a90534900f0517d327.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/48fe88ed249677d57458ef30f3d83026ed76a247.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/480c8257c6134dbc3e941b936c99a5498843720c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/480c8257c6134dbc3e941b936c99a5498843720c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/60800a2076ca17a4aaffd24b62bc1a5a17fed4f7.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/48eaa06e469f990be54be43bb93d0351a50b9f4c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/48eaa06e469f990be54be43bb93d0351a50b9f4c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright year" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/188e729ab5b4470f5cace818174ecc32bfc22785.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1b310651bf0e2a2c452625323619acd9d53f97b2.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e1fe634e137112296dfdeb3bd1573d11cd8364cf.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b5be900a0d3ec998ec424d3934ffddf62132b007.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/261df6ec245c09df891b15088ae98de13746a980.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/2fdcd2c94f9a35a9d157e3f294f08f2557d0bf0f.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:23:7 › Login | Footer › Should display footer copyright year @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/188e729ab5b4470f5cace818174ecc32bfc22785.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/1b310651bf0e2a2c452625323619acd9d53f97b2.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/1b310651bf0e2a2c452625323619acd9d53f97b2.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/e1fe634e137112296dfdeb3bd1573d11cd8364cf.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b5be900a0d3ec998ec424d3934ffddf62132b007.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/b5be900a0d3ec998ec424d3934ffddf62132b007.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/261df6ec245c09df891b15088ae98de13746a980.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/2fdcd2c94f9a35a9d157e3f294f08f2557d0bf0f.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/2fdcd2c94f9a35a9d157e3f294f08f2557d0bf0f.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright owner link" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/00f0daee805b866cc3e1bb6475e31ffe7eec729c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/33a03f5fe882c6b8612ab910e16272566f33265c.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e03ecfce83841ee5c1f9403e6f6bb03cca2784fb.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a13888cde1937a4917eab249e8683fd6eb5aadb6.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fa1b6d17d72ee302100ec9ea18c6320c44b63c4e.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/cdcdab18a4380047c34fe6cbd8cd242220bbbe4d.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:28:7 › Login | Footer › Should display footer copyright owner link @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/00f0daee805b866cc3e1bb6475e31ffe7eec729c.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/33a03f5fe882c6b8612ab910e16272566f33265c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/33a03f5fe882c6b8612ab910e16272566f33265c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/e03ecfce83841ee5c1f9403e6f6bb03cca2784fb.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a13888cde1937a4917eab249e8683fd6eb5aadb6.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/a13888cde1937a4917eab249e8683fd6eb5aadb6.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/fa1b6d17d72ee302100ec9ea18c6320c44b63c4e.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/cdcdab18a4380047c34fe6cbd8cd242220bbbe4d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/cdcdab18a4380047c34fe6cbd8cd242220bbbe4d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="7.541" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="7.541">
+<system-out>
+<![CDATA[2026-06-16T09:02:43+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:44+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:44+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:44+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:44+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:46+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:46+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:46+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:46+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:47+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:47+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:47+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/920f1af1b0bb6ddffbf48b8bc63539fed3effe9c.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="2" failures="0" skipped="0" time="0.018" errors="2">
+<testcase name="Login | Footer › Should display footer rights text" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/219bdf6f18ffcc7e7132421347c9d989c580fd4c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/3b09a37f191df7b33c1d48e4b9734d18d99e8199.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/39e97c59bb6d8d0ce569579b630c581bf365cdee.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ab016545d8ead6c1c972cf8a09eb7f67d9e912b9.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/809e37a976a8f6c64a2f7fdd9d3e09f190a1ef92.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0456b99d93a49386c3996e46da541898937cc84e.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:33:7 › Login | Footer › Should display footer rights text @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/219bdf6f18ffcc7e7132421347c9d989c580fd4c.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/3b09a37f191df7b33c1d48e4b9734d18d99e8199.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/3b09a37f191df7b33c1d48e4b9734d18d99e8199.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/39e97c59bb6d8d0ce569579b630c581bf365cdee.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ab016545d8ead6c1c972cf8a09eb7f67d9e912b9.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/ab016545d8ead6c1c972cf8a09eb7f67d9e912b9.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/809e37a976a8f6c64a2f7fdd9d3e09f190a1ef92.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/0456b99d93a49386c3996e46da541898937cc84e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/0456b99d93a49386c3996e46da541898937cc84e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Footer › Should display footer social media icons" classname="layers/ui/login/Footer.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/acbc60ad26c0c8bada917151a55dcfcecd81bdd5.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e8158302c9d6772464df6347360cf9b256a3336e.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a344ffb4607990c8a4e3325a79a61d425455dc15.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0177801c95929dc7c1a4c41e58c9ea2130194583.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a732bf5191ec33e8433cd111e72c8fc3e691995a.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9e7f80d0b51775d420574e85a4073ad8a0bd7939.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/Footer.spec.ts:38:7 › Login | Footer › Should display footer social media icons @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/acbc60ad26c0c8bada917151a55dcfcecd81bdd5.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/e8158302c9d6772464df6347360cf9b256a3336e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/e8158302c9d6772464df6347360cf9b256a3336e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/a344ffb4607990c8a4e3325a79a61d425455dc15.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/0177801c95929dc7c1a4c41e58c9ea2130194583.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/0177801c95929dc7c1a4c41e58c9ea2130194583.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/a732bf5191ec33e8433cd111e72c8fc3e691995a.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/9e7f80d0b51775d420574e85a4073ad8a0bd7939.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/9e7f80d0b51775d420574e85a4073ad8a0bd7939.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="2" failures="0" skipped="0" time="0.018" errors="2">
+<testcase name="Login | Forgot Password › Should display reset password success page after requesting password reset" classname="layers/ui/login/ForgotPassword.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/532a4207bcfa3a4802ce701b6c9e74c9eccd77a4.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a0f9a38ce6d9a3926bdb350c8bb1dddf45b5974d.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/64f73fe751a1b8dafe86728f7e13d04f34f6ff46.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d421c8d5eca9b789e8ebfd61f15a19768ece5419.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a7917d6db41e3843fda707bd7aa36180a1497980.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7ec3f2bff7b76256d2beb7fd68dc654f3de61126.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/ForgotPassword.spec.ts:10:7 › Login | Forgot Password › Should display reset password success page after requesting password reset @regression @skip-auth @login @sanity 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/532a4207bcfa3a4802ce701b6c9e74c9eccd77a4.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a0f9a38ce6d9a3926bdb350c8bb1dddf45b5974d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/a0f9a38ce6d9a3926bdb350c8bb1dddf45b5974d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/64f73fe751a1b8dafe86728f7e13d04f34f6ff46.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d421c8d5eca9b789e8ebfd61f15a19768ece5419.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d421c8d5eca9b789e8ebfd61f15a19768ece5419.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/a7917d6db41e3843fda707bd7aa36180a1497980.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7ec3f2bff7b76256d2beb7fd68dc654f3de61126.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7ec3f2bff7b76256d2beb7fd68dc654f3de61126.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Forgot Password › Should navigate back to login page when cancel button is clicked" classname="layers/ui/login/ForgotPassword.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/73e336485335bc3de242bc7a6ce88e31641b1f15.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6d1812072edf61ff55f150177c08d251b6fcf05d.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c835ba5cbd952b161df79c948d3e2eb766380695.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d77bd04345319ab7223ac4e87f2e497f6aa83cfc.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4f86be54d8ca9d24e337959d1d2e9f010013db83.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6807465034b153836f0d2d352cab56589617d3f6.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/ForgotPassword.spec.ts:24:7 › Login | Forgot Password › Should navigate back to login page when cancel button is clicked @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/73e336485335bc3de242bc7a6ce88e31641b1f15.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6d1812072edf61ff55f150177c08d251b6fcf05d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6d1812072edf61ff55f150177c08d251b6fcf05d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/c835ba5cbd952b161df79c948d3e2eb766380695.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d77bd04345319ab7223ac4e87f2e497f6aa83cfc.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d77bd04345319ab7223ac4e87f2e497f6aa83cfc.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/4f86be54d8ca9d24e337959d1d2e9f010013db83.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6807465034b153836f0d2d352cab56589617d3f6.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6807465034b153836f0d2d352cab56589617d3f6.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.873" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.873">
+<system-out>
+<![CDATA[2026-06-16T09:02:39+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:40+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:40+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:40+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:40+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:40+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:42+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:42+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:42+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:43+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:43+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:43+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/516363c6e7a520bf134010cd155af2d7e1fadfff.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="4" failures="0" skipped="0" time="0.036" errors="4">
+<testcase name="Login | Invalid Credentials › Should display required field errors when credentials are empty" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/cb0939ba4e34e8c27f561e1629ff9efa597eefee.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fa1aa0396c10a14b5654b68f1ba1c3c8a88fe8d6.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9d25d275ecfd05db8d440d131f302c69193ad338.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0579eed408fca92a3c8f07b74245bc6029604a10.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9ff9164eeb6a8ae3a7b6ff9efe32e03484eb99ab.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0b99aaa4b300aa42ec156e08304bfec97bf9344f.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/InvalidLogin.spec.ts:13:9 › Login | Invalid Credentials › Should display required field errors when credentials are empty @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/cb0939ba4e34e8c27f561e1629ff9efa597eefee.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/fa1aa0396c10a14b5654b68f1ba1c3c8a88fe8d6.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/fa1aa0396c10a14b5654b68f1ba1c3c8a88fe8d6.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/9d25d275ecfd05db8d440d131f302c69193ad338.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/0579eed408fca92a3c8f07b74245bc6029604a10.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/0579eed408fca92a3c8f07b74245bc6029604a10.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/9ff9164eeb6a8ae3a7b6ff9efe32e03484eb99ab.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/0b99aaa4b300aa42ec156e08304bfec97bf9344f.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/0b99aaa4b300aa42ec156e08304bfec97bf9344f.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/ea0b28fdbde212705f3d14ab20e6e48532ee273d.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/991b1c1a5ba40de1c1f5041ed4ee816ad9304b23.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6560eccd0f5c805dff247844743353d22a6a16ba.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a6f388412bdc44515ebcfc0fb8c949c9e880db7a.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8582c0cdcf4e71d6313f1a40ef3d5092c0766d8a.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d1a16284a81b7f368a6a0e213f339269cda7f8ea.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/InvalidLogin.spec.ts:23:9 › Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/ea0b28fdbde212705f3d14ab20e6e48532ee273d.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/991b1c1a5ba40de1c1f5041ed4ee816ad9304b23.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/991b1c1a5ba40de1c1f5041ed4ee816ad9304b23.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/6560eccd0f5c805dff247844743353d22a6a16ba.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a6f388412bdc44515ebcfc0fb8c949c9e880db7a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/a6f388412bdc44515ebcfc0fb8c949c9e880db7a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/8582c0cdcf4e71d6313f1a40ef3d5092c0766d8a.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d1a16284a81b7f368a6a0e213f339269cda7f8ea.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d1a16284a81b7f368a6a0e213f339269cda7f8ea.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/b2f28cc121940cb959d4d1982c6a7f5fe55f5ea6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/284eeb2e83fd6722004f684875205e70952090c4.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6c041aad4a612589f4b0344be5ddaae734c20423.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5a20de5241636da9c79d2fbf0fb7cb9939fa0b60.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1695fc5d8311b740727d8b011bc086e3d3487a7c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/88d2706ba10e54e460928c1cd919c19f1928621e.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/InvalidLogin.spec.ts:36:9 › Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/b2f28cc121940cb959d4d1982c6a7f5fe55f5ea6.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/284eeb2e83fd6722004f684875205e70952090c4.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/284eeb2e83fd6722004f684875205e70952090c4.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/6c041aad4a612589f4b0344be5ddaae734c20423.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5a20de5241636da9c79d2fbf0fb7cb9939fa0b60.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/5a20de5241636da9c79d2fbf0fb7cb9939fa0b60.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/1695fc5d8311b740727d8b011bc086e3d3487a7c.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/88d2706ba10e54e460928c1cd919c19f1928621e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/88d2706ba10e54e460928c1cd919c19f1928621e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/7a7a597436a83eb776d01c4cbc319bbf6d427fac.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7eade71e6d16bce3790005c5407507d676e8a16f.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/317132935e5e8846cde989a5351cf2ac9e02b960.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/954235a5125f2b5e6794f9080b8f7ff4b3456a11.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9089c38e00aaf5c758db1595451bd9324a18c43f.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/282d766fe2d984571bea8263bc545b2fcc51e3e1.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/InvalidLogin.spec.ts:50:9 › Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password @regression @skip-auth @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/7a7a597436a83eb776d01c4cbc319bbf6d427fac.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7eade71e6d16bce3790005c5407507d676e8a16f.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7eade71e6d16bce3790005c5407507d676e8a16f.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/317132935e5e8846cde989a5351cf2ac9e02b960.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/954235a5125f2b5e6794f9080b8f7ff4b3456a11.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/954235a5125f2b5e6794f9080b8f7ff4b3456a11.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/9089c38e00aaf5c758db1595451bd9324a18c43f.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/282d766fe2d984571bea8263bc545b2fcc51e3e1.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/282d766fe2d984571bea8263bc545b2fcc51e3e1.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="10.927" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="10.927">
+<system-out>
+<![CDATA[2026-06-16T09:02:31+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:33+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:33+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:33+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:33+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:33+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:37+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:37+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:37+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:38+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:38+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:38+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/5525197321484455895424a50756d89d4c7df047.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="2" failures="0" skipped="0" time="0.019" errors="2">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="0.01">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/6c2f02a027f0b8f9d50d92f40f79ff2d79b7ace8.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7991896a90db9aa3ae48e794fd48d1aed727f623.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ee626efa0504aaba3dcd1d8d960bc1410afb0c2d.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/797edc64206d4378e81698920d0cecec91a37bb0.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4708847e8ca5b411b6177bfc4ef6e0db57c72239.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/dd8ad7eac908c78754feb1b3c08790c92f124df5.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/ValidLogin.spec.ts:13:9 › Login | Valid Credentials › Should navigate to Dashboard on successful login @regression @sanity @dashboard @login 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/6c2f02a027f0b8f9d50d92f40f79ff2d79b7ace8.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7991896a90db9aa3ae48e794fd48d1aed727f623.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7991896a90db9aa3ae48e794fd48d1aed727f623.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/ee626efa0504aaba3dcd1d8d960bc1410afb0c2d.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/797edc64206d4378e81698920d0cecec91a37bb0.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/797edc64206d4378e81698920d0cecec91a37bb0.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/4708847e8ca5b411b6177bfc4ef6e0db57c72239.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/dd8ad7eac908c78754feb1b3c08790c92f124df5.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/dd8ad7eac908c78754feb1b3c08790c92f124df5.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/e1de0b8964faaaedbb19d6b05485de7a7f579828.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/3dd89542fad3d43e8660c33a5b3bbc5aa07b84c6.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8067d4ded8e6f9562dda0182efee2540acb5bd51.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ecb301c847844535551d12bbf319316b2f7be22e.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/13b913fee90690c4a36c0329e8a45c447a0409c5.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f961e584a160012b14b40cd9149357708661c60d.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/login/ValidLogin.spec.ts:25:7 › Login | Page Title › Should display page title correctly @regression @sanity @skip-auth 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/e1de0b8964faaaedbb19d6b05485de7a7f579828.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/3dd89542fad3d43e8660c33a5b3bbc5aa07b84c6.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/3dd89542fad3d43e8660c33a5b3bbc5aa07b84c6.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/8067d4ded8e6f9562dda0182efee2540acb5bd51.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ecb301c847844535551d12bbf319316b2f7be22e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/ecb301c847844535551d12bbf319316b2f7be22e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/13b913fee90690c4a36c0329e8a45c447a0409c5.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f961e584a160012b14b40cd9149357708661c60d.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f961e584a160012b14b40cd9149357708661c60d.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-06-16T07:03:24.776Z" hostname="firefox" tests="1" failures="0" skipped="0" time="0.009" errors="1">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/c62774201c0705b473fe6d92dc0a7fc20d531e83.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ae3bf45565574e2d559e6a8c131df9bc9da6aee9.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/79a6d95b8736eb67f777482b1330d197ba26c14c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/bd006914d211de6f664fa1743ed84db3f1726c98.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/2dacff6255c9c26a42df82652b0c432eaddae0f6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c4a2f3f87cc3c3239f54883aaf04d4534fa54238.zip]]
+]]>
+</system-out>
+<error message="browserType.launch: Executable doesn&apos;t exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox" type="Error">
+<![CDATA[  [firefox] › layers/ui/menuItems/Dashboard.spec.ts:12:9 › Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login @regression @sanity @dashboard 
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/c62774201c0705b473fe6d92dc0a7fc20d531e83.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ae3bf45565574e2d559e6a8c131df9bc9da6aee9.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/ae3bf45565574e2d559e6a8c131df9bc9da6aee9.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/79a6d95b8736eb67f777482b1330d197ba26c14c.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/bd006914d211de6f664fa1743ed84db3f1726c98.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/bd006914d211de6f664fa1743ed84db3f1726c98.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/firefox-1522/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: ../all-blob-reports/resources/2dacff6255c9c26a42df82652b0c432eaddae0f6.markdown
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c4a2f3f87cc3c3239f54883aaf04d4534fa54238.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/c4a2f3f87cc3c3239f54883aaf04d4534fa54238.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>
