@@ -1,0 +1,458 @@
+<testsuites id="" name="" tests="9" failures="1" skipped="0" errors="0" time="409.7461708984375">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.961" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.961">
+<system-out>
+<![CDATA[2026-06-16T09:01:59+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:01+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:01+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:01+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:01+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:01+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:01+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/eeb609b3a76bdb47e5fd86c5f439365f46ae8754.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.957" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="2.957">
+<system-out>
+<![CDATA[2026-06-16T09:02:05+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Social Media Icons count is 4
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer LinkedIn Icon state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Facebook Icon state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer Twitter Icon state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Footer YouTube Icon state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Assertion Passed: Complete footer with all elements is displayed
+
+[[ATTACHMENT|../all-blob-reports/resources/cd1f7b72dea2c6246587611d7d91eac6127c8302.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="chromium" tests="1" failures="1" skipped="0" time="396.983" errors="0">
+<testcase name="Login | Forgot Password › Should display reset password success page after requesting password reset" classname="layers/ui/login/ForgotPassword.spec.ts" time="396.983">
+<system-out>
+<![CDATA[2026-06-16T09:02:08+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:09+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Clicked on forgotPasswordLink
+2026-06-16T09:02:11+02:00 [[32minfo[39m]: Reset Password Header state is visible
+2026-06-16T09:02:11+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:11+02:00 [[32minfo[39m]: Clicked on Reset Password Button
+2026-06-16T09:03:51+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSuccessHeaderIsVisible",
+  "context": "Failed to verify element Reset Password Success Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:03:51.295Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })",
+    "    - waiting for navigation to finish...",
+    "    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword\""
+  ]
+}
+2026-06-16T09:03:51+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSentMessageIsVisible",
+  "context": "Failed to verify element Reset Password Sent Message is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:03:51.298Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByText('A reset password link has been sent to you via email.')",
+    "    - waiting for navigation to finish...",
+    "    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword\""
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/c2c768a061d266b628f3f8952886602109bdcd96.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fc17637b1ebb7845d8d0e17589edb06ad6988120.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/15687c49bc827c006618eeae7f284ee7bcf760ca.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/689eac7474d7048f19a84a7368447904ef5d85e4.zip]]
+2026-06-16T09:03:59+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:04:00+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:04:00+02:00 [[32minfo[39m]: Clicked on forgotPasswordLink
+2026-06-16T09:04:01+02:00 [[32minfo[39m]: Reset Password Header state is visible
+2026-06-16T09:04:01+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:05:01+02:00 [[32minfo[39m]: Clicked on Reset Password Button
+2026-06-16T09:06:41+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSuccessHeaderIsVisible",
+  "context": "Failed to verify element Reset Password Success Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:06:41.810Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })"
+  ]
+}
+2026-06-16T09:06:41+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSentMessageIsVisible",
+  "context": "Failed to verify element Reset Password Sent Message is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:06:41.814Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByText('A reset password link has been sent to you via email.')"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/faf72403d7fe98f83b6e6693b3da9203504f5abd.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4eb9074b045d1d9770ff47fbc234b2bebfd4eeef.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/dbb9ed3f1f3063ed814994852a53d9331ff2d3d0.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ba5a2cec38a6bc5b7a2ce404a3cdf622f5f4e643.zip]]
+2026-06-16T09:06:57+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:06:58+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:06:58+02:00 [[32minfo[39m]: Clicked on forgotPasswordLink
+2026-06-16T09:06:58+02:00 [[32minfo[39m]: Reset Password Header state is visible
+2026-06-16T09:06:59+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:06:59+02:00 [[32minfo[39m]: Clicked on Reset Password Button
+2026-06-16T09:08:39+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSuccessHeaderIsVisible",
+  "context": "Failed to verify element Reset Password Success Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:08:39.066Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })",
+    "    - waiting for navigation to finish...",
+    "    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword\""
+  ]
+}
+2026-06-16T09:08:39+02:00 [[31merror[39m]: {
+  "source": "verifyResetPasswordSentMessageIsVisible",
+  "context": "Failed to verify element Reset Password Sent Message is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-06-16T07:08:39.071Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByText('A reset password link has been sent to you via email.')",
+    "    - waiting for navigation to finish...",
+    "    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword\""
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/a2cf3fbd2849a83b4cc7169584e9972c727842a2.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9601757bf0342881799816d9abbd06c972c47dca.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7a13b7c92d8594913e9fec9cb96dd5473abf4fd8.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/427d19f6caff677324252cc2e8dfe8c9b6f1949b.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › layers/ui/login/ForgotPassword.spec.ts:10:7 › Login | Forgot Password › Should display reset password success page after requesting password reset @regression @skip-auth @login @sanity 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Reset Password link sent successfully' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })
+        - waiting for navigation to finish...
+        - navigated to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword"
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at ForgotPasswordPage.verifyResetPasswordSuccessHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:94:34)
+        at ForgotPasswordPage.verifyResetPasswordSuccessPageIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:84:12)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/ForgotPassword.spec.ts:17:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c2c768a061d266b628f3f8952886602109bdcd96.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/fc17637b1ebb7845d8d0e17589edb06ad6988120.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/15687c49bc827c006618eeae7f284ee7bcf760ca.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/689eac7474d7048f19a84a7368447904ef5d85e4.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/689eac7474d7048f19a84a7368447904ef5d85e4.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Reset Password link sent successfully' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at ForgotPasswordPage.verifyResetPasswordSuccessHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:94:34)
+        at ForgotPasswordPage.verifyResetPasswordSuccessPageIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:84:12)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/ForgotPassword.spec.ts:17:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/faf72403d7fe98f83b6e6693b3da9203504f5abd.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/4eb9074b045d1d9770ff47fbc234b2bebfd4eeef.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/dbb9ed3f1f3063ed814994852a53d9331ff2d3d0.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ba5a2cec38a6bc5b7a2ce404a3cdf622f5f4e643.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/ba5a2cec38a6bc5b7a2ce404a3cdf622f5f4e643.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Reset Password link sent successfully' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('heading', { name: 'Reset Password link sent successfully' })
+        - waiting for navigation to finish...
+        - navigated to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestResetPassword"
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at ForgotPasswordPage.verifyResetPasswordSuccessHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:94:34)
+        at ForgotPasswordPage.verifyResetPasswordSuccessPageIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/forgotPasswordPage.ts:84:12)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/ForgotPassword.spec.ts:17:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a2cf3fbd2849a83b4cc7169584e9972c727842a2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/9601757bf0342881799816d9abbd06c972c47dca.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/7a13b7c92d8594913e9fec9cb96dd5473abf4fd8.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/427d19f6caff677324252cc2e8dfe8c9b6f1949b.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/427d19f6caff677324252cc2e8dfe8c9b6f1949b.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="8.626" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="8.626">
+<system-out>
+<![CDATA[2026-06-16T09:02:08+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:10+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:10+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:14+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:14+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:14+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/30488f2e208739e99c986dea704188d9fb76738d.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.408" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="11.408">
+<system-out>
+<![CDATA[2026-06-16T09:02:19+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:19+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-06-16T09:02:19+02:00 [[33mwarn[39m]: Authentication session is stale; re-authenticating
+2026-06-16T09:02:20+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:22+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:22+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:26+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-06-16T09:02:26+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/826eff8d3a69a5ee3967bb9bbee7526146690e82.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.312" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.312">
+<system-out>
+<![CDATA[2026-06-16T09:02:04+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:02:05+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:07+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:07+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:07+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:07+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:07+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:07+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/da65376db4bc46f0a2e8a4048ae4d1f28e883036.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.703" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="3.703">
+<system-out>
+<![CDATA[2026-06-16T09:02:12+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:12+02:00 [[32minfo[39m]: Retrieved page title
+2026-06-16T09:02:12+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-06-16T09:02:12+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/8d46f6444b1e603a4a1808f2d5f1c07fc4016380.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.612" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.612">
+<system-out>
+<![CDATA[2026-06-16T09:01:58+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:01:58+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-06-16T09:01:58+02:00 [[32minfo[39m]: Login Header state is visible
+2026-06-16T09:01:58+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-06-16T09:01:59+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-06-16T09:02:00+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-06-16T09:02:00+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-06-16T09:02:00+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-06-16T09:02:00+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-06-16T09:02:00+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-06-16T09:02:00+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/56ac76a9354ab3abc30260dce0cb408597c5f63d.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-06-16T07:09:03.828Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.522" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="3.522">
+<system-out>
+<![CDATA[2026-06-16T09:02:04+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-06-16T09:02:04+02:00 [[32minfo[39m]: Class "active" found on element
+2026-06-16T09:02:04+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-06-16T09:02:04+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/79691107f2119140db67cf282cb297c892288b64.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
