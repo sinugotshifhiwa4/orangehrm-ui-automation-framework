@@ -1,0 +1,151 @@
+<testsuites id="" name="" tests="18" failures="0" skipped="0" errors="0" time="40.172909912109375">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="8.309" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="8.309">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/32ace5a35add36a479282598d44b62ae00476a39.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="4" failures="0" skipped="0" time="17.641" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="4.74">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/0e1c7f442d71c14a615c4847908daf4874ec6621.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer version text" classname="layers/ui/login/Footer.spec.ts" time="3.653">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/47d4a5204e62da1ba44376ece6fac9ea5abdbc6e.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright year" classname="layers/ui/login/Footer.spec.ts" time="4.158">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/73536e14a7b2074251da8e790954ad5f333a377f.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright owner link" classname="layers/ui/login/Footer.spec.ts" time="5.09">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/4db4841b3cf7b7f569120003659753e44a266564.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.719" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.719">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/ffb81d1e365ba11c6f57a7e79f0f4d269d621918.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="2" failures="0" skipped="0" time="7.727" errors="0">
+<testcase name="Login | Footer › Should display footer rights text" classname="layers/ui/login/Footer.spec.ts" time="3.737">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/f87dbfb1f712c3378f7f0098732d4c9ab28a2c93.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer social media icons" classname="layers/ui/login/Footer.spec.ts" time="3.99">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/b7f6a830e62eba03566ff476c2f69279246866c5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.643" errors="0">
+<testcase name="Login | Forgot Password › Should navigate back to login page when cancel button is clicked" classname="layers/ui/login/ForgotPassword.spec.ts" time="10.643">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/0ac2fa7b6b3b87a47cb831318da968aaad34cb96.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.286" errors="0">
+<testcase name="Login | Invalid Credentials › Should display required field errors when credentials are empty" classname="layers/ui/login/InvalidLogin.spec.ts" time="4.286">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/604c3cc8b9768b427ac46c42062d0af323e718ac.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.956" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.956">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/1e5708e90e64bab52e1ef2a51240f2691666c465.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="3" failures="0" skipped="0" time="22.99" errors="0">
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password" classname="layers/ui/login/InvalidLogin.spec.ts" time="7.612">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/1a8ece5bccc3ad6c92fd8135b00b6703e13dbf23.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="7.53">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/eac02924bce3a0fbf177538ed68a2ee7ca7ccf4b.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="7.848">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/9eba3f3627cd92ff86bf24eebc3f5ec745bcb7e0.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="9.129" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="9.129">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/47eca78ce43c3f757dce2cef4b9e2c12205b1073.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="2" failures="0" skipped="0" time="15.09" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="12.181">
+<system-out>
+<![CDATA[2026-06-22T09:30:03+02:00 [[33mwarn[39m]: Authentication session is stale; re-authenticating
+
+[[ATTACHMENT|../all-blob-reports/resources/51684bcd746cbc458fbbee5f95e4ba857300ac43.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="2.909">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/2e02d821dfc57530d4729a7edb62194e18d05e3f.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-06-22T07:30:40.163Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.374" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="5.374">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/3dc9eef43049e493e96a5f83afac5a6093c0a147.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
