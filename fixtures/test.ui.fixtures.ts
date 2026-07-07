@@ -19,6 +19,19 @@ import { ForgotPasswordPage } from "../src/layers/ui/pages/orangeHrm/login/forgo
 import { DashboardPage } from "../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.js";
 import { TopBar } from "../src/layers/ui/pages/orangeHrm/navigationBars/topbar.js";
 import { SideBar } from "../src/layers/ui/pages/orangeHrm/navigationBars/sidebar.js";
+import { PimPage } from "../src/layers/ui/pages/orangeHrm/pim/pimPage.js";
+import { AddEmployeePage } from "../src/layers/ui/pages/orangeHrm/pim/addEmployee/addEmployeePage.js";
+import { PersonalDetailsPage } from "../src/layers/ui/pages/orangeHrm/pim/personalDetails/personalDetailsPage.js";
+import { OxdFormHelper } from "../src/layers/ui/pages/orangeHrm/shared/components/oxdFormHelper.js";
+import { ContactDetailsPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/contactDetailsPage.js";
+import { EmergencyContactsPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/emergencyContactsPage.js";
+import { DependentsPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/dependentsPage.js";
+import { ImmigrationPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/immigrationPage.js";
+import { JobPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/jobPage.js";
+import { SalaryPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/salaryPage.js";
+import { ReportToPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/reportToPage.js";
+import { QualificationsPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/qualificationsPage.js";
+import { MembershipsPage } from "../src/layers/ui/pages/orangeHrm/pim/employeeProfile/membershipsPage.js";
 
 type TestFixtures = {
   // Context
@@ -36,6 +49,19 @@ type TestFixtures = {
   dashboardPage: DashboardPage;
   topBar: TopBar;
   sideBar: SideBar;
+  pimPage: PimPage;
+  addEmployeePage: AddEmployeePage;
+  personalDetailsPage: PersonalDetailsPage;
+  oxdFormHelper: OxdFormHelper;
+  contactDetailsPage: ContactDetailsPage;
+  emergencyContactsPage: EmergencyContactsPage;
+  dependentsPage: DependentsPage;
+  immigrationPage: ImmigrationPage;
+  jobPage: JobPage;
+  salaryPage: SalaryPage;
+  reportToPage: ReportToPage;
+  qualificationsPage: QualificationsPage;
+  membershipsPage: MembershipsPage;
 };
 
 export const test = configTest.extend<TestFixtures>({
@@ -84,6 +110,58 @@ export const test = configTest.extend<TestFixtures>({
 
   sideBar: async ({ page }, use) => {
     await use(new SideBar(page));
+  },
+
+  pimPage: async ({ page }, use) => {
+    await use(new PimPage(page));
+  },
+
+  addEmployeePage: async ({ page }, use) => {
+    await use(new AddEmployeePage(page));
+  },
+
+  oxdFormHelper: async ({ page }, use) => {
+    await use(new OxdFormHelper(page));
+  },
+
+  personalDetailsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new PersonalDetailsPage(page, oxdFormHelper));
+  },
+
+  contactDetailsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new ContactDetailsPage(page, oxdFormHelper));
+  },
+
+  emergencyContactsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new EmergencyContactsPage(page, oxdFormHelper));
+  },
+
+  dependentsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new DependentsPage(page, oxdFormHelper));
+  },
+
+  immigrationPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new ImmigrationPage(page, oxdFormHelper));
+  },
+
+  jobPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new JobPage(page, oxdFormHelper));
+  },
+
+  salaryPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new SalaryPage(page, oxdFormHelper));
+  },
+
+  reportToPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new ReportToPage(page, oxdFormHelper));
+  },
+
+  qualificationsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new QualificationsPage(page, oxdFormHelper));
+  },
+
+  membershipsPage: async ({ page, oxdFormHelper }, use) => {
+    await use(new MembershipsPage(page, oxdFormHelper));
   },
 
   authenticationExecutor: async ({ loginOrchestrator, loginPage }, use) => {
