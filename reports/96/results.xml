@@ -1,0 +1,300 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="1" errors="1" time="463.5753601074219">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="458.572" errors="1">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="458.572">
+<system-out>
+<![CDATA[2026-07-08T08:27:30+02:00 [[31merror[39m]: {
+  "source": "navigateToPortal",
+  "context": "Failed to navigate to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "message": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "timestamp": "2026-07-08T06:27:30.413Z",
+  "environment": "qa",
+  "stack": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "errorType": "Error"
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/3bb153ba93445bb4bff1775f5dfc76d6cc2a1c3f.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/50164c653f85fe431ba24a63cca42289f3194893.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/15ad4e65af16ea9d5451ef2c5d3e9df5743e2690.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8a1c48c4a5fd8536779829c54c382b015a643675.zip]]
+2026-07-08T08:29:45+02:00 [[31merror[39m]: {
+  "source": "navigateToPortal",
+  "context": "Failed to navigate to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "message": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "timestamp": "2026-07-08T06:29:45.578Z",
+  "environment": "qa",
+  "stack": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "errorType": "Error"
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/2330eb69edff613ff1cce9219a02a6d007e7d2e2.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/97941bac2329ab7a2a491cff869ae28e5aa66482.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/db79ff01747ede485aa6fb1f12f9a2801ae764e9.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f5fb72216edc0d923f7025acf8028026323fab83.zip]]
+2026-07-08T08:32:29+02:00 [[31merror[39m]: {
+  "source": "navigateToPortal",
+  "context": "Failed to navigate to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "message": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "timestamp": "2026-07-08T06:32:29.421Z",
+  "environment": "qa",
+  "stack": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "errorType": "Error"
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/dc63854634f6e4a5f064e4c7acba209acf23756d.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/61943e84b93ef73d360e3ec6827266b52b772c56.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b31f4ea6881e0d286c9074aa0ce1d4eb8212f4c6.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e5bfc001706943a0aa9145b0c5c6dc2a1e27ec3e.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" type="Error">
+<![CDATA[  [setup-auth-state] › layers/ui/authentication/Authentication.setup.ts:3:15 › Authenticates the user with valid credentials @authenticate @sanity @regression @login @dashboard 
+
+    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+    Call log:
+      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+
+       at ../src/layers/ui/base/internal/actions/navigationActions.ts:32
+
+      30 |   ): Promise<Response | null> {
+      31 |     return this.performAction(
+    > 32 |       () => this.page.goto(url, options),
+         |                       ^
+      33 |       callerMethodName,
+      34 |       `Navigated to ${url}`,
+      35 |       `Failed to navigate to ${url}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:32:23)
+        at NavigationActions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at NavigationActions.navigateToUrl (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:31:17)
+        at LoginOrchestrator.navigateToPortal (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:37:27)
+        at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:91:18)
+        at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:16)
+        at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:36)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/3bb153ba93445bb4bff1775f5dfc76d6cc2a1c3f.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/50164c653f85fe431ba24a63cca42289f3194893.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/15ad4e65af16ea9d5451ef2c5d3e9df5743e2690.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/8a1c48c4a5fd8536779829c54c382b015a643675.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/8a1c48c4a5fd8536779829c54c382b015a643675.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+    Call log:
+      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+
+       at ../src/layers/ui/base/internal/actions/navigationActions.ts:32
+
+      30 |   ): Promise<Response | null> {
+      31 |     return this.performAction(
+    > 32 |       () => this.page.goto(url, options),
+         |                       ^
+      33 |       callerMethodName,
+      34 |       `Navigated to ${url}`,
+      35 |       `Failed to navigate to ${url}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:32:23)
+        at NavigationActions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at NavigationActions.navigateToUrl (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:31:17)
+        at LoginOrchestrator.navigateToPortal (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:37:27)
+        at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:91:18)
+        at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:16)
+        at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:36)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/2330eb69edff613ff1cce9219a02a6d007e7d2e2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/97941bac2329ab7a2a491cff869ae28e5aa66482.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/db79ff01747ede485aa6fb1f12f9a2801ae764e9.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f5fb72216edc0d923f7025acf8028026323fab83.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f5fb72216edc0d923f7025acf8028026323fab83.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+    Call log:
+      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+
+       at ../src/layers/ui/base/internal/actions/navigationActions.ts:32
+
+      30 |   ): Promise<Response | null> {
+      31 |     return this.performAction(
+    > 32 |       () => this.page.goto(url, options),
+         |                       ^
+      33 |       callerMethodName,
+      34 |       `Navigated to ${url}`,
+      35 |       `Failed to navigate to ${url}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:32:23)
+        at NavigationActions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at NavigationActions.navigateToUrl (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/navigationActions.ts:31:17)
+        at LoginOrchestrator.navigateToPortal (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:37:27)
+        at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:91:18)
+        at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:16)
+        at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:36)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/dc63854634f6e4a5f064e4c7acba209acf23756d.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/61943e84b93ef73d360e3ec6827266b52b772c56.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/b31f4ea6881e0d286c9074aa0ce1d4eb8212f4c6.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/e5bfc001706943a0aa9145b0c5c6dc2a1e27ec3e.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/e5bfc001706943a0aa9145b0c5c6dc2a1e27ec3e.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="7.699" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="7.699">
+<system-out>
+<![CDATA[2026-07-08T08:25:54+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:25:56+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-07-08T08:25:56+02:00 [[32minfo[39m]: Login Header state is visible
+2026-07-08T08:25:56+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-07-08T08:25:56+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-07-08T08:25:56+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-07-08T08:25:57+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-07-08T08:25:57+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-07-08T08:25:57+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-07-08T08:25:58+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-07-08T08:25:58+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-07-08T08:25:58+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/9978172b1d45c26a8731f0d4942a338edcfd7a12.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.034" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="6.034">
+<system-out>
+<![CDATA[2026-07-08T08:26:04+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:26:04+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-07-08T08:26:04+02:00 [[32minfo[39m]: Existing authentication session is still valid
+2026-07-08T08:26:04+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-07-08T08:26:04+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/46f2b72374912de39786feccb5616be38aff0c5a.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.587" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.587">
+<system-out>
+<![CDATA[2026-07-08T08:25:17+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:25:17+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-07-08T08:25:18+02:00 [[32minfo[39m]: Login Header state is visible
+2026-07-08T08:25:18+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-07-08T08:25:18+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-07-08T08:25:18+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-07-08T08:25:19+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-07-08T08:25:19+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-07-08T08:25:19+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-07-08T08:25:19+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-07-08T08:25:19+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-07-08T08:25:19+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/44e97dd7cdd23e69499f360d3724e2799a227e90.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.195" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="3.195">
+<system-out>
+<![CDATA[2026-07-08T08:25:23+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:25:23+02:00 [[32minfo[39m]: Retrieved page title
+2026-07-08T08:25:23+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-07-08T08:25:23+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/d30f48ab7bae95067932e62eee2b06b6df7df900.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="7.691" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="7.691">
+<system-out>
+<![CDATA[2026-07-08T08:25:51+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:25:52+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-07-08T08:25:52+02:00 [[32minfo[39m]: Login Header state is visible
+2026-07-08T08:25:52+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-07-08T08:25:52+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-07-08T08:25:53+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-07-08T08:25:53+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-07-08T08:25:53+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-07-08T08:25:53+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-07-08T08:25:54+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-07-08T08:25:54+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-07-08T08:25:54+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/5a7ec3768f0a8465c99b49b33838895b97b35397.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-07-08T06:33:19.790Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.931" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="4.931">
+<system-out>
+<![CDATA[2026-07-08T08:26:00+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-07-08T08:26:01+02:00 [[32minfo[39m]: Class "active" found on element
+2026-07-08T08:26:01+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-07-08T08:26:01+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/e258f4c490bbaca6a96a9183e8c53509569165b9.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
