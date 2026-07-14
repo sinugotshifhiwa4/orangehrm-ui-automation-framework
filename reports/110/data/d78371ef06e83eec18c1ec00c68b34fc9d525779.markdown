@@ -1,0 +1,122 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: layers/ui/menuItems/Dashboard.spec.ts >> Dashboard | Default Landing Page >> Should load the Dashboard as the default page after successful login
+- Location: tests/layers/ui/menuItems/Dashboard.spec.ts:12:9
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /dashboard\/index/
+Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+Timeout: 100000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 100000ms
+    203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+```
+
+```yaml
+- img "company-branding"
+- heading "Login" [level=5]
+- paragraph: "Username : Admin"
+- paragraph: "Password : admin123"
+- text:  Username
+- textbox "Username"
+- text:  Password
+- textbox "Password"
+- button "Login"
+- paragraph: Forgot your password?
+- separator
+- paragraph: Or login with
+- paragraph: Raj
+- link:
+  - /url: https://www.linkedin.com/company/orangehrm/mycompany/
+- link:
+  - /url: https://www.facebook.com/OrangeHRM/
+- link:
+  - /url: https://twitter.com/orangehrm?lang=en
+- link:
+  - /url: https://www.youtube.com/c/OrangeHRMInc
+- paragraph: OrangeHRM OS 5.9
+- paragraph:
+  - text: © 2005 - 2026
+  - link "OrangeHRM, Inc":
+    - /url: http://www.orangehrm.com
+  - text: . All rights reserved.
+- img "orangehrm-logo"
+```
+
+# Test source
+
+```ts
+  1  | import { type Locator, type Page, expect } from "@playwright/test";
+  2  | import { BasePage } from "../../../base/basePage.js";
+  3  | import type { DefaultPageOptions } from "./types/dashboard.type.js";
+  4  | import logger from "../../../../../configuration/logger/loggerManager.js";
+  5  | 
+  6  | /**
+  7  |  * Page object for the OrangeHRM dashboard, the default landing page after login.
+  8  |  */
+  9  | export class DashboardPage extends BasePage {
+  10 |   private readonly dashboardHeader: Locator;
+  11 | 
+  12 |   private readonly dashboardMenuItemLink: Locator;
+  13 | 
+  14 |   /**
+  15 |    * Creates the dashboard page object and resolves the primary dashboard header locator.
+  16 |    * @param page - Active Playwright page instance.
+  17 |    */
+  18 |   constructor(page: Page) {
+  19 |     super(page);
+  20 | 
+  21 |     this.dashboardHeader = page.getByRole("heading", { name: "Dashboard" });
+  22 |     this.dashboardMenuItemLink = page.getByRole("link", { name: "Dashboard" });
+  23 |   }
+  24 | 
+  25 |   /**
+  26 |    * Verifies that the dashboard header is visible.
+  27 |    * @returns A promise that resolves when the visibility check passes.
+  28 |    */
+  29 |   public async verifyDashboardHeaderIsVisible(): Promise<void> {
+  30 |     await this.elementAssertions.verifyElementState(
+  31 |       this.dashboardHeader,
+  32 |       "verifyDashboardHeaderIsVisible",
+  33 |       "visible",
+  34 |       "Dashboard header",
+  35 |     );
+  36 |   }
+  37 | 
+  38 |   /**
+  39 |    * Verifies that the dashboard is the default landing page by checking the URL
+  40 |    * and confirming that the dashboard menu item is marked as active.
+  41 |    * @param options - Options containing the expected dashboard URL and active class name.
+  42 |    * @returns A promise that resolves when the dashboard default-page assertions pass.
+  43 |    */
+  44 |   public async verifyDashboardIsDefaultPage(options: DefaultPageOptions): Promise<void> {
+  45 |     const { expectedUrl, classAttribute } = options;
+  46 | 
+> 47 |     await expect(this.page).toHaveURL(expectedUrl);
+     |                             ^ Error: expect(page).toHaveURL(expected) failed
+  48 | 
+  49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+  50 |       this.dashboardMenuItemLink,
+  51 |       "verifyDashboardIsDefaultPage",
+  52 |       classAttribute,
+  53 |     );
+  54 | 
+  55 |     expect(isDashboardActive).toBe(true);
+  56 | 
+  57 |     logger.info(`Verified: Dashboard is the default page with URL: ${expectedUrl}`);
+  58 |   }
+  59 | }
+  60 | 
+```
