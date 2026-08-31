@@ -1,0 +1,304 @@
+<testsuites id="" name="" tests="18" failures="1" skipped="0" errors="0" time="432.12668505859375">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="21.642" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="21.642">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/e81449944cb125fb6dad3f56d314075fc2d2380f.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="4" failures="0" skipped="0" time="34.421" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="11.037">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/1d98937c297975423cf5884af284b1da123fb21c.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer version text" classname="layers/ui/login/Footer.spec.ts" time="5.563">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/44b433175fc195183ff47125a9636566b9a55e49.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright year" classname="layers/ui/login/Footer.spec.ts" time="9.307">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/34fa9ebe8a2cc72c3e8f6e3ac73dff7c54cc2380.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer copyright owner link" classname="layers/ui/login/Footer.spec.ts" time="8.514">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/390a6cf9a5bb71ac8c1fd9dfa8d07056e42cc675.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="21.946" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="21.946">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/558a83c21e000dc1b21aac2352ecbe58c0417c5f.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="2" failures="0" skipped="0" time="16.19" errors="0">
+<testcase name="Login | Footer › Should display footer rights text" classname="layers/ui/login/Footer.spec.ts" time="8.436">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/b70dc37dde2ae2e4ba2d398b0778537841c34dfc.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Footer › Should display footer social media icons" classname="layers/ui/login/Footer.spec.ts" time="7.754">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/e9ded62cfeee2d1b23b7b3786e7452df639ba74f.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ForgotPassword.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.234" errors="0">
+<testcase name="Login | Forgot Password › Should navigate back to login page when cancel button is clicked" classname="layers/ui/login/ForgotPassword.spec.ts" time="14.234">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/d7fce9b8b88fdbbf4aa29ca9fdfee74167584d19.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.972" errors="0">
+<testcase name="Login | Invalid Credentials › Should display required field errors when credentials are empty" classname="layers/ui/login/InvalidLogin.spec.ts" time="6.972">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/4b66b7bd2c847139d07ef309d2344ea84e95cbe3.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="22.874" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="22.874">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/ad5a21ea54702ad3cf47d754a54051129fca80fd.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/InvalidLogin.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="3" failures="0" skipped="0" time="39.487" errors="0">
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and password" classname="layers/ui/login/InvalidLogin.spec.ts" time="14.847">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/339c23644023e14318c2daba7c04d683d9c82ec2.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with invalid username and valid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="10.575">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/c23189e4e8fd382291e53d0606b64ea24e9ff4c1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Invalid Credentials › Should display invalid credentials alert with valid username and invalid password" classname="layers/ui/login/InvalidLogin.spec.ts" time="14.065">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/5ea269f6ace15d0f5d67fa903e261d67c504abf8.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="11.72" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="11.72">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/fc002e8357dcc405b1dfeedb08e00f502486a3b4.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="2" failures="0" skipped="0" time="13.076" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="10.326">
+<system-out>
+<![CDATA[2026-08-31T10:22:05+02:00 [[33mwarn[39m]: Authentication session is stale; re-authenticating
+
+[[ATTACHMENT|../all-blob-reports/resources/0034b0bd330a471a924c38672e25ff676e1cf0ec.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="2.75">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/61b61e86f87cd1170430ae7297396d9e8ae74730.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-08-31T08:27:49.658Z" hostname="chromium" tests="1" failures="1" skipped="0" time="310.477" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="310.477">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../all-blob-reports/resources/6e7f78bc6650ad78badc46aa45f3917366a00a3f.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4dba018221c30b03545ab59abe331434fb4909ef.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/41f60157a185cd8d1c0b367999c7f3c1da247bcc.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6ead7bd3b5e99bfb00c6cfd66c0bafa7a106f8f1.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/15cb9d0246cff586ded100fec22d972172c27286.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/bf475750e8114bc22ca95961a03772eca7807c93.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/cc7309dbd4236c04c4d8050ba2a6ddf092cc59b8.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/62aa84d34ab795e9950e30f98b648b9fe633d3b9.zip]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ad3c62351a3b2c0eef63023f1adc0c638d916cf3.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d86b94bd3df15ebd4f3c88594bc2bb424d0e3fe5.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1c2ee50312d05996f2613ca799233c2d07700128.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f84911dc9282089040ba116fccd5055c2c90724b.zip]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [chromium] › layers/ui/menuItems/Dashboard.spec.ts:12:9 › Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login @regression @sanity @dashboard 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6e7f78bc6650ad78badc46aa45f3917366a00a3f.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/4dba018221c30b03545ab59abe331434fb4909ef.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/41f60157a185cd8d1c0b367999c7f3c1da247bcc.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/6ead7bd3b5e99bfb00c6cfd66c0bafa7a106f8f1.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/6ead7bd3b5e99bfb00c6cfd66c0bafa7a106f8f1.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/15cb9d0246cff586ded100fec22d972172c27286.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/bf475750e8114bc22ca95961a03772eca7807c93.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/cc7309dbd4236c04c4d8050ba2a6ddf092cc59b8.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/62aa84d34ab795e9950e30f98b648b9fe633d3b9.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/62aa84d34ab795e9950e30f98b648b9fe633d3b9.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        202 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/ad3c62351a3b2c0eef63023f1adc0c638d916cf3.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d86b94bd3df15ebd4f3c88594bc2bb424d0e3fe5.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/1c2ee50312d05996f2613ca799233c2d07700128.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/f84911dc9282089040ba116fccd5055c2c90724b.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/f84911dc9282089040ba116fccd5055c2c90724b.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
