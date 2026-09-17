@@ -1,0 +1,261 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: layers/ui/authentication/Authentication.setup.ts >> Authenticates the user with valid credentials
+- Location: tests/layers/ui/authentication/Authentication.setup.ts:3:15
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('heading', { name: 'Login' })
+Expected: visible
+Timeout: 100000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 100000ms
+  - waiting for getByRole('heading', { name: 'Login' })
+
+```
+
+```yaml
+- img "company-branding"
+- heading "登录" [level=5]
+- paragraph: "Username : Admin"
+- paragraph: "Password : admin123"
+- text:  用户名
+- textbox "用户名"
+- text:  密码
+- textbox "密码"
+- button "登录"
+- paragraph: 忘了密码?
+- link:
+  - /url: https://www.linkedin.com/company/orangehrm/mycompany/
+- link:
+  - /url: https://www.facebook.com/OrangeHRM/
+- link:
+  - /url: https://twitter.com/orangehrm?lang=en
+- link:
+  - /url: https://www.youtube.com/c/OrangeHRMInc
+- paragraph: OrangeHRM OS 5.9
+- paragraph:
+  - text: © 2005 - 2026
+  - link "OrangeHRM, Inc":
+    - /url: http://www.orangehrm.com
+  - text: . All rights reserved.
+- img "orangehrm-logo"
+```
+
+# Test source
+
+```ts
+  108 |     callerMethodName: string,
+  109 |     elementName: string,
+  110 |   ): Promise<boolean> {
+  111 |     return this.performAction(
+  112 |       () => element.isVisible(),
+  113 |       callerMethodName,
+  114 |       `Verified: ${elementName} is visible`,
+  115 |       `Failed to check visibility of ${elementName}`,
+  116 |     );
+  117 |   }
+  118 | 
+  119 |   /**
+  120 |    * Retrieves the count of matching elements.
+  121 |    * @param element - The Locator of elements to retrieve the count from.
+  122 |    * @param callerMethodName - The name of the method that called the action.
+  123 |    * @param elementName - The name of the elements.
+  124 |    * @returns A promise that resolves with the count of matching elements.
+  125 |    */
+  126 |   public async getElementCount(
+  127 |     element: Locator,
+  128 |     callerMethodName: string,
+  129 |     elementName: string,
+  130 |   ): Promise<number> {
+  131 |     return this.performAction(
+  132 |       () => element.count(),
+  133 |       callerMethodName,
+  134 |       `Retrieved count for ${elementName}`,
+  135 |       `Failed to get count for ${elementName}`,
+  136 |     );
+  137 |   }
+  138 | 
+  139 |   /**
+  140 |    * Verifies that a locator resolves to an exact number of matching elements.
+  141 |    * Uses Playwright's auto-retrying assertion so it waits for elements to render.
+  142 |    * @param element - The Locator of elements to count.
+  143 |    * @param callerMethodName - The name of the method that called the action.
+  144 |    * @param expectedCount - The exact number of elements expected.
+  145 |    * @param elementName - The name of the elements.
+  146 |    * @returns A promise that resolves once the expected count is matched.
+  147 |    */
+  148 |   public async verifyElementCount(
+  149 |     element: Locator,
+  150 |     callerMethodName: string,
+  151 |     expectedCount: number,
+  152 |     elementName: string,
+  153 |   ): Promise<void> {
+  154 |     await this.performAction(
+  155 |       async () => {
+  156 |         await expect(element).toHaveCount(expectedCount);
+  157 |       },
+  158 |       callerMethodName,
+  159 |       `${elementName} count is ${expectedCount}`,
+  160 |       `Failed to verify ${elementName} count is ${expectedCount}`,
+  161 |     );
+  162 |   }
+  163 | 
+  164 |   /**
+  165 |    * Retrieves the bounding box of an element.
+  166 |    * @param element - The Locator of the element to retrieve the bounding box from.
+  167 |    * @param callerMethodName - The name of the method that called the action.
+  168 |    * @param elementName - The name of the element.
+  169 |    * @returns A promise that resolves with the bounding box, or null if unavailable.
+  170 |    */
+  171 |   public async getBoundingBox(
+  172 |     element: Locator,
+  173 |     callerMethodName: string,
+  174 |     elementName: string,
+  175 |   ): Promise<{ x: number; y: number; width: number; height: number } | null> {
+  176 |     return this.performAction(
+  177 |       () => element.boundingBox(),
+  178 |       callerMethodName,
+  179 |       `Retrieved bounding box for ${elementName}`,
+  180 |       `Failed to get bounding box for ${elementName}`,
+  181 |     );
+  182 |   }
+  183 | 
+  184 |   /**
+  185 |    * Verifies that an element is in a specified state.
+  186 |    * @param element - The Locator of the element to verify.
+  187 |    * @param callerMethodName - The name of the method that called the action.
+  188 |    * @param state - The desired state: "enabled", "disabled", "visible", or "hidden".
+  189 |    * @param elementName - The name of the element.
+  190 |    * @returns A promise that resolves when the element state assertion passes.
+  191 |    */
+  192 |   public async verifyElementState(
+  193 |     element: Locator,
+  194 |     callerMethodName: string,
+  195 |     state: AssertionElementState,
+  196 |     elementName: string,
+  197 |   ): Promise<void> {
+  198 |     await this.performAction(
+  199 |       async () => {
+  200 |         switch (state) {
+  201 |           case "enabled":
+  202 |             await expect(element).toBeEnabled();
+  203 |             break;
+  204 |           case "disabled":
+  205 |             await expect(element).toBeDisabled();
+  206 |             break;
+  207 |           case "visible":
+> 208 |             await expect(element).toBeVisible();
+      |                                   ^ Error: expect(locator).toBeVisible() failed
+  209 |             break;
+  210 |           case "hidden":
+  211 |             await expect(element).not.toBeVisible();
+  212 |             break;
+  213 |         }
+  214 |       },
+  215 |       callerMethodName,
+  216 |       `${elementName} state is ${state}`,
+  217 |       `Failed to verify element ${elementName} is ${state}`,
+  218 |     );
+  219 |   }
+  220 | 
+  221 |   /**
+  222 |    * Checks if an element is editable.
+  223 |    * @param element - The Locator of the element to check.
+  224 |    * @param callerMethodName - The name of the method that called the action.
+  225 |    * @param elementName - The name of the element.
+  226 |    * @returns A promise that resolves with true if the element is editable, or false otherwise.
+  227 |    */
+  228 |   public async isElementEditable(
+  229 |     element: Locator,
+  230 |     callerMethodName: string,
+  231 |     elementName: string,
+  232 |   ): Promise<boolean> {
+  233 |     return this.performAction(
+  234 |       () => element.isEditable(),
+  235 |       callerMethodName,
+  236 |       `${elementName} is editable`,
+  237 |       `Failed to check if ${elementName} is editable`,
+  238 |     );
+  239 |   }
+  240 | 
+  241 |   /**
+  242 |    * Checks if an element is checked.
+  243 |    * @param element - The Locator of the element to check.
+  244 |    * @param callerMethodName - The name of the method that called the action.
+  245 |    * @param elementName - The name of the element.
+  246 |    * @returns A promise that resolves with true if the element is checked, or false otherwise.
+  247 |    */
+  248 |   public async isElementChecked(
+  249 |     element: Locator,
+  250 |     callerMethodName: string,
+  251 |     elementName: string,
+  252 |   ): Promise<boolean> {
+  253 |     return this.performAction(
+  254 |       () => element.isChecked(),
+  255 |       callerMethodName,
+  256 |       `${elementName} is checked`,
+  257 |       `Failed to check if ${elementName} is checked`,
+  258 |     );
+  259 |   }
+  260 | 
+  261 |   /**
+  262 |    * Checks if an element is disabled.
+  263 |    * @param element - The Locator of the element to check.
+  264 |    * @param callerMethodName - The name of the method that called the action.
+  265 |    * @param elementName - The name of the element.
+  266 |    * @returns A promise that resolves with true if the element is disabled, or false otherwise.
+  267 |    */
+  268 |   public async isElementDisabled(
+  269 |     element: Locator,
+  270 |     callerMethodName: string,
+  271 |     elementName: string,
+  272 |   ): Promise<boolean> {
+  273 |     return this.performAction(
+  274 |       () => element.isDisabled(),
+  275 |       callerMethodName,
+  276 |       `${elementName} disabled state checked`,
+  277 |       `Failed to check disabled state for ${elementName}`,
+  278 |     );
+  279 |   }
+  280 | 
+  281 |   /**
+  282 |    * Verifies the state of a checkbox.
+  283 |    * @param element - The Locator of the element to verify.
+  284 |    * @param callerMethodName - The name of the method that called the action.
+  285 |    * @param isChecked - Whether the checkbox should be checked or not.
+  286 |    * @param elementName - The name of the element.
+  287 |    * @returns A promise that resolves if the verification succeeds, or rejects with an error if it fails.
+  288 |    */
+  289 |   public async verifyCheckboxState(
+  290 |     element: Locator,
+  291 |     callerMethodName: string,
+  292 |     isChecked: boolean,
+  293 |     elementName: string,
+  294 |   ): Promise<void> {
+  295 |     await this.performAction(
+  296 |       async () => {
+  297 |         if (isChecked) {
+  298 |           await expect(element).toBeChecked();
+  299 |         } else {
+  300 |           await expect(element).not.toBeChecked();
+  301 |         }
+  302 |       },
+  303 |       callerMethodName,
+  304 |       `${elementName} is ${isChecked ? "checked" : "unchecked"}`,
+  305 |       `Failed to verify ${elementName} is ${isChecked ? "checked" : "unchecked"}`,
+  306 |     );
+  307 |   }
+  308 | 
+```

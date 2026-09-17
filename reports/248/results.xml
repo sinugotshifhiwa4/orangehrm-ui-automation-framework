@@ -1,0 +1,354 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="0" errors="0" time="239.06024096679687">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="215.095" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="215.095">
+<system-out>
+<![CDATA[2026-09-17T11:08:16+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:08:17+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:09:57+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:09:57.278Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/637cc75ee38eb22bf5e2bbb15272cc8e34e6b4ff.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/32c4519d149b237cdf60439f05cb611f0cd7d08d.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/20f1d104d540ac23f64ae8212c7bedad79db217c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0680152f9fe3bcb7e7258de8b4a427aa1e2dece0.zip]]
+2026-09-17T11:10:02+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:10:03+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:43+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:11:43.451Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/9aef221daf51a831499cf01ff92c261a902618b9.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0d5b1948996701320bab960135341f377fe2cd87.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/ae5cf6ee8afa13a45862a4c231609f197f434600.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/3a1c325eb41ab3f14f9d46e036b8851a3ce8b183.zip]]
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:49+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:49+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-17T11:11:49+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-17T11:11:49+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-17T11:11:50+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-17T11:11:50+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/a899e1aa59070b9a224ad66c67dcfeb20a089184.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.969" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="3.969">
+<system-out>
+<![CDATA[2026-09-17T11:11:55+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Social Media Icons count is 4
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer LinkedIn Icon state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Facebook Icon state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer Twitter Icon state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Footer YouTube Icon state is visible
+2026-09-17T11:11:55+02:00 [[32minfo[39m]: Assertion Passed: Complete footer with all elements is displayed
+
+[[ATTACHMENT|../all-blob-reports/resources/d91b4af5492795e61e3b6c5e692b06977bfbd4b3.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="212.616" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="212.616">
+<system-out>
+<![CDATA[2026-09-17T11:08:06+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:08:07+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:09:47+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:09:47.326Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/e900375eccbdf2612133a558bafff07ac69157a6.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/47768853fa62d1cfe3f2a65ada0249005f48ab9f.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7c42c8178ed7aa33a73af1a07a0360d1b3465563.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8357257907cf4890bff5d7def63b93bd58f2b094.zip]]
+2026-09-17T11:09:51+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:09:52+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:32+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:11:32.523Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/50abf889aa58743d325d4ca578aa2c181c136e2c.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1418194683e3b054ff8c7862170274e908476dd7.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/39e24973c29c3c5b7d3dd6867783f99cb15fe621.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e8e3026dd1f8a5a61257abd88da53340bede9bf3.zip]]
+2026-09-17T11:11:36+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:37+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:37+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-17T11:11:37+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-17T11:11:37+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-17T11:11:37+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-17T11:11:38+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-17T11:11:38+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-17T11:11:38+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-17T11:11:39+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-17T11:11:39+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-17T11:11:39+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/87fbe47ee86add741662fd2d143edfb0674c6db2.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.204" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="4.204">
+<system-out>
+<![CDATA[2026-09-17T11:11:43+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:43+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-09-17T11:11:43+02:00 [[32minfo[39m]: Existing authentication session is still valid
+2026-09-17T11:11:44+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-09-17T11:11:44+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/be39224a539fdec2ac2d40ab1870ece175f05dd5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="215.135" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="215.135">
+<system-out>
+<![CDATA[2026-09-17T11:08:14+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:08:15+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:09:55+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:09:55.202Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/2baaf9dcf058105a11fe858da98f91981c435f9c.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/f68e4e92ecce8a87aad29e99f7e6b180ce04f0d2.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/118516f8a47cef1c377ad0ce36499c1b3014a3c5.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/6d4b9465afd558250434af0a65a446b706b880dd.zip]]
+2026-09-17T11:10:00+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:10:01+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:41+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:11:41.191Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/3d26a10e96f5def051bea70f7aeb4e95ab7e53a3.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/8c3b6225391b59cdab04624ac66f3d460efece41.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/374de0e660214fe223c399d54220c728472465e3.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/db307b79263978e4baaeee5b681f069801ad33b6.zip]]
+2026-09-17T11:11:46+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:46+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:46+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-17T11:11:46+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-17T11:11:47+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-17T11:11:47+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-17T11:11:48+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-17T11:11:48+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/532945215e118c53c8c6b36ffceeb57c122b2086.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.428" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="3.428">
+<system-out>
+<![CDATA[2026-09-17T11:11:53+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:53+02:00 [[32minfo[39m]: Retrieved page title
+2026-09-17T11:11:53+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-09-17T11:11:53+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/8529b99473780f3c90fc27ea8a1e02dd7fcd808e.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="211.076" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="211.076">
+<system-out>
+<![CDATA[2026-09-17T11:08:00+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:08:00+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:09:40+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:09:40.986Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/2f24d7375a9260a4b16e7bf937e26c68b6342383.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/82aa8283e4fcfb4ba87928565d9395d49c10387f.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a33146ec75b1854028e111761aa83706c9da1e1b.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e327537d1e44d95abb3576525e1d2161858342a6.zip]]
+2026-09-17T11:09:44+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:09:45+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:25+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-17T09:11:25.741Z",
+  "environment": "qa",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/7a88ae7fbb0906666e386d1c7462e3e0beac4007.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/deca389e28c95f62ac45737de5a099659909e3b9.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/fb049ec72e82981916cf6de138fb03531156eeed.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c8e0431f0b3004e6a4f16a16d9a7f0bd1ff11fbb.zip]]
+2026-09-17T11:11:29+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:30+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-17T11:11:30+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-17T11:11:30+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-17T11:11:30+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-17T11:11:30+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-17T11:11:31+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-17T11:11:31+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-17T11:11:31+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-17T11:11:31+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-17T11:11:31+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-17T11:11:31+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/fc7d8815b32804774a4f75ab69ab29970e127cff.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-09-17T09:12:21.933Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.412" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="3.412">
+<system-out>
+<![CDATA[2026-09-17T11:11:35+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-17T11:11:35+02:00 [[32minfo[39m]: Class "active" found on element
+2026-09-17T11:11:35+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-09-17T11:11:35+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/2d66ef6123aa766e0c9c223998aa46279fc55caf.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
