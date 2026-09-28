@@ -1,0 +1,377 @@
+<testsuites id="" name="" tests="8" failures="1" skipped="0" errors="0" time="318.61091796875">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.905" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.905">
+<system-out>
+<![CDATA[2026-09-28T13:32:46+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:32:47+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-28T13:32:47+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-28T13:32:47+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-28T13:32:47+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-28T13:32:47+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-28T13:32:48+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-28T13:32:48+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-28T13:32:49+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-28T13:32:49+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-28T13:32:49+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/20f81489528e458e131972b49d9d2f77a26de7b0.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="chromium" tests="1" failures="1" skipped="0" time="309.341" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="309.341">
+<system-out>
+<![CDATA[2026-09-28T13:32:52+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-28T13:34:32+02:00 [[31merror[39m]: {
+  "source": "verifyFooterSocialMediaIconsAreVisible",
+  "context": "Failed to verify Footer Social Media Icons count is 4",
+  "message": "expect(locator).toHaveCount(expected) failed",
+  "timestamp": "2026-09-28T11:34:32.680Z",
+  "environment": "uat",
+  "stack": "expect(locator).toHaveCount(expected) failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toHaveCount",
+  "expected": 4,
+  "received": 0,
+  "log": [
+    "  - Expect \"toHaveCount\" with timeout 100000ms",
+    "  - waiting for locator('.orangehrm-login-footer-sm').locator('a')",
+    "    203 × locator resolved to 0 elements",
+    "        - unexpected value \"0\""
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/595a0e7e3c8115e05fe59925b9a03c67e508a8be.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/b8c38ad507ea717e3d6a379da28d45296b2b6715.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/73cdbf06c28521416681e8269805c6224c051988.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0851d40faaedc5281bf3f4a71b9a19a17462c254.zip]]
+2026-09-28T13:34:36+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:34:36+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-28T13:34:36+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-28T13:34:36+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-28T13:34:36+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-28T13:36:16+02:00 [[31merror[39m]: {
+  "source": "verifyFooterSocialMediaIconsAreVisible",
+  "context": "Failed to verify Footer Social Media Icons count is 4",
+  "message": "expect(locator).toHaveCount(expected) failed",
+  "timestamp": "2026-09-28T11:36:16.717Z",
+  "environment": "uat",
+  "stack": "expect(locator).toHaveCount(expected) failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toHaveCount",
+  "expected": 4,
+  "received": 0,
+  "log": [
+    "  - Expect \"toHaveCount\" with timeout 100000ms",
+    "  - waiting for locator('.orangehrm-login-footer-sm').locator('a')",
+    "    203 × locator resolved to 0 elements",
+    "        - unexpected value \"0\""
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/c12f550b16705dd5daf4da2d39e8b3c54de3c138.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/9b4de3cb6c3b33edfc9375080deb9109bf86f239.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/68ef101b5b0a9f986608406903aeb07ba85d4642.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/1527fb0d62ac2b5c8ee099682f9a69c2401d1426.zip]]
+2026-09-28T13:36:20+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:36:21+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-28T13:36:21+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-28T13:36:21+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-28T13:36:21+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-28T13:38:01+02:00 [[31merror[39m]: {
+  "source": "verifyFooterSocialMediaIconsAreVisible",
+  "context": "Failed to verify Footer Social Media Icons count is 4",
+  "message": "expect(locator).toHaveCount(expected) failed",
+  "timestamp": "2026-09-28T11:38:01.054Z",
+  "environment": "uat",
+  "stack": "expect(locator).toHaveCount(expected) failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toHaveCount",
+  "expected": 4,
+  "received": 0,
+  "log": [
+    "  - Expect \"toHaveCount\" with timeout 100000ms",
+    "  - waiting for locator('.orangehrm-login-footer-sm').locator('a')",
+    "    203 × locator resolved to 0 elements",
+    "        - unexpected value \"0\""
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/020900189fd6d1b72a17621da29c381ee966ad9b.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/e3b1bee6c5070eb5f77354481e02a0ce51a05b65.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/121bbc1f25a4f01c4fadddac3978ef2801cfa807.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/048b2d299d9c5c5a708f2f9fbdbbb7d6e4fd36c8.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveCount(expected) failed" type="expect.toHaveCount">
+<![CDATA[  [chromium] › layers/ui/login/Footer.spec.ts:9:7 › Login | Footer › Should display complete footer with all elements @regression @skip-auth @login @sanity 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.orangehrm-login-footer-sm').locator('a')
+    Expected: 4
+    Received: 0
+    Timeout:  100000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 100000ms
+      - waiting for locator('.orangehrm-login-footer-sm').locator('a')
+        203 × locator resolved to 0 elements
+            - unexpected value "0"
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:156
+
+      154 |     await this.performAction(
+      155 |       async () => {
+    > 156 |         await expect(element).toHaveCount(expectedCount);
+          |                               ^
+      157 |       },
+      158 |       callerMethodName,
+      159 |       `${elementName} count is ${expectedCount}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:156:31)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementCount (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:154:16)
+        at LoginPage.verifyFooterSocialMediaIconsAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:398:34)
+        at LoginPage.verifyFooter (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:330:18)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/Footer.spec.ts:13:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/595a0e7e3c8115e05fe59925b9a03c67e508a8be.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/b8c38ad507ea717e3d6a379da28d45296b2b6715.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/73cdbf06c28521416681e8269805c6224c051988.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/0851d40faaedc5281bf3f4a71b9a19a17462c254.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/0851d40faaedc5281bf3f4a71b9a19a17462c254.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.orangehrm-login-footer-sm').locator('a')
+    Expected: 4
+    Received: 0
+    Timeout:  100000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 100000ms
+      - waiting for locator('.orangehrm-login-footer-sm').locator('a')
+        203 × locator resolved to 0 elements
+            - unexpected value "0"
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:156
+
+      154 |     await this.performAction(
+      155 |       async () => {
+    > 156 |         await expect(element).toHaveCount(expectedCount);
+          |                               ^
+      157 |       },
+      158 |       callerMethodName,
+      159 |       `${elementName} count is ${expectedCount}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:156:31)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementCount (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:154:16)
+        at LoginPage.verifyFooterSocialMediaIconsAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:398:34)
+        at LoginPage.verifyFooter (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:330:18)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/Footer.spec.ts:13:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c12f550b16705dd5daf4da2d39e8b3c54de3c138.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/9b4de3cb6c3b33edfc9375080deb9109bf86f239.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/68ef101b5b0a9f986608406903aeb07ba85d4642.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/1527fb0d62ac2b5c8ee099682f9a69c2401d1426.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/1527fb0d62ac2b5c8ee099682f9a69c2401d1426.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.orangehrm-login-footer-sm').locator('a')
+    Expected: 4
+    Received: 0
+    Timeout:  100000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 100000ms
+      - waiting for locator('.orangehrm-login-footer-sm').locator('a')
+        203 × locator resolved to 0 elements
+            - unexpected value "0"
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:156
+
+      154 |     await this.performAction(
+      155 |       async () => {
+    > 156 |         await expect(element).toHaveCount(expectedCount);
+          |                               ^
+      157 |       },
+      158 |       callerMethodName,
+      159 |       `${elementName} count is ${expectedCount}`,
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:156:31)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementCount (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:154:16)
+        at LoginPage.verifyFooterSocialMediaIconsAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:398:34)
+        at LoginPage.verifyFooter (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:330:18)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/login/Footer.spec.ts:13:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/020900189fd6d1b72a17621da29c381ee966ad9b.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/e3b1bee6c5070eb5f77354481e02a0ce51a05b65.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/121bbc1f25a4f01c4fadddac3978ef2801cfa807.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/048b2d299d9c5c5a708f2f9fbdbbb7d6e4fd36c8.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/048b2d299d9c5c5a708f2f9fbdbbb7d6e4fd36c8.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.486" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.486">
+<system-out>
+<![CDATA[2026-09-28T13:33:17+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:33:18+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-28T13:33:18+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-28T13:33:18+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-28T13:33:18+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-28T13:33:18+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-28T13:33:19+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-28T13:33:19+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-28T13:33:19+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-28T13:33:19+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-28T13:33:19+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/d0dc1bef6cd5e50c20abb46df3725421464db68a.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.454" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="3.454">
+<system-out>
+<![CDATA[2026-09-28T13:33:23+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:33:23+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-09-28T13:33:23+02:00 [[32minfo[39m]: Existing authentication session is still valid
+2026-09-28T13:33:23+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-09-28T13:33:23+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/483f2edd429cdc96a468d6ae1ecc8cc644a52657.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.965" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.965">
+<system-out>
+<![CDATA[2026-09-28T13:32:51+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:32:51+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-28T13:32:51+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-28T13:32:51+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-28T13:32:51+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-28T13:32:51+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-28T13:32:52+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-28T13:32:53+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-28T13:32:53+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-28T13:32:53+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/88b8ac146ce35bfe3307dbf19bdeee9fd25ecf65.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.671" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="2.671">
+<system-out>
+<![CDATA[2026-09-28T13:32:56+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:32:56+02:00 [[32minfo[39m]: Retrieved page title
+2026-09-28T13:32:56+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-09-28T13:32:56+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/7b7a0ab9f763db49c3215793b01e75fe3ce8aa29.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="5.141" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="5.141">
+<system-out>
+<![CDATA[2026-09-28T13:32:57+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:32:58+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-28T13:32:58+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-28T13:32:58+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-28T13:32:58+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-28T13:32:58+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-28T13:32:59+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-28T13:32:59+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-28T13:32:59+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-28T13:32:59+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-28T13:32:59+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/b0ba5889b84904b8926deac2b174afa881f0ae29.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-09-28T11:38:23.495Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.083" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="4.083">
+<system-out>
+<![CDATA[2026-09-28T13:33:04+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-28T13:33:04+02:00 [[32minfo[39m]: Class "active" found on element
+2026-09-28T13:33:04+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-09-28T13:33:04+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/9d390c598a3817cbdd5f27b91054d893e69c9596.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
