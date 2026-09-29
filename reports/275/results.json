@@ -1,0 +1,1407 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/configuration/runtime/globalSetup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+        "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+        "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+      },
+      "gitCommit": {
+        "shortHash": "70ee179",
+        "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+        "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+        "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+        "author": {
+          "name": "Tshifhiwa Sinugo",
+          "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+          "time": 1781628218000
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "time": 1781628218000
+        },
+        "branch": "environment/UAT"
+      },
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/36560171594"
+          },
+          "gitCommit": {
+            "shortHash": "70ee179",
+            "hash": "70ee17939f4182e6170d6f5d43aaeedbf10386f8",
+            "subject": "Merge pull request #13 from sinugotshifhiwa4/environment/QA",
+            "body": "Merge pull request #13 from sinugotshifhiwa4/environment/QA\n\nEnvironment/qa",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628218000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628218000
+            },
+            "branch": "environment/UAT"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      }
+    ],
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        null
+      ],
+      [
+        "json",
+        null
+      ],
+      [
+        "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/node_modules/ortoni-report/dist/ortoni-report.js",
+        {
+          "open": "never",
+          "folderPath": "ortoni-report",
+          "filename": "index.html",
+          "title": "Orange HRM Automation Report",
+          "projectName": "OrangeHRM",
+          "testType": "Functional",
+          "authorName": "runner",
+          "base64Image": false,
+          "stdIO": false,
+          "meta": {
+            "Test Cycle": "Sep, 2026",
+            "version": "1.0.0",
+            "platform": "Linux"
+          }
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "configFile": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/playwright.config.ts",
+    "rootDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+    "quiet": false,
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "layers/ui/authentication/Authentication.setup.ts",
+      "file": "layers/ui/authentication/Authentication.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 107521,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:12:43+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:45+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:25+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyLoginHeaderIsVisible\",\n  \"context\": \"Failed to verify element Login Header is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:14:25.754Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('heading', { name: 'Login' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-29T11:12:38.710Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/db88e2efb1eaeac85b8274ea43696be2163e3116.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/3239e3f1d1116dd77bef0d6e0d9d4492d3904d67.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/061feccafbbe20a0b161fa67ebaa550b06a0e204.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a9d57befdf6466770d3bcb74afa583ef667e8f9e.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5683,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:14:30+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:31+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:31+02:00 [\u001b[32minfo\u001b[39m]: Login Header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:31+02:00 [\u001b[32minfo\u001b[39m]: Username Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:31+02:00 [\u001b[32minfo\u001b[39m]: Password Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:31+02:00 [\u001b[32minfo\u001b[39m]: Clicked on Login Button\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:32+02:00 [\u001b[32minfo\u001b[39m]: Invalid Credentials Alert state is hidden\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:32+02:00 [\u001b[32minfo\u001b[39m]: Authentication session state created successfully\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:33+02:00 [\u001b[32minfo\u001b[39m]: Dashboard header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:33+02:00 [\u001b[32minfo\u001b[39m]: Upgrade button state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:33+02:00 [\u001b[32minfo\u001b[39m]: User dropdown selector state is visible\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 19
+                    }
+                  ],
+                  "startTime": "2026-09-29T11:14:27.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/de38a3d090c98a23c790c8dea495930e192ef89c.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc4713",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 105716,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:13:22+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:13:23+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:03+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyLoginHeaderIsVisible\",\n  \"context\": \"Failed to verify element Login Header is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:15:03.971Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('heading', { name: 'Login' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-29T11:13:17.957Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/8c6362728a25faf7ee0610b2046ef80a44575023.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/0ccd95443d5bb51245308f13de37cf7da930aca2.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/02049dc491a2263e5ce2907214adc47da5b21d57.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/4f57619a366e3e5d941b3d255bbc21aeaf158adc.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                },
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5731,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:15:08+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:09+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:09+02:00 [\u001b[32minfo\u001b[39m]: Login Header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:09+02:00 [\u001b[32minfo\u001b[39m]: Username Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:09+02:00 [\u001b[32minfo\u001b[39m]: Password Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:09+02:00 [\u001b[32minfo\u001b[39m]: Clicked on Login Button\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:10+02:00 [\u001b[32minfo\u001b[39m]: Invalid Credentials Alert state is hidden\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:10+02:00 [\u001b[32minfo\u001b[39m]: Authentication session state created successfully\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:11+02:00 [\u001b[32minfo\u001b[39m]: Dashboard header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:11+02:00 [\u001b[32minfo\u001b[39m]: Upgrade button state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:15:11+02:00 [\u001b[32minfo\u001b[39m]: User dropdown selector state is visible\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 21
+                    }
+                  ],
+                  "startTime": "2026-09-29T11:15:06.101Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/0c20239ed31437dbff7b9e56b428f4a5a786c787.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47131",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": false,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 123720,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at DashboardPage.verifyDashboardHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:30:34)\n    at TopBar.verifyTopBarMenusAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/navigationBars/topbar.ts:37:26)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:11:18",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at DashboardPage.verifyDashboardHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:30:34)\n    at TopBar.verifyTopBarMenusAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/navigationBars/topbar.ts:37:26)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:11:18"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:12:36+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:38+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:38+02:00 [\u001b[32minfo\u001b[39m]: Login Header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:38+02:00 [\u001b[32minfo\u001b[39m]: Username Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:38+02:00 [\u001b[32minfo\u001b[39m]: Password Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:38+02:00 [\u001b[32minfo\u001b[39m]: Clicked on Login Button\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:44+02:00 [\u001b[32minfo\u001b[39m]: Invalid Credentials Alert state is hidden\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:44+02:00 [\u001b[32minfo\u001b[39m]: Authentication session state created successfully\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:46+02:00 [\u001b[32minfo\u001b[39m]: Upgrade button state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:12:46+02:00 [\u001b[32minfo\u001b[39m]: User dropdown selector state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:24+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyDashboardHeaderIsVisible\",\n  \"context\": \"Failed to verify element Dashboard header is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:14:24.572Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('heading', { name: 'Dashboard' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 33
+                    }
+                  ],
+                  "startTime": "2026-09-29T11:12:33.530Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a94312d33543f007da5496d2d3e02514fbed2c64.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/eb89df2c9ef8bf0d39e141fca4980dbc932cd3da.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/bfb66a157bc886865372f805e87e9fb4e9b07e13.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a06479a2618b054fd4b842f9fa6964dde5ad7b7a.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 117787,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)\n    at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)\n    at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:14:41+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:16:21+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyOrangeHrmLogoIsVisible\",\n  \"context\": \"Failed to verify element OrangeHRM Logo is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:16:21.069Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('img', { name: 'company-branding' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-09-29T11:14:38.632Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/5db3d51d823ddd8d5438e3db85993885f2f04ebe.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/661ffe88fa6698f653e51c19eeae332191c83a00.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/7bb8a6d1e08d3224dc8b35e04c1f3de97f1cad37.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/d340be78c507cd4a9eb6d1e964c40dc6bfc69510.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 117722,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)\n    at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('img', { name: 'company-branding' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('img', { name: 'company-branding' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)\n    at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:16:40+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:18:20+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyOrangeHrmLogoIsVisible\",\n  \"context\": \"Failed to verify element OrangeHRM Logo is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:18:20.146Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('img', { name: 'company-branding' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-09-29T11:16:37.618Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/1ad6f1de22adb143cae71146474d8bf9858f3048.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/28c70637ecec575b10d69ffe70d597e9fe58f797.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/cd4c383f4dfd94c3c8c44645460bd41821ed4b20.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/c08acc20b660537263a5c5247a57f2d952fb1a06.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47132",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 104483,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5",
+                    "location": {
+                      "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                      "column": 35,
+                      "line": 208
+                    },
+                    "snippet": "   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n\u001b[0m \u001b[90m 206 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m:\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 210 |\u001b[39m           \u001b[36mcase\u001b[39m \u001b[32m\"hidden\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m 211 |\u001b[39m             \u001b[36mawait\u001b[39m expect(element)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                        "column": 35,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Login' })\nExpected: visible\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 100000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Login' })\u001b[22m\n\n\n   at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208\n\n  206 |             break;\n  207 |           case \"visible\":\n> 208 |             await expect(element).toBeVisible();\n      |                                   ^\n  209 |             break;\n  210 |           case \"hidden\":\n  211 |             await expect(element).not.toBeVisible();\n    at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)\n    at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)\n    at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)\n    at LoginPage.verifyLoginHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:149:34)\n    at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:121:18)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:11\n    at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:7)\n    at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)\n    at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:13:02+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:13:03+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:43+02:00 [\u001b[31merror\u001b[39m]: {\n  \"source\": \"verifyLoginHeaderIsVisible\",\n  \"context\": \"Failed to verify element Login Header is visible\",\n  \"message\": \"expect(locator).toBeVisible() failed\",\n  \"timestamp\": \"2026-09-29T11:14:43.138Z\",\n  \"environment\": \"uat\",\n  \"stack\": \"expect(locator).toBeVisible() failed\",\n  \"errorType\": \"ExpectError\",\n  \"pass\": false,\n  \"matcherName\": \"toBeVisible\",\n  \"expected\": \"visible\",\n  \"log\": [\n    \"  - Expect \\\"toBeVisible\\\" with timeout 100000ms\",\n    \"  - waiting for getByRole('heading', { name: 'Login' })\"\n  ]\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-29T11:12:59.104Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/7db5df4898df12ab550c9711c0d5ad173259a6c1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/2aa8e624a0ea48d5b2f38ebaaa4f750072afe154.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/58fa49b7b4bccf317a694cc0f02cb7acb7536487.markdown"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/5dcdfcd11f2f6651911aaf1ec278a749b67f41eb.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts",
+                    "column": 35,
+                    "line": 208
+                  }
+                },
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6074,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "2026-09-29T13:14:48+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:48+02:00 [\u001b[32minfo\u001b[39m]: OrangeHRM Logo state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:48+02:00 [\u001b[32minfo\u001b[39m]: Login Header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:49+02:00 [\u001b[32minfo\u001b[39m]: Username Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:49+02:00 [\u001b[32minfo\u001b[39m]: Password Input filled successfully with value: ********\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:49+02:00 [\u001b[32minfo\u001b[39m]: Clicked on Login Button\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:50+02:00 [\u001b[32minfo\u001b[39m]: Invalid Credentials Alert state is hidden\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:50+02:00 [\u001b[32minfo\u001b[39m]: Authentication session state created successfully\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:50+02:00 [\u001b[32minfo\u001b[39m]: Dashboard header state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:50+02:00 [\u001b[32minfo\u001b[39m]: Upgrade button state is visible\n"
+                    },
+                    {
+                      "text": "2026-09-29T13:14:50+02:00 [\u001b[32minfo\u001b[39m]: User dropdown selector state is visible\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 25
+                    }
+                  ],
+                  "startTime": "2026-09-29T11:14:45.256Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/2bdc4c6ba40aed4c285181e7f17b3abfef50bbcc.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47133",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/Footer.spec.ts",
+      "file": "layers/ui/login/Footer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Footer",
+          "file": "layers/ui/login/Footer.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display complete footer with all elements",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login",
+                "sanity"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3806,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Version Text state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Copyright Year state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Copyright Owner Link state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Rights Text state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Social Media Icons count is 4\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer LinkedIn Icon state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Facebook Icon state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer Twitter Icon state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Footer YouTube Icon state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:37+02:00 [\u001b[32minfo\u001b[39m]: Assertion Passed: Complete footer with all elements is displayed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-29T11:14:34.289Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/c68f4c55a1e94b05a4afb958ab7e4bc4f1bd00c2.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-a28e81b62d6e2e319ac1",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/ValidLogin.spec.ts",
+      "file": "layers/ui/login/ValidLogin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Valid Credentials",
+          "file": "layers/ui/login/ValidLogin.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should navigate to Dashboard on successful login",
+              "ok": true,
+              "tags": [
+                "regression",
+                "sanity",
+                "dashboard",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4769,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "2026-09-29T13:15:16+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:15:16+02:00 [\u001b[32minfo\u001b[39m]: Checked if URL contains: /auth/login\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:15:16+02:00 [\u001b[32minfo\u001b[39m]: Existing authentication session is still valid\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:15:16+02:00 [\u001b[32minfo\u001b[39m]: Dashboard menu item state is visible\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:15:16+02:00 [\u001b[32minfo\u001b[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-29T11:15:12.630Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a41a2dbad3610ee78303ac76cbf2b52d1666e703.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b57d8ef1cae4ea7c48f9-1d5110b1a615a296ebc7",
+              "file": "layers/ui/login/ValidLogin.spec.ts",
+              "line": 13,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Login | Page Title",
+          "file": "layers/ui/login/ValidLogin.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display page title correctly",
+              "ok": true,
+              "tags": [
+                "regression",
+                "sanity",
+                "skip-auth"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b57d8ef1cae4ea7c48f9-46684447444e7e13c297",
+              "file": "layers/ui/login/ValidLogin.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/menuItems/Dashboard.spec.ts",
+      "file": "layers/ui/menuItems/Dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard | Default Landing Page",
+          "file": "layers/ui/menuItems/Dashboard.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should load the Dashboard as the default page after successful login",
+              "ok": true,
+              "tags": [
+                "regression",
+                "sanity",
+                "dashboard"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4560,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "2026-09-29T13:14:55+02:00 [\u001b[32minfo\u001b[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:55+02:00 [\u001b[32minfo\u001b[39m]: Class \"active\" found on element\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:55+02:00 [\u001b[32minfo\u001b[39m]: Verified: Dashboard is the default page with URL: /dashboard\\/index/\n"
+                        },
+                        {
+                          "text": "2026-09-29T13:14:55+02:00 [\u001b[32minfo\u001b[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-29T11:14:52.125Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/2c00912417276a3fa31184ff822c42cf76da015d.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "47350857b38bcc864f81-1b247bdeae07f8c694e7",
+              "file": "layers/ui/menuItems/Dashboard.spec.ts",
+              "line": 12,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-29T11:12:32.448Z",
+    "duration": 363506.2189941406,
+    "expected": 3,
+    "skipped": 1,
+    "unexpected": 1,
+    "flaky": 3
+  }
+}

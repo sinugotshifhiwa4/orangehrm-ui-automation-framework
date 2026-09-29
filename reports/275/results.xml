@@ -1,0 +1,438 @@
+<testsuites id="" name="" tests="8" failures="1" skipped="1" errors="0" time="363.5062189941406">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="113.204" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="113.204">
+<system-out>
+<![CDATA[2026-09-29T13:12:43+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:12:45+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:14:25+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:14:25.754Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/db88e2efb1eaeac85b8274ea43696be2163e3116.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/3239e3f1d1116dd77bef0d6e0d9d4492d3904d67.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/061feccafbbe20a0b161fa67ebaa550b06a0e204.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a9d57befdf6466770d3bcb74afa583ef667e8f9e.zip]]
+2026-09-29T13:14:30+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:14:31+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:14:31+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T13:14:31+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T13:14:31+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T13:14:31+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T13:14:32+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T13:14:32+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T13:14:33+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T13:14:33+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T13:14:33+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/de38a3d090c98a23c790c8dea495930e192ef89c.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.806" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="3.806">
+<system-out>
+<![CDATA[2026-09-29T13:14:37+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Social Media Icons count is 4
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer LinkedIn Icon state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Facebook Icon state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer Twitter Icon state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Footer YouTube Icon state is visible
+2026-09-29T13:14:37+02:00 [[32minfo[39m]: Assertion Passed: Complete footer with all elements is displayed
+
+[[ATTACHMENT|../all-blob-reports/resources/c68f4c55a1e94b05a4afb958ab7e4bc4f1bd00c2.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="111.447" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="111.447">
+<system-out>
+<![CDATA[2026-09-29T13:13:22+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:13:23+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:15:03+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:15:03.971Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/8c6362728a25faf7ee0610b2046ef80a44575023.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/0ccd95443d5bb51245308f13de37cf7da930aca2.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/02049dc491a2263e5ce2907214adc47da5b21d57.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/4f57619a366e3e5d941b3d255bbc21aeaf158adc.zip]]
+2026-09-29T13:15:08+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:15:09+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:15:09+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T13:15:09+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T13:15:09+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T13:15:09+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T13:15:10+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T13:15:10+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T13:15:11+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T13:15:11+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T13:15:11+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/0c20239ed31437dbff7b9e56b428f4a5a786c787.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.769" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="4.769">
+<system-out>
+<![CDATA[2026-09-29T13:15:16+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:15:16+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-09-29T13:15:16+02:00 [[32minfo[39m]: Existing authentication session is still valid
+2026-09-29T13:15:16+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-09-29T13:15:16+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/a41a2dbad3610ee78303ac76cbf2b52d1666e703.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="setup-auth-state" tests="1" failures="1" skipped="0" time="359.229" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="359.229">
+<system-out>
+<![CDATA[2026-09-29T13:12:36+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:12:38+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:12:38+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T13:12:38+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T13:12:38+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T13:12:38+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T13:12:44+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T13:12:44+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T13:12:46+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T13:12:46+02:00 [[32minfo[39m]: User dropdown selector state is visible
+2026-09-29T13:14:24+02:00 [[31merror[39m]: {
+  "source": "verifyDashboardHeaderIsVisible",
+  "context": "Failed to verify element Dashboard header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:14:24.572Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Dashboard' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/a94312d33543f007da5496d2d3e02514fbed2c64.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/eb89df2c9ef8bf0d39e141fca4980dbc932cd3da.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/bfb66a157bc886865372f805e87e9fb4e9b07e13.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/a06479a2618b054fd4b842f9fa6964dde5ad7b7a.zip]]
+2026-09-29T13:14:41+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:16:21+02:00 [[31merror[39m]: {
+  "source": "verifyOrangeHrmLogoIsVisible",
+  "context": "Failed to verify element OrangeHRM Logo is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:16:21.069Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('img', { name: 'company-branding' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/5db3d51d823ddd8d5438e3db85993885f2f04ebe.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/661ffe88fa6698f653e51c19eeae332191c83a00.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7bb8a6d1e08d3224dc8b35e04c1f3de97f1cad37.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d340be78c507cd4a9eb6d1e964c40dc6bfc69510.zip]]
+2026-09-29T13:16:40+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:18:20+02:00 [[31merror[39m]: {
+  "source": "verifyOrangeHrmLogoIsVisible",
+  "context": "Failed to verify element OrangeHRM Logo is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:18:20.146Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('img', { name: 'company-branding' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/1ad6f1de22adb143cae71146474d8bf9858f3048.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/28c70637ecec575b10d69ffe70d597e9fe58f797.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/cd4c383f4dfd94c3c8c44645460bd41821ed4b20.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c08acc20b660537263a5c5247a57f2d952fb1a06.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [setup-auth-state] › layers/ui/authentication/Authentication.setup.ts:3:15 › Authenticates the user with valid credentials @authenticate @sanity @regression @login @dashboard 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Dashboard' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('heading', { name: 'Dashboard' })
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at DashboardPage.verifyDashboardHeaderIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:30:34)
+        at TopBar.verifyTopBarMenusAreVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/navigationBars/topbar.ts:37:26)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:11:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a94312d33543f007da5496d2d3e02514fbed2c64.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/eb89df2c9ef8bf0d39e141fca4980dbc932cd3da.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/bfb66a157bc886865372f805e87e9fb4e9b07e13.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/a06479a2618b054fd4b842f9fa6964dde5ad7b7a.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/a06479a2618b054fd4b842f9fa6964dde5ad7b7a.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('img', { name: 'company-branding' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('img', { name: 'company-branding' })
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)
+        at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)
+        at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)
+        at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)
+        at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)
+        at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5db3d51d823ddd8d5438e3db85993885f2f04ebe.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/661ffe88fa6698f653e51c19eeae332191c83a00.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/7bb8a6d1e08d3224dc8b35e04c1f3de97f1cad37.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/d340be78c507cd4a9eb6d1e964c40dc6bfc69510.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/d340be78c507cd4a9eb6d1e964c40dc6bfc69510.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('img', { name: 'company-branding' })
+    Expected: visible
+    Timeout: 100000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 100000ms
+      - waiting for getByRole('img', { name: 'company-branding' })
+
+
+       at ../src/layers/ui/base/internal/actions/elementAssertions.ts:208
+
+      206 |             break;
+      207 |           case "visible":
+    > 208 |             await expect(element).toBeVisible();
+          |                                   ^
+      209 |             break;
+      210 |           case "hidden":
+      211 |             await expect(element).not.toBeVisible();
+        at action (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:208:35)
+        at ElementAssertions.performAction (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/actionBase.ts:34:28)
+        at ElementAssertions.verifyElementState (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/base/internal/actions/elementAssertions.ts:198:16)
+        at LoginPage.verifyOrangeHrmLogoIsVisible (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:136:34)
+        at LoginPage.login (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/login/loginPage.ts:120:18)
+        at loginFn (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:34:32)
+        at LoginOrchestrator.executeLoginFlow (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:92:13)
+        at LoginOrchestrator.loginWithValidCredentials (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/loginOrchestrator.ts:65:5)
+        at AuthenticationExecutor.run (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/authentication/authenticationExecutor.ts:32:7)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/authentication/Authentication.setup.ts:10:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/1ad6f1de22adb143cae71146474d8bf9858f3048.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/28c70637ecec575b10d69ffe70d597e9fe58f797.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/cd4c383f4dfd94c3c8c44645460bd41821ed4b20.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/c08acc20b660537263a5c5247a57f2d952fb1a06.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/c08acc20b660537263a5c5247a57f2d952fb1a06.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="110.557" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="110.557">
+<system-out>
+<![CDATA[2026-09-29T13:13:02+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:13:03+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:14:43+02:00 [[31merror[39m]: {
+  "source": "verifyLoginHeaderIsVisible",
+  "context": "Failed to verify element Login Header is visible",
+  "message": "expect(locator).toBeVisible() failed",
+  "timestamp": "2026-09-29T11:14:43.138Z",
+  "environment": "uat",
+  "stack": "expect(locator).toBeVisible() failed",
+  "errorType": "ExpectError",
+  "pass": false,
+  "matcherName": "toBeVisible",
+  "expected": "visible",
+  "log": [
+    "  - Expect \"toBeVisible\" with timeout 100000ms",
+    "  - waiting for getByRole('heading', { name: 'Login' })"
+  ]
+}
+
+[[ATTACHMENT|../all-blob-reports/resources/7db5df4898df12ab550c9711c0d5ad173259a6c1.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/2aa8e624a0ea48d5b2f38ebaaa4f750072afe154.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/58fa49b7b4bccf317a694cc0f02cb7acb7536487.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5dcdfcd11f2f6651911aaf1ec278a749b67f41eb.zip]]
+2026-09-29T13:14:48+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:14:48+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T13:14:48+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T13:14:49+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T13:14:49+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T13:14:49+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T13:14:50+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T13:14:50+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T13:14:50+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T13:14:50+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T13:14:50+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/2bdc4c6ba40aed4c285181e7f17b3abfef50bbcc.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-09-29T11:18:56.639Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.56" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="4.56">
+<system-out>
+<![CDATA[2026-09-29T13:14:55+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T13:14:55+02:00 [[32minfo[39m]: Class "active" found on element
+2026-09-29T13:14:55+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-09-29T13:14:55+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/2c00912417276a3fa31184ff822c42cf76da015d.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
