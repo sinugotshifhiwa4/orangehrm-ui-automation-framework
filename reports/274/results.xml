@@ -1,0 +1,146 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="0" errors="0" time="19.953385009765626">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.714" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.714">
+<system-out>
+<![CDATA[2026-09-29T12:22:21+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T12:22:23+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-29T12:22:23+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T12:22:26+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T12:22:26+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T12:22:26+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/35d00eb7113401418140dc656cbdd45b527a0136.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.928" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="2.928">
+<system-out>
+<![CDATA[2026-09-29T12:22:29+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:29+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-09-29T12:22:29+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-09-29T12:22:29+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-09-29T12:22:29+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Footer Social Media Icons count is 4
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Footer LinkedIn Icon state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Footer Facebook Icon state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Footer Twitter Icon state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Footer YouTube Icon state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Assertion Passed: Complete footer with all elements is displayed
+
+[[ATTACHMENT|../all-blob-reports/resources/29e33c3d0bb47209389f45e19d5543923a47562b.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.312" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.312">
+<system-out>
+<![CDATA[2026-09-29T12:22:29+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T12:22:32+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T12:22:32+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-29T12:22:32+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/ace6b3fcab9010f945ffa438108dbacb2352844c.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.239" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="4.239">
+<system-out>
+<![CDATA[2026-09-29T12:22:36+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:36+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-09-29T12:22:36+02:00 [[32minfo[39m]: Existing authentication session is still valid
+2026-09-29T12:22:37+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-09-29T12:22:37+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/15e1ed37a7ae14fb2d3926fbf64943b0081d5f6c.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.553" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.553">
+<system-out>
+<![CDATA[2026-09-29T12:22:29+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T12:22:32+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T12:22:32+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-29T12:22:32+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T12:22:33+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/9de61ff54e6523a1eb68c398ce2dee0c0ba8baa5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.385" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="2.385">
+<system-out>
+<![CDATA[2026-09-29T12:22:36+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:36+02:00 [[32minfo[39m]: Retrieved page title
+2026-09-29T12:22:36+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-09-29T12:22:36+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/905fb7c03855141c8d2f7851d64fd44e00a8c0f5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="6.256" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="6.256">
+<system-out>
+<![CDATA[2026-09-29T12:22:27+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:28+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-09-29T12:22:28+02:00 [[32minfo[39m]: Login Header state is visible
+2026-09-29T12:22:28+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-09-29T12:22:28+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-09-29T12:22:28+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-09-29T12:22:30+02:00 [[35mdebug[39m]: Authentication state saved successfully
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-09-29T12:22:30+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/cf5ad0e191d13bbf2e355e756b4407f36b35a6a6.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-09-29T10:23:04.290Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.354" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="4.354">
+<system-out>
+<![CDATA[2026-09-29T12:22:35+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-09-29T12:22:35+02:00 [[32minfo[39m]: Class "active" found on element
+2026-09-29T12:22:35+02:00 [[32minfo[39m]: Verified: Dashboard is the default page with URL: /dashboard\/index/
+2026-09-29T12:22:35+02:00 [[32minfo[39m]: Assertion Passed: Dashboard is loaded as the default page with the correct URL and active menu state
+
+[[ATTACHMENT|../all-blob-reports/resources/85b4d7ff244e25c6ea99102715487746f59c5dbb.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
