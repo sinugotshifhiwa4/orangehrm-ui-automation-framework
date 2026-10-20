@@ -1,0 +1,302 @@
+<testsuites id="" name="" tests="8" failures="1" skipped="0" errors="0" time="317.1341689453125">
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="5.688" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="5.688">
+<system-out>
+<![CDATA[2026-10-20T11:52:47+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Login Header state is visible
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-10-20T11:52:48+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-10-20T11:52:50+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-10-20T11:52:50+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-10-20T11:52:50+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/0b9f61b0236ad34027079c9c48e672900edeecd5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/Footer.spec.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.664" errors="0">
+<testcase name="Login | Footer › Should display complete footer with all elements" classname="layers/ui/login/Footer.spec.ts" time="2.664">
+<system-out>
+<![CDATA[2026-10-20T11:52:53+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Version Text state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Copyright Year state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Copyright Owner Link state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Rights Text state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Social Media Icons count is 4
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer LinkedIn Icon state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Facebook Icon state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer Twitter Icon state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Footer YouTube Icon state is visible
+2026-10-20T11:52:53+02:00 [[32minfo[39m]: Assertion Passed: Complete footer with all elements is displayed
+
+[[ATTACHMENT|../all-blob-reports/resources/0e8ffbf9afce8b1e696fc88387091b5b53ed0f3f.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="5.829" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="5.829">
+<system-out>
+<![CDATA[2026-10-20T11:52:30+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Login Header state is visible
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-10-20T11:52:33+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-10-20T11:52:33+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-10-20T11:52:33+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/c472ae86070de96a236b6dff65fe51ef99285c19.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.967" errors="0">
+<testcase name="Login | Valid Credentials › Should navigate to Dashboard on successful login" classname="layers/ui/login/ValidLogin.spec.ts" time="5.967">
+<system-out>
+<![CDATA[2026-10-20T11:52:37+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:37+02:00 [[32minfo[39m]: Checked if URL contains: /auth/login
+2026-10-20T11:52:37+02:00 [[33mwarn[39m]: Authentication session is stale; re-authenticating
+2026-10-20T11:52:37+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:38+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-10-20T11:52:38+02:00 [[32minfo[39m]: Login Header state is visible
+2026-10-20T11:52:38+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-10-20T11:52:38+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-10-20T11:52:38+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-10-20T11:52:39+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-10-20T11:52:39+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-10-20T11:52:40+02:00 [[32minfo[39m]: Dashboard menu item state is visible
+2026-10-20T11:52:40+02:00 [[32minfo[39m]: Assertion Passed: User successfully logged in and Dashboard is Visible
+
+[[ATTACHMENT|../all-blob-reports/resources/7ef72b6871cddbef37d389a4c8bd933e73fa2b06.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="5.627" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="5.627">
+<system-out>
+<![CDATA[2026-10-20T11:52:25+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Login Header state is visible
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-10-20T11:52:26+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-10-20T11:52:28+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-10-20T11:52:28+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-10-20T11:52:28+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/1ebf166ec0f966ab4fbb988a8da235d298f3ff3e.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/login/ValidLogin.spec.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.573" errors="0">
+<testcase name="Login | Page Title › Should display page title correctly" classname="layers/ui/login/ValidLogin.spec.ts" time="2.573">
+<system-out>
+<![CDATA[2026-10-20T11:52:31+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Retrieved page title
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Verified: Page title 'OrangeHRM' matches expected 'OrangeHRM'
+2026-10-20T11:52:31+02:00 [[32minfo[39m]: Assertion Passed: Page title is correctly displayed as "OrangeHRM"
+
+[[ATTACHMENT|../all-blob-reports/resources/8d3d3764030ee6dd1cb04a9ecf7ccfeaf74857f5.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/authentication/Authentication.setup.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="setup-auth-state" tests="1" failures="0" skipped="0" time="4.803" errors="0">
+<testcase name="Authenticates the user with valid credentials" classname="layers/ui/authentication/Authentication.setup.ts" time="4.803">
+<system-out>
+<![CDATA[2026-10-20T11:52:23+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: OrangeHRM Logo state is visible
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Login Header state is visible
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Username Input filled successfully with value: ********
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Password Input filled successfully with value: ********
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Clicked on Login Button
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Invalid Credentials Alert state is hidden
+2026-10-20T11:52:24+02:00 [[32minfo[39m]: Authentication session state created successfully
+2026-10-20T11:52:25+02:00 [[32minfo[39m]: Dashboard header state is visible
+2026-10-20T11:52:25+02:00 [[32minfo[39m]: Upgrade button state is visible
+2026-10-20T11:52:25+02:00 [[32minfo[39m]: User dropdown selector state is visible
+
+[[ATTACHMENT|../all-blob-reports/resources/d66574d64a0d166f1187e713834cbb78d43568a4.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="layers/ui/menuItems/Dashboard.spec.ts" timestamp="2026-10-20T09:58:03.981Z" hostname="chromium" tests="1" failures="1" skipped="0" time="308.397" errors="0">
+<testcase name="Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login" classname="layers/ui/menuItems/Dashboard.spec.ts" time="308.397">
+<system-out>
+<![CDATA[2026-10-20T11:52:29+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+[[ATTACHMENT|../all-blob-reports/resources/4cf05d5efeeb092869d9fcdd690ae43eb62a3b0d.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/732786c8eab1e57127855bfc75bde3e7e0291f9f.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/d7f5dea0221b125571bd77e3a2859528a6465802.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/7c656d3b72056212df61b7606ecd232ca444bbf4.zip]]
+2026-10-20T11:54:12+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+[[ATTACHMENT|../all-blob-reports/resources/447bdc0990747900de70d8e91e7a5340aed43a5e.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/912cdcc2004ff94f38cf26f1f8219100f8608b7a.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/787208ce15f3a5ab64db14d9378538addef5d08c.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/5805301e18d8b5c40dd40de492270005ed22294c.zip]]
+2026-10-20T11:55:56+02:00 [[32minfo[39m]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+[[ATTACHMENT|../all-blob-reports/resources/466a3a00acd67c8848feb6e9f33578d9687c4aa8.png]]
+
+[[ATTACHMENT|../all-blob-reports/resources/49b4ed308dde7afdc6781888c1b14c0d03c9303d.webm]]
+
+[[ATTACHMENT|../all-blob-reports/resources/c4219e61705efb3450381a75ae7c16df7bb46289.markdown]]
+
+[[ATTACHMENT|../all-blob-reports/resources/aee7d88075033fce1f4bf99e4dd3d040190a22ed.zip]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [chromium] › layers/ui/menuItems/Dashboard.spec.ts:12:9 › Dashboard | Default Landing Page › Should load the Dashboard as the default page after successful login @regression @sanity @dashboard 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/4cf05d5efeeb092869d9fcdd690ae43eb62a3b0d.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/732786c8eab1e57127855bfc75bde3e7e0291f9f.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/d7f5dea0221b125571bd77e3a2859528a6465802.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/7c656d3b72056212df61b7606ecd232ca444bbf4.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/7c656d3b72056212df61b7606ecd232ca444bbf4.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/447bdc0990747900de70d8e91e7a5340aed43a5e.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/912cdcc2004ff94f38cf26f1f8219100f8608b7a.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/787208ce15f3a5ab64db14d9378538addef5d08c.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/5805301e18d8b5c40dd40de492270005ed22294c.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/5805301e18d8b5c40dd40de492270005ed22294c.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /dashboard\/index/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    Timeout: 100000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 100000ms
+        203 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+
+
+       at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47
+
+      45 |     const { expectedUrl, classAttribute } = options;
+      46 |
+    > 47 |     await expect(this.page).toHaveURL(expectedUrl);
+         |                             ^
+      48 |
+      49 |     const isDashboardActive = await this.elementAssertions.hasClass(
+      50 |       this.dashboardMenuItemLink,
+        at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)
+        at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/466a3a00acd67c8848feb6e9f33578d9687c4aa8.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/49b4ed308dde7afdc6781888c1b14c0d03c9303d.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../all-blob-reports/resources/c4219e61705efb3450381a75ae7c16df7bb46289.markdown
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../all-blob-reports/resources/aee7d88075033fce1f4bf99e4dd3d040190a22ed.zip
+    Usage:
+
+        npx playwright show-trace ../all-blob-reports/resources/aee7d88075033fce1f4bf99e4dd3d040190a22ed.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
