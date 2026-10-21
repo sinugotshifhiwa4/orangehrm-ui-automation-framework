@@ -1,0 +1,157 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: layers/ui/authentication/Authentication.setup.ts >> Authenticates the user with valid credentials
+- Location: tests/layers/ui/authentication/Authentication.setup.ts:3:15
+
+# Error details
+
+```
+Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Call log:
+  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1   | import { type Page, type Response, expect } from "@playwright/test";
+  2   | import { ActionBase } from "./actionBase.js";
+  3   | 
+  4   | /**
+  5   |  * Navigation actions: visiting URLs, history, page load waits, and URL/title assertions.
+  6   |  */
+  7   | export class NavigationActions extends ActionBase {
+  8   |   /**
+  9   |    * Creates navigation helpers for the active page.
+  10  |    * @param page - Active Playwright page instance.
+  11  |    */
+  12  |   constructor(page: Page) {
+  13  |     super(page);
+  14  |   }
+  15  | 
+  16  |   /**
+  17  |    * Navigates to a specified URL.
+  18  |    * @param url - The URL to navigate to.
+  19  |    * @param callerMethodName - The name of the method that called this function.
+  20  |    * @param options - Optional navigation options.
+  21  |    * @returns A promise that resolves with the response or null.
+  22  |    */
+  23  |   public async navigateToUrl(
+  24  |     url: string,
+  25  |     callerMethodName: string,
+  26  |     options?: {
+  27  |       waitUntil?: "load" | "domcontentloaded" | "networkidle" | "commit";
+  28  |       timeout?: number;
+  29  |     },
+  30  |   ): Promise<Response | null> {
+  31  |     return this.performAction(
+> 32  |       () => this.page.goto(url, options),
+      |                       ^ Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  33  |       callerMethodName,
+  34  |       `Navigated to ${url}`,
+  35  |       `Failed to navigate to ${url}`,
+  36  |     );
+  37  |   }
+  38  | 
+  39  |   /**
+  40  |    * Reloads the current page.
+  41  |    * @param callerMethodName - The name of the method that called this function.
+  42  |    * @param options - Optional reload options.
+  43  |    * @returns A promise that resolves with the response or null.
+  44  |    */
+  45  |   public async reloadPage(
+  46  |     callerMethodName: string,
+  47  |     options?: {
+  48  |       waitUntil?: "load" | "domcontentloaded" | "networkidle" | "commit";
+  49  |       timeout?: number;
+  50  |     },
+  51  |   ): Promise<Response | null> {
+  52  |     return this.performAction(
+  53  |       () => this.page.reload(options),
+  54  |       callerMethodName,
+  55  |       "Page reloaded successfully",
+  56  |       "Failed to reload page",
+  57  |     );
+  58  |   }
+  59  | 
+  60  |   /**
+  61  |    * Navigates back in browser history.
+  62  |    * @param callerMethodName - The name of the method that called this function.
+  63  |    * @param options - Optional navigation options.
+  64  |    * @returns A promise that resolves with the response or null.
+  65  |    */
+  66  |   public async goBack(
+  67  |     callerMethodName: string,
+  68  |     options?: {
+  69  |       waitUntil?: "load" | "domcontentloaded" | "networkidle" | "commit";
+  70  |       timeout?: number;
+  71  |     },
+  72  |   ): Promise<Response | null> {
+  73  |     return this.performAction(
+  74  |       () => this.page.goBack(options),
+  75  |       callerMethodName,
+  76  |       "Navigated back successfully",
+  77  |       "Failed to navigate back",
+  78  |     );
+  79  |   }
+  80  | 
+  81  |   /**
+  82  |    * Navigates forward in browser history.
+  83  |    * @param callerMethodName - The name of the method that called this function.
+  84  |    * @param options - Optional navigation options.
+  85  |    * @returns A promise that resolves with the response or null.
+  86  |    */
+  87  |   public async goForward(
+  88  |     callerMethodName: string,
+  89  |     options?: {
+  90  |       waitUntil?: "load" | "domcontentloaded" | "networkidle" | "commit";
+  91  |       timeout?: number;
+  92  |     },
+  93  |   ): Promise<Response | null> {
+  94  |     return this.performAction(
+  95  |       () => this.page.goForward(options),
+  96  |       callerMethodName,
+  97  |       "Navigated forward successfully",
+  98  |       "Failed to navigate forward",
+  99  |     );
+  100 |   }
+  101 | 
+  102 |   /**
+  103 |    * Gets the current page URL.
+  104 |    * @param callerMethodName - The name of the method that called this function.
+  105 |    * @returns The current URL as a string.
+  106 |    */
+  107 |   public async getCurrentUrl(callerMethodName: string): Promise<string> {
+  108 |     return this.performAction(
+  109 |       () => Promise.resolve(this.page.url()),
+  110 |       callerMethodName,
+  111 |       "Retrieved current URL",
+  112 |       "Failed to get current URL",
+  113 |     );
+  114 |   }
+  115 | 
+  116 |   /**
+  117 |    * Gets the current page title.
+  118 |    * @param callerMethodName - The name of the method that called this function.
+  119 |    * @returns A promise that resolves with the page title.
+  120 |    */
+  121 |   public async getPageTitle(callerMethodName: string): Promise<string> {
+  122 |     return this.performAction(
+  123 |       () => this.page.title(),
+  124 |       callerMethodName,
+  125 |       "Retrieved page title",
+  126 |       "Failed to get page title",
+  127 |     );
+  128 |   }
+  129 | 
+  130 |   /**
+  131 |    * Verifies that the current page URL matches the expected URL.
+  132 |    * @param expectedUrl - The expected URL or pattern to verify against.
+```
