@@ -1,0 +1,1508 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/configuration/runtime/globalSetup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+        "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+        "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+      },
+      "gitCommit": {
+        "shortHash": "567e714",
+        "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+        "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+        "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+        "author": {
+          "name": "Tshifhiwa Sinugo",
+          "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+          "time": 1781628261000
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "time": 1781628261000
+        },
+        "branch": "environment/PreProd"
+      },
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "setup-auth-state",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 330000
+      },
+      {
+        "outputDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/commit/52770375369709b99a7093d7d832906abd49abe7",
+            "commitHash": "52770375369709b99a7093d7d832906abd49abe7",
+            "buildHref": "https://github.com/sinugotshifhiwa4/orangehrm-ui-automation-framework/actions/runs/40286399805"
+          },
+          "gitCommit": {
+            "shortHash": "567e714",
+            "hash": "567e7149040afd0c48b7363d4d1921a01056f248",
+            "subject": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT",
+            "body": "Merge pull request #14 from sinugotshifhiwa4/environment/UAT\n\nEnvironment/uat",
+            "author": {
+              "name": "Tshifhiwa Sinugo",
+              "email": "87231752+sinugotshifhiwa4@users.noreply.github.com",
+              "time": 1781628261000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1781628261000
+            },
+            "branch": "environment/PreProd"
+          },
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 330000
+      }
+    ],
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        null
+      ],
+      [
+        "json",
+        null
+      ],
+      [
+        "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/node_modules/ortoni-report/dist/ortoni-report.js",
+        {
+          "open": "never",
+          "folderPath": "ortoni-report",
+          "filename": "index.html",
+          "title": "Orange HRM Automation Report",
+          "projectName": "OrangeHRM",
+          "testType": "Functional",
+          "authorName": "runner",
+          "base64Image": false,
+          "stdIO": false,
+          "meta": {
+            "Test Cycle": "Oct, 2026",
+            "version": "1.0.0",
+            "platform": "Linux"
+          }
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "configFile": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/playwright.config.ts",
+    "rootDir": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests",
+    "quiet": false,
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "layers/ui/authentication/Authentication.setup.ts",
+      "file": "layers/ui/authentication/Authentication.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 21
+                    }
+                  ],
+                  "startTime": "2026-10-26T07:34:06.745Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/8d0ea20747a4238ac8b02e3a06f5867a03316658.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc4713",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4873,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-10-26T07:33:43.226Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/4838bc3771972edaa736b0648cf77f346621fd60.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47131",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4913,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 20
+                    }
+                  ],
+                  "startTime": "2026-10-26T07:33:41.516Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a92de91668a77dfa987682f6313d0631363b13d3.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47132",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        },
+        {
+          "title": "Authenticates the user with valid credentials",
+          "ok": true,
+          "tags": [
+            "authenticate",
+            "sanity",
+            "regression",
+            "login",
+            "dashboard"
+          ],
+          "tests": [
+            {
+              "timeout": 330000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup-auth-state",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6010,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Fill Username Input with ********",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Fill Password Input with ********",
+                      "duration": 11
+                    }
+                  ],
+                  "startTime": "2026-10-26T07:33:53.060Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/04ca0bd6ed6862a3e46c6073bae4c66cd741dc74.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19707a55a07dc28a6918-973b3018e8945bbc47133",
+          "file": "layers/ui/authentication/Authentication.setup.ts",
+          "line": 3,
+          "column": 15
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/Footer.spec.ts",
+      "file": "layers/ui/login/Footer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Footer",
+          "file": "layers/ui/login/Footer.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display complete footer with all elements",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login",
+                "sanity"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3974,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:15.329Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/1304ab17b5b9f42d3fc8b7c93fdf6675054d783b.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-a28e81b62d6e2e319ac1",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "Should display footer version text",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:19.432Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/8aa2c369cc6b8d91f81e6abbb52fd573b0ed447d.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-12d8c848a9eafd55365e",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "Should display footer copyright year",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3559,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:22.936Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/b86bffee57b25f45551916086975dc19141203b5.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-441196ada200474c4ada",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "Should display footer copyright owner link",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3521,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:26.513Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/e831db1ce0376ac6c843b7b30fc7003b19705e3d.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-be35d1cd8d8e19ee7881",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "Should display footer rights text",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3202,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:33:48.699Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/e3ce8b297ab0b2558664dd9a8019ff5fbdd6c502.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-bfd19de19eeee71156ea",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "Should display footer social media icons",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2844,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:33:51.984Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/6c8228f696d1ffd0e0f8ff609bfa065546c10444.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b08870c1a847f74b44-b48616dad5259238b29e",
+              "file": "layers/ui/login/Footer.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/ForgotPassword.spec.ts",
+      "file": "layers/ui/login/ForgotPassword.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Forgot Password",
+          "file": "layers/ui/login/ForgotPassword.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should navigate back to login page when cancel button is clicked",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6928,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:33:54.841Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/598a933e5d41aab37a2683a5e232d83c1c3591e7.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "77e286ae45739735c2a2-cabf2be4599d8ff1d349",
+              "file": "layers/ui/login/ForgotPassword.spec.ts",
+              "line": 24,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/InvalidLogin.spec.ts",
+      "file": "layers/ui/login/InvalidLogin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Invalid Credentials",
+          "file": "layers/ui/login/InvalidLogin.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display required field errors when credentials are empty",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3402,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:01.781Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/f8e9a3acdc5c2dc92c72e2b1a489f78c58393e86.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4cac2c8849f44ffde4b0-3ffe296ec3f9ac99d02f",
+              "file": "layers/ui/login/InvalidLogin.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "Should display invalid credentials alert with invalid username and password",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4102,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Fill Username Input with ********",
+                          "duration": 25
+                        },
+                        {
+                          "title": "Fill Password Input with ********",
+                          "duration": 30
+                        }
+                      ],
+                      "startTime": "2026-10-26T07:33:48.431Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/ae848b3f881fa9d2fbdd0adc07024c11e2c2ef50.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4cac2c8849f44ffde4b0-85611bc38594110578f7",
+              "file": "layers/ui/login/InvalidLogin.spec.ts",
+              "line": 23,
+              "column": 9
+            },
+            {
+              "title": "Should display invalid credentials alert with invalid username and valid password",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4705,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Fill Username Input with ********",
+                          "duration": 23
+                        },
+                        {
+                          "title": "Fill Password Input with ********",
+                          "duration": 21
+                        }
+                      ],
+                      "startTime": "2026-10-26T07:33:52.658Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/886a11c715e51952a82c1f0a5f40477e34181edd.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4cac2c8849f44ffde4b0-8681330703b2abe1d039",
+              "file": "layers/ui/login/InvalidLogin.spec.ts",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "Should display invalid credentials alert with valid username and invalid password",
+              "ok": true,
+              "tags": [
+                "regression",
+                "skip-auth",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7346,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Fill Username Input with ********",
+                          "duration": 15
+                        },
+                        {
+                          "title": "Fill Password Input with ********",
+                          "duration": 15
+                        }
+                      ],
+                      "startTime": "2026-10-26T07:33:57.386Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/97a510a7663378d0410a9e93a18f25fdcf88b445.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4cac2c8849f44ffde4b0-4daecc1327c0fe8f4b3c",
+              "file": "layers/ui/login/InvalidLogin.spec.ts",
+              "line": 50,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/login/ValidLogin.spec.ts",
+      "file": "layers/ui/login/ValidLogin.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login | Valid Credentials",
+          "file": "layers/ui/login/ValidLogin.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should navigate to Dashboard on successful login",
+              "ok": true,
+              "tags": [
+                "regression",
+                "sanity",
+                "dashboard",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6865,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "2026-10-26T09:34:02+02:00 [\u001b[33mwarn\u001b[39m]: Authentication session is stale; re-authenticating\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:33:59.658Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/9cbdbf93669ba5ddb33619eaf647c4f64ba423d6.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b57d8ef1cae4ea7c48f9-1d5110b1a615a296ebc7",
+              "file": "layers/ui/login/ValidLogin.spec.ts",
+              "line": 13,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Login | Page Title",
+          "file": "layers/ui/login/ValidLogin.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display page title correctly",
+              "ok": true,
+              "tags": [
+                "regression",
+                "sanity",
+                "skip-auth"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2777,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:06.604Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/a4ee221733acf9693759e8356078454634882229.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b57d8ef1cae4ea7c48f9-46684447444e7e13c297",
+              "file": "layers/ui/login/ValidLogin.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "layers/ui/menuItems/Dashboard.spec.ts",
+      "file": "layers/ui/menuItems/Dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard | Default Landing Page",
+          "file": "layers/ui/menuItems/Dashboard.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should load the Dashboard as the default page after successful login",
+              "ok": false,
+              "tags": [
+                "regression",
+                "sanity",
+                "dashboard"
+              ],
+              "tests": [
+                {
+                  "timeout": 330000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 102726,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27",
+                        "location": {
+                          "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                          "column": 29,
+                          "line": 47
+                        },
+                        "snippet": "   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m     \u001b[36mconst\u001b[39m { expectedUrl\u001b[33m,\u001b[39m classAttribute } \u001b[33m=\u001b[39m options\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(expectedUrl)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mconst\u001b[39m isDashboardActive \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melementAssertions\u001b[33m.\u001b[39mhasClass(\n \u001b[90m 50 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdashboardMenuItemLink\u001b[33m,\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                            "column": 29,
+                            "line": 47
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n\n   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n  45 |     const { expectedUrl, classAttribute } = options;\n  46 |\n> 47 |     await expect(this.page).toHaveURL(expectedUrl);\n     |                             ^\n  48 |\n  49 |     const isDashboardActive = await this.elementAssertions.hasClass(\n  50 |       this.dashboardMenuItemLink,\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-26T07:34:09.395Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/ccf135d6333f04fc41ad644586b90f46f517edc2.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/24f288294879603720376131d3ddaf5d729d74dd.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/1bbef9b39df7a077b49405083f7ee975d7f0f3be.markdown"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/e73b10f82cb0fe89afc03724972b22aa0102e273.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                        "column": 29,
+                        "line": 47
+                      }
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 103431,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27",
+                        "location": {
+                          "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                          "column": 29,
+                          "line": 47
+                        },
+                        "snippet": "   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m     \u001b[36mconst\u001b[39m { expectedUrl\u001b[33m,\u001b[39m classAttribute } \u001b[33m=\u001b[39m options\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(expectedUrl)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mconst\u001b[39m isDashboardActive \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melementAssertions\u001b[33m.\u001b[39mhasClass(\n \u001b[90m 50 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdashboardMenuItemLink\u001b[33m,\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                            "column": 29,
+                            "line": 47
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n\n   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n  45 |     const { expectedUrl, classAttribute } = options;\n  46 |\n> 47 |     await expect(this.page).toHaveURL(expectedUrl);\n     |                             ^\n  48 |\n  49 |     const isDashboardActive = await this.elementAssertions.hasClass(\n  50 |       this.dashboardMenuItemLink,\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-10-26T07:35:53.009Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/9ee3b85d61758ef24175fe76f7a05d840e5b758e.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/6ff68ed87e936e7ff976b3ca51af6b80a1a13ae3.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/36e59072da2de2c7d4da1f40273d8c2aff2fe08b.markdown"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/f6427bac005ba1ff1a0911e9036fe4d91b092fd9.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                        "column": 29,
+                        "line": 47
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 102862,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27",
+                        "location": {
+                          "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                          "column": 29,
+                          "line": 47
+                        },
+                        "snippet": "   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m     \u001b[36mconst\u001b[39m { expectedUrl\u001b[33m,\u001b[39m classAttribute } \u001b[33m=\u001b[39m options\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(expectedUrl)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mconst\u001b[39m isDashboardActive \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melementAssertions\u001b[33m.\u001b[39mhasClass(\n \u001b[90m 50 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdashboardMenuItemLink\u001b[33m,\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                            "column": 29,
+                            "line": 47
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/dashboard\\/index/\u001b[39m\nReceived string:  \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[39m\nTimeout: 100000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 100000ms\u001b[22m\n\u001b[2m    203 × unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\"\u001b[22m\n\n\n   at ../src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47\n\n  45 |     const { expectedUrl, classAttribute } = options;\n  46 |\n> 47 |     await expect(this.page).toHaveURL(expectedUrl);\n     |                             ^\n  48 |\n  49 |     const isDashboardActive = await this.elementAssertions.hasClass(\n  50 |       this.dashboardMenuItemLink,\n    at DashboardPage.verifyDashboardIsDefaultPage (/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts:47:29)\n    at /home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/tests/layers/ui/menuItems/Dashboard.spec.ts:15:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-10-26T07:37:37.364Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/5175929aee10d7080eec66f32330b9a4b97bf88e.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/bd0b4033489a75feeace68f65143aadb3106c9a5.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/6d433ccb306a996ab2ecd6ab9bf1fe0151e6ea88.markdown"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/all-blob-reports/resources/9d67042d75b9afc61d2cd043de215a8c9fac8cd6.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/orangehrm-ui-automation-framework/orangehrm-ui-automation-framework/src/layers/ui/pages/orangeHrm/menuItems/dashboardPage.ts",
+                        "column": 29,
+                        "line": 47
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "47350857b38bcc864f81-1b247bdeae07f8c694e7",
+              "file": "layers/ui/menuItems/Dashboard.spec.ts",
+              "line": 12,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T07:33:40.266Z",
+    "duration": 340553.623046875,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
